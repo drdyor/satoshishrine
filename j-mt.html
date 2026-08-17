@@ -1,0 +1,262 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malta &mdash; EU crypto register</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1f17;--panel:#0f2a20;--panel2:#123024;--ink:#f2ecdb;--soft:#9db0a4;
+--faint:#5f7568;--line:#1f4536;--line2:#163329;--gold:#cba95f;--green:#46a878;
+--warn:#d9a441;--no:#e0836a;
+--sh-sm:0 1px 2px rgba(0,0,0,.3);--sh:0 2px 4px rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.5)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:300;
+line-height:1.6;-webkit-font-smoothing:antialiased;
+background:var(--bg);
+background-image:radial-gradient(1200px 680px at 50% -12%,#123227 0%,rgba(18,50,39,0) 60%),
+radial-gradient(900px 500px at 88% 8%,rgba(203,169,95,.05) 0%,rgba(203,169,95,0) 55%);
+background-attachment:fixed}
+.wrap{max-width:1180px;margin:0 auto;padding:1.4rem 1.25rem 5rem}
+a{color:var(--gold)}
+h1,.brand,.jc .cc,.tile .v,h2.sec,.med .big{font-variant-numeric:tabular-nums}
+.top{display:flex;align-items:center;gap:.75rem;padding:.8rem 0 1.2rem;
+border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{width:38px;height:38px;border-radius:50%;border:1px solid rgba(203,169,95,.4);
+background:#1a3224;display:grid;place-items:center;color:var(--gold);
+font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;
+box-shadow:inset 0 1px 0 rgba(203,169,95,.25)}
+.brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:600;
+letter-spacing:.01em}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:.6rem;font-weight:500;
+letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin-top:-.15rem}
+.topnav{margin-left:auto;display:flex;gap:.45rem;flex-wrap:wrap}
+.topnav a{font-size:.8rem;text-decoration:none;color:var(--soft);border:1px solid var(--line);
+padding:.3rem .75rem;border-radius:9px}
+.topnav a:hover{border-color:var(--gold);color:var(--gold)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2.4rem;align-items:center;
+margin:2.4rem 0 2rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:1.6rem}}
+.eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+font-weight:600;margin:0 0 .55rem}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.02;margin:0}
+h1 em{font-style:italic;color:var(--gold)}
+h1::after{content:"";display:block;width:60px;height:2px;margin:.7rem 0 0;border-radius:2px;
+background:linear-gradient(90deg,var(--gold),transparent)}
+.lede{color:var(--soft);max-width:52ch;font-weight:400;margin:1.1rem 0 0;font-size:1.02rem}
+/* THE ONE LUX MOMENT — the single strongest finding, as a gold-ringed medallion. Fills the
+   hero's right column and leads with the number that most contradicts the market. */
+.med{justify-self:center;width:262px;text-align:center;padding:1.8rem 1.4rem;
+border-radius:22px;background:linear-gradient(180deg,#123227,#0d241b);
+border:1px solid rgba(203,169,95,.28);box-shadow:var(--sh),inset 0 1px 0 rgba(203,169,95,.18)}
+.med .ring{width:150px;height:150px;margin:0 auto .9rem;border-radius:50%;display:grid;
+place-items:center;background:radial-gradient(circle at 50% 38%,#16382a,#0c221a);
+border:1px solid rgba(203,169,95,.35);box-shadow:0 0 0 6px rgba(203,169,95,.05),
+inset 0 2px 14px rgba(0,0,0,.5)}
+.med .big{font-family:'Cormorant Garamond',Georgia,serif;font-size:4.4rem;font-weight:600;
+line-height:1;color:var(--gold)}
+.med .cap{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;
+margin-top:.3rem}
+.med .sub2{font-size:.76rem;color:var(--soft);margin-top:.35rem;line-height:1.4}
+.med .stamp{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--line)}
+.regions{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.region{border:1px solid var(--line);border-radius:11px;padding:.5rem .9rem;font-size:.84rem;
+background:var(--panel);color:var(--soft);display:flex;gap:.5rem;align-items:center}
+.region.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+.region .n{font-size:.68rem;color:var(--faint);border:1px solid var(--line);
+border-radius:6px;padding:.05rem .4rem}
+.region.off{opacity:.72}
+.region.off .n{color:var(--warn);border-color:rgba(217,164,65,.4)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;
+margin-bottom:1.8rem}
+.tile{background:linear-gradient(180deg,var(--panel),#0c2118);border:1px solid var(--line);
+border-radius:18px;padding:1.15rem 1.2rem;box-shadow:var(--sh-sm);position:relative;
+overflow:hidden}
+.tile::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,var(--gold),transparent)}
+.tile .k{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+font-weight:600}
+.tile .v{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.3rem;font-weight:600;
+line-height:1.05;margin:.2rem 0 .1rem}
+.tile .s{font-size:.79rem;color:var(--soft)}
+/* overflow-wrap:anywhere, NOT word-break:break-all — the latter split the retrieval date
+   mid-word ("Wed, 12 Au / g 2026") and a mangled date undermines the one thing this line
+   exists to prove. Long hashes still wrap; words stay whole. */
+.tile .src{font-size:.67rem;color:var(--faint);margin-top:.55rem;padding-top:.45rem;
+border-top:1px dashed var(--line);word-break:normal;overflow-wrap:anywhere;line-height:1.45}
+.tile.gold .v{color:var(--gold)} .tile.warn .v{color:var(--warn)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:1.4rem;align-items:start}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+h2.sec{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;
+margin:0 0 .3rem}
+.sub{color:var(--soft);font-size:.86rem;margin:0 0 .9rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:.7rem}
+.jc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1rem;
+position:relative;overflow:hidden;box-shadow:var(--sh-sm);
+transition:box-shadow .2s,border-color .2s,transform .2s}
+.jc:hover{box-shadow:var(--sh);border-color:rgba(203,169,95,.4);transform:translateY(-2px)}
+.jc::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,var(--green),transparent)}
+.jc.flagged::before{background:linear-gradient(90deg,var(--warn),transparent)}
+.jc.eea::before{background:linear-gradient(90deg,var(--faint),transparent)}
+.jc .cc{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;
+line-height:1}
+.jc .nm{font-size:.92rem;font-weight:500;margin-bottom:.5rem}
+.jc .row{display:flex;gap:1rem;margin-top:.5rem}
+.jc .n{font-size:1.15rem;font-weight:500}
+.jc .lbl{font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.jc .flag{display:inline-block;margin-top:.55rem;font-size:.64rem;letter-spacing:.08em;
+text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
+border-radius:6px;padding:.1rem .45rem}
+.jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
+margin-top:1.6rem}
+.ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.ev:first-of-type{border-top:none}
+.ev .d{font-size:.74rem;color:var(--faint);white-space:nowrap;min-width:82px}
+.ev .b{font-size:.88rem}
+.ev .who{color:var(--soft);font-size:.77rem}
+.rail{display:flex;flex-direction:column;gap:.8rem}
+.gaps{background:var(--panel);border:1px solid rgba(217,164,65,.3);
+border-left:3px solid var(--warn);border-radius:0 16px 16px 0;padding:1rem 1.1rem}
+.gaps h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;
+margin:0 0 .5rem;color:var(--warn)}
+.gaps li{font-size:.83rem;color:var(--soft);margin:.45rem 0}
+.cta{background:var(--panel2);border:1px solid rgba(203,169,95,.3);border-radius:16px;
+padding:1.1rem;text-align:center}
+.cta a{display:inline-block;margin-top:.6rem;padding:.55rem 1.1rem;border-radius:11px;
+background:var(--gold);color:#08150f;text-decoration:none;font-weight:600;font-size:.87rem}
+.prov{margin-top:2.4rem;padding-top:1.1rem;border-top:1px solid var(--line);
+font-size:.75rem;color:var(--faint)}
+.prov code{color:var(--soft);word-break:break-all}
+a.jc{text-decoration:none;color:inherit;display:block}
+a.jc .open{display:block;margin-top:.7rem;font-size:.68rem;letter-spacing:.08em;
+text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity .2s}
+a.jc:hover .open{opacity:1}
+.stat{display:inline-block;margin-right:1.1rem;font-size:.95rem;color:var(--soft)}
+.stat b{color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;
+font-weight:600;margin-right:.25rem}
+table.reg{width:100%;border-collapse:collapse;margin:.4rem 0 .6rem;font-size:.86rem}
+table.reg th{text-align:left;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;
+color:var(--faint);font-weight:600;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+table.reg td{padding:.6rem .6rem;border-bottom:1px solid var(--line2);vertical-align:top}
+table.reg tr:hover td{background:var(--panel)}
+table.reg .ent b{font-weight:500}
+table.reg .brand{display:block;font-size:.74rem;color:var(--faint)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;
+color:var(--soft)}
+.svc{display:inline-block;width:1.35rem;text-align:center;border:1px solid var(--line);
+border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cursor:help}
+.legend{font-size:.72rem;color:var(--faint);line-height:1.7;margin:.4rem 0 0}
+.legend b{color:var(--gold);font-weight:600}
+.rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
+.muted{color:var(--faint)}
+@media print{.regions,.cta{display:none}}
+</style></head><body><div class="wrap">
+<div class="top"><div class="mark">&#167;</div>
+<div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
+<div class="topnav"><a href="index.html">&larr; All jurisdictions</a></div></div>
+<p class="eyebrow" style="margin-top:1.6rem">Jurisdiction &middot; MiCA interim register</p>
+<h1>Malta <em>MT</em></h1>
+<div style="margin:1.2rem 0 .4rem"><span class="stat"><b>22</b> authorised
+CASPs</span> <span class="stat"><b>3</b> DAC8 acts</span>
+<span class="stat"><b>0</b> flagged</span> </div>
+<h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
+<p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
+holds the licence, which is routinely not the brand a group trades under.</p>
+<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>Altarius Asset Management Limited</b>
+ </td>
+ <td class="mono">5299000X84JRI8MS7D35</td><td><a href="www.altariusgroup.com" target="_blank" rel="noopener">www.altariusgroup.com</a></td>
+ <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing portfolio management">i</span></td>
+ <td class="mono">24/03/2025</td></tr><tr><td class="ent"><b>Bequant Pro Limited</b>
+ <span class="brand">Bequant</span></td>
+ <td class="mono">213800Y834JOMU87Z285</td><td><a href="https://bequant.pro/" target="_blank" rel="noopener">bequant.pro</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">30/06/2026</td></tr><tr><td class="ent"><b>Blue Cube (Malta) Limited</b>
+ <span class="brand">Blockchain.com</span></td>
+ <td class="mono">254900GDCT8070R2VV26</td><td><a href="www.blockchain.com" target="_blank" rel="noopener">www.blockchain.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">22/10/2025</td></tr><tr><td class="ent"><b>BP23 CA Limited</b>
+ <span class="brand">Bitpanda</span></td>
+ <td class="mono">984500DEID7B03J77118</td><td><a href="www.bitpanda.com" target="_blank" rel="noopener">www.bitpanda.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">27/01/2025</td></tr><tr><td class="ent"><b>Calamatta Cuschieri Investment Services Limited</b>
+ </td>
+ <td class="mono">391200EKTIW0OR813R66</td><td><a href="https://cc.com.mt" target="_blank" rel="noopener">cc.com.mt</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span></td>
+ <td class="mono">03/03/2026</td></tr><tr><td class="ent"><b>CF Technologies Ltd</b>
+ <span class="brand">Xcoins</span></td>
+ <td class="mono">98450091A6D61FB36406</td><td><a href="https://xcoins.com/en" target="_blank" rel="noopener">xcoins.com/en</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">27/06/2026</td></tr><tr><td class="ent"><b>Damex Digital LTD</b>
+ <span class="brand">Damex</span></td>
+ <td class="mono">9845008E8QA4CCFE5F68</td><td><a href="www.damex.io" target="_blank" rel="noopener">www.damex.io</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">29/01/2026</td></tr><tr><td class="ent"><b>Everest Network Limited</b>
+ <span class="brand">Everest</span></td>
+ <td class="mono">984500C3A855AC77FE74</td><td><a href="https://www.everest.org/" target="_blank" rel="noopener">www.everest.org</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">30/06/2026</td></tr><tr><td class="ent"><b>FalconX Limited</b>
+ <span class="brand">FalconX</span></td>
+ <td class="mono">984500F6A0762F9LA923</td><td><a href="https://www.falconx.io/" target="_blank" rel="noopener">www.falconx.io</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">26/06/2026</td></tr><tr><td class="ent"><b>Foris DAX MT Limited</b>
+ <span class="brand">Crypto.com</span></td>
+ <td class="mono">2549005CVR5HH70FDO07</td><td><a href="crypto.com" target="_blank" rel="noopener">crypto.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">27/01/2025</td></tr><tr><td class="ent"><b>Gate Technology Limited</b>
+ <span class="brand">Gate</span></td>
+ <td class="mono">984500D6A0F945BB5A15</td><td><a href="www.gate.com/en-eu" target="_blank" rel="noopener">www.gate.com/en-eu</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">29/09/2025</td></tr><tr><td class="ent"><b>Gemini Intergalactic EU Ltd</b>
+ <span class="brand">Gemini</span></td>
+ <td class="mono">2138002QAMX8PPKSO715</td><td><a href="www.gemini.com" target="_blank" rel="noopener">www.gemini.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">21/08/2025</td></tr><tr><td class="ent"><b>Legion Malta Limited</b>
+ <span class="brand">Legion</span></td>
+ <td class="mono">254900OPT54E6SDS6P25</td><td><a href="https://legion.cc/" target="_blank" rel="noopener">legion.cc</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">23/06/2026</td></tr><tr><td class="ent"><b>OKX Europe Limited</b>
+ <span class="brand">OKX</span></td>
+ <td class="mono">54930069NLWEIGLHXU42</td><td><a href="www.okx.com" target="_blank" rel="noopener">www.okx.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">27/01/2025</td></tr><tr><td class="ent"><b>Olmipay Limited</b>
+ <span class="brand">Olmipay</span></td>
+ <td class="mono">984500F9M4XF7C5E5E25</td><td><a href="Olmipay.com  (upcoming)" target="_blank" rel="noopener">Olmipay.com  (upcoming)</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">29/05/2026</td></tr><tr><td class="ent"><b>OP Digital Services Limited</b>
+ <span class="brand">OP Digital</span></td>
+ <td class="mono">213800ZWEHNKOCS3AC78</td><td><a href="https://www.openpayd.com/" target="_blank" rel="noopener">www.openpayd.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">23/06/2026</td></tr><tr><td class="ent"><b>Payhound Limited</b>
+ <span class="brand">Payhound</span></td>
+ <td class="mono">9845001DD90AF543DC90</td><td><a href="www.payhound.com" target="_blank" rel="noopener">www.payhound.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">24/11/2025</td></tr><tr><td class="ent"><b>Socios Europe Services Limited</b>
+ <span class="brand">Socios.com</span></td>
+ <td class="mono">984500EBA2E9980CDD80</td><td><a href="www.socios.com" target="_blank" rel="noopener">www.socios.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">10/09/2025</td></tr><tr><td class="ent"><b>Stable Mint Ltd.</b>
+ </td>
+ <td class="mono">984500A64C0EA64BC554</td><td><a href="https://stablemint.io/" target="_blank" rel="noopener">stablemint.io</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">29/05/2026</td></tr><tr><td class="ent"><b>System Pay Services (Malta) Limited</b>
+ <span class="brand">BVNK</span></td>
+ <td class="mono">984500640Z8ADE893D04</td><td><a href="https://bvnk.com/" target="_blank" rel="noopener">bvnk.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">13/02/2026</td></tr><tr><td class="ent"><b>Zap (Strike) Europe Limited</b>
+ <span class="brand">Strike</span></td>
+ <td class="mono">984500457TABOA3BZ224</td><td><a href="https://strike.me/en-GB/" target="_blank" rel="noopener">strike.me/en-GB</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">25/06/2026</td></tr><tr><td class="ent"><b>Zillion Bits Limited</b>
+ <span class="brand">ZBX</span></td>
+ <td class="mono">254900FESD7AF56FOQ37</td><td><a href="www.zbx.com" target="_blank" rel="noopener">www.zbx.com</a></td>
+ <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
+ <td class="mono">06/02/2025</td></tr></tbody></table>
+<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+
+<div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
+CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
+(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+<code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
+are national competence and are not held for any jurisdiction.</div>
+</div></body></html>

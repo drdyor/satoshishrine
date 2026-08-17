@@ -1,0 +1,4 @@
+.vercel
+.env*
+.worklog.lock
+law_crypto.json

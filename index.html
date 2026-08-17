@@ -1,0 +1,431 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EU crypto register — what is actually on the record</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1f17;--panel:#0f2a20;--panel2:#123024;--ink:#f2ecdb;--soft:#9db0a4;
+--faint:#5f7568;--line:#1f4536;--line2:#163329;--gold:#cba95f;--green:#46a878;
+--warn:#d9a441;--no:#e0836a;
+--sh-sm:0 1px 2px rgba(0,0,0,.3);--sh:0 2px 4px rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.5)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:300;
+line-height:1.6;-webkit-font-smoothing:antialiased;
+background:var(--bg);
+background-image:radial-gradient(1200px 680px at 50% -12%,#123227 0%,rgba(18,50,39,0) 60%),
+radial-gradient(900px 500px at 88% 8%,rgba(203,169,95,.05) 0%,rgba(203,169,95,0) 55%);
+background-attachment:fixed}
+.wrap{max-width:1180px;margin:0 auto;padding:1.4rem 1.25rem 5rem}
+a{color:var(--gold)}
+h1,.brand,.jc .cc,.tile .v,h2.sec,.med .big{font-variant-numeric:tabular-nums}
+.top{display:flex;align-items:center;gap:.75rem;padding:.8rem 0 1.2rem;
+border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{width:38px;height:38px;border-radius:50%;border:1px solid rgba(203,169,95,.4);
+background:#1a3224;display:grid;place-items:center;color:var(--gold);
+font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;
+box-shadow:inset 0 1px 0 rgba(203,169,95,.25)}
+.brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:600;
+letter-spacing:.01em}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:.6rem;font-weight:500;
+letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin-top:-.15rem}
+.topnav{margin-left:auto;display:flex;gap:.45rem;flex-wrap:wrap}
+.topnav a{font-size:.8rem;text-decoration:none;color:var(--soft);border:1px solid var(--line);
+padding:.3rem .75rem;border-radius:9px}
+.topnav a:hover{border-color:var(--gold);color:var(--gold)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2.4rem;align-items:center;
+margin:2.4rem 0 2rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:1.6rem}}
+.eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+font-weight:600;margin:0 0 .55rem}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.02;margin:0}
+h1 em{font-style:italic;color:var(--gold)}
+h1::after{content:"";display:block;width:60px;height:2px;margin:.7rem 0 0;border-radius:2px;
+background:linear-gradient(90deg,var(--gold),transparent)}
+.lede{color:var(--soft);max-width:52ch;font-weight:400;margin:1.1rem 0 0;font-size:1.02rem}
+/* THE ONE LUX MOMENT — the single strongest finding, as a gold-ringed medallion. Fills the
+   hero's right column and leads with the number that most contradicts the market. */
+.med{justify-self:center;width:262px;text-align:center;padding:1.8rem 1.4rem;
+border-radius:22px;background:linear-gradient(180deg,#123227,#0d241b);
+border:1px solid rgba(203,169,95,.28);box-shadow:var(--sh),inset 0 1px 0 rgba(203,169,95,.18)}
+.med .ring{width:150px;height:150px;margin:0 auto .9rem;border-radius:50%;display:grid;
+place-items:center;background:radial-gradient(circle at 50% 38%,#16382a,#0c221a);
+border:1px solid rgba(203,169,95,.35);box-shadow:0 0 0 6px rgba(203,169,95,.05),
+inset 0 2px 14px rgba(0,0,0,.5)}
+.med .big{font-family:'Cormorant Garamond',Georgia,serif;font-size:4.4rem;font-weight:600;
+line-height:1;color:var(--gold)}
+.med .cap{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;
+margin-top:.3rem}
+.med .sub2{font-size:.76rem;color:var(--soft);margin-top:.35rem;line-height:1.4}
+.med .stamp{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--line)}
+.regions{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.region{border:1px solid var(--line);border-radius:11px;padding:.5rem .9rem;font-size:.84rem;
+background:var(--panel);color:var(--soft);display:flex;gap:.5rem;align-items:center}
+.region.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+.region .n{font-size:.68rem;color:var(--faint);border:1px solid var(--line);
+border-radius:6px;padding:.05rem .4rem}
+.region.off{opacity:.72}
+.region.off .n{color:var(--warn);border-color:rgba(217,164,65,.4)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;
+margin-bottom:1.8rem}
+.tile{background:linear-gradient(180deg,var(--panel),#0c2118);border:1px solid var(--line);
+border-radius:18px;padding:1.15rem 1.2rem;box-shadow:var(--sh-sm);position:relative;
+overflow:hidden}
+.tile::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,var(--gold),transparent)}
+.tile .k{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+font-weight:600}
+.tile .v{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.3rem;font-weight:600;
+line-height:1.05;margin:.2rem 0 .1rem}
+.tile .s{font-size:.79rem;color:var(--soft)}
+/* overflow-wrap:anywhere, NOT word-break:break-all — the latter split the retrieval date
+   mid-word ("Wed, 12 Au / g 2026") and a mangled date undermines the one thing this line
+   exists to prove. Long hashes still wrap; words stay whole. */
+.tile .src{font-size:.67rem;color:var(--faint);margin-top:.55rem;padding-top:.45rem;
+border-top:1px dashed var(--line);word-break:normal;overflow-wrap:anywhere;line-height:1.45}
+.tile.gold .v{color:var(--gold)} .tile.warn .v{color:var(--warn)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:1.4rem;align-items:start}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+h2.sec{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;
+margin:0 0 .3rem}
+.sub{color:var(--soft);font-size:.86rem;margin:0 0 .9rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:.7rem}
+.jc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1rem;
+position:relative;overflow:hidden;box-shadow:var(--sh-sm);
+transition:box-shadow .2s,border-color .2s,transform .2s}
+.jc:hover{box-shadow:var(--sh);border-color:rgba(203,169,95,.4);transform:translateY(-2px)}
+.jc::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,var(--green),transparent)}
+.jc.flagged::before{background:linear-gradient(90deg,var(--warn),transparent)}
+.jc.eea::before{background:linear-gradient(90deg,var(--faint),transparent)}
+.jc .cc{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;
+line-height:1}
+.jc .nm{font-size:.92rem;font-weight:500;margin-bottom:.5rem}
+.jc .row{display:flex;gap:1rem;margin-top:.5rem}
+.jc .n{font-size:1.15rem;font-weight:500}
+.jc .lbl{font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.jc .flag{display:inline-block;margin-top:.55rem;font-size:.64rem;letter-spacing:.08em;
+text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
+border-radius:6px;padding:.1rem .45rem}
+.jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
+margin-top:1.6rem}
+.ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.ev:first-of-type{border-top:none}
+.ev .d{font-size:.74rem;color:var(--faint);white-space:nowrap;min-width:82px}
+.ev .b{font-size:.88rem}
+.ev .who{color:var(--soft);font-size:.77rem}
+.rail{display:flex;flex-direction:column;gap:.8rem}
+.gaps{background:var(--panel);border:1px solid rgba(217,164,65,.3);
+border-left:3px solid var(--warn);border-radius:0 16px 16px 0;padding:1rem 1.1rem}
+.gaps h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;
+margin:0 0 .5rem;color:var(--warn)}
+.gaps li{font-size:.83rem;color:var(--soft);margin:.45rem 0}
+.cta{background:var(--panel2);border:1px solid rgba(203,169,95,.3);border-radius:16px;
+padding:1.1rem;text-align:center}
+.cta a{display:inline-block;margin-top:.6rem;padding:.55rem 1.1rem;border-radius:11px;
+background:var(--gold);color:#08150f;text-decoration:none;font-weight:600;font-size:.87rem}
+.prov{margin-top:2.4rem;padding-top:1.1rem;border-top:1px solid var(--line);
+font-size:.75rem;color:var(--faint)}
+.prov code{color:var(--soft);word-break:break-all}
+a.jc{text-decoration:none;color:inherit;display:block}
+a.jc .open{display:block;margin-top:.7rem;font-size:.68rem;letter-spacing:.08em;
+text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity .2s}
+a.jc:hover .open{opacity:1}
+.stat{display:inline-block;margin-right:1.1rem;font-size:.95rem;color:var(--soft)}
+.stat b{color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;
+font-weight:600;margin-right:.25rem}
+table.reg{width:100%;border-collapse:collapse;margin:.4rem 0 .6rem;font-size:.86rem}
+table.reg th{text-align:left;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;
+color:var(--faint);font-weight:600;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+table.reg td{padding:.6rem .6rem;border-bottom:1px solid var(--line2);vertical-align:top}
+table.reg tr:hover td{background:var(--panel)}
+table.reg .ent b{font-weight:500}
+table.reg .brand{display:block;font-size:.74rem;color:var(--faint)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;
+color:var(--soft)}
+.svc{display:inline-block;width:1.35rem;text-align:center;border:1px solid var(--line);
+border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cursor:help}
+.legend{font-size:.72rem;color:var(--faint);line-height:1.7;margin:.4rem 0 0}
+.legend b{color:var(--gold);font-weight:600}
+.rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
+.muted{color:var(--faint)}
+@media print{.regions,.cta{display:none}}
+</style></head><body><div class="wrap">
+<div class="top"><div class="mark">&#167;</div>
+<div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
+<div class="topnav"><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#InterimMiCARegister" target="_blank" rel="noopener">ESMA source register &rarr;</a></div></div>
+
+<div class="hero">
+ <div>
+  <p class="eyebrow">Regulation (EU) 2023/1114 &middot; Directive (EU) 2023/2226</p>
+  <h1>What is <em>actually</em> on the record</h1>
+  <p class="lede">Every figure on this page comes from a file held on disk, with its sha256
+  and the date it was retrieved. Where nothing is held, it says so &mdash; rather than
+  estimating. There is no compliance score, because no regulator publishes one.</p>
+ </div>
+ <div class="med">
+  <div class="ring"><div class="big">0</div></div>
+  <div class="cap">Authorised ART issuers</div>
+  <div class="sub2">Asset-referenced token issuers authorised across the entire EU. The file
+  has not changed in 18 months.</div>
+  <div class="stamp">ARTZZ.csv &middot; since Feb 2025</div>
+ </div>
+</div>
+
+<div class="regions"><span class="region on">European Union <span class="n">27 + EEA</span></span><span class="region off" title="No federal register of authorised crypto entities and no transposition table exist. Answering here would mean reading SEC litigation releases, 50 state money-transmitter regimes and pending bills — legal research per jurisdiction, not a held source. Nothing is held; nothing is shown.">United States <span class="n">nothing held</span></span><span class="region off" title="FCA and FINMA publish registers, but this repo holds neither. Until one is fetched, hashed and dated, there is nothing to display.">UK &amp; Switzerland <span class="n">nothing held</span></span><span class="region off" title="MAS, SFC, FSA and ASIC each publish separately. None held.">Asia-Pacific <span class="n">nothing held</span></span><span class="region off" title="VARA, and the Brazilian and Mexican regimes. None held.">MEA &amp; Americas <span class="n">nothing held</span></span></div>
+<div class="tiles">
+<div class="tile"><div class="k">Authorised CASPs</div>
+ <div class="v">329</div>
+ <div class="s">across 26 states</div><div class="src">CASPS.csv &middot; sha256 6695cd09464c&hellip; &middot; Wed, 12 Aug 2026 08:47:01 GMT</div></div>
+<div class="tile warn"><div class="k">Asset-referenced token issuers</div>
+ <div class="v">0</div>
+ <div class="s">EU-wide. File unchanged since Fri, 14 Feb 2025 15:37:53 GMT</div>
+ <div class="src">ARTZZ.csv &middot; sha256 fa1ef4da123e&hellip; &middot; Fri, 14 Feb 2025 15:37:53 GMT</div></div>
+<div class="tile gold"><div class="k">DAC8 transposition</div>
+ <div class="v">26<span style="font-size:1.2rem;color:var(--faint)">/27</span></div>
+ <div class="s">220 national measures</div>
+ <div class="src">EUR-Lex national implementing measures &middot; CELEX
+ 32023L2226</div></div>
+<div class="tile"><div class="k">Non-compliant entries</div>
+ <div class="v">167</div>
+ <div class="s">165 of them
+ IT &mdash; read the skew</div><div class="src">NCASP.csv &middot; sha256 fb778670226e&hellip; &middot; Wed, 12 Aug 2026 08:47:41 GMT</div></div>
+</div>
+
+<div class="cols">
+ <div>
+  <h2 class="sec">Jurisdictions</h2>
+  <p class="sub">Authorisations, DAC8 implementing acts and flagged entities per state.
+  Labels are facts from the register — never a judgement like &ldquo;crypto-friendly&rdquo;,
+  which nothing on disk could support.</p>
+  <div class="cards"><a class="jc link" href="j-at.html"><div class="cc">AT</div>
+ <div class="nm">Austria</div>
+ <div class="row">
+  <div><div class="n">11</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">1</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-be.html"><div class="cc">BE</div>
+ <div class="nm">Belgium</div>
+ <div class="row">
+  <div><div class="n">2</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">21</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc flagged link" href="j-bg.html"><div class="cc">BG</div>
+ <div class="nm">Bulgaria</div>
+ <div class="row">
+  <div><div class="n">4</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag">DAC8 NOT NOTIFIED</span> <span class="open">Open register &rarr;</span></a><a class="jc link" href="j-hr.html"><div class="cc">HR</div>
+ <div class="nm">Croatia</div>
+ <div class="row">
+  <div><div class="n">6</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">8</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-cy.html"><div class="cc">CY</div>
+ <div class="nm">Cyprus</div>
+ <div class="row">
+  <div><div class="n">26</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-cz.html"><div class="cc">CZ</div>
+ <div class="nm">Czechia</div>
+ <div class="row">
+  <div><div class="n">11</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">2</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-dk.html"><div class="cc">DK</div>
+ <div class="nm">Denmark</div>
+ <div class="row">
+  <div><div class="n">7</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">16</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-ee.html"><div class="cc">EE</div>
+ <div class="nm">Estonia</div>
+ <div class="row">
+  <div><div class="n">3</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">6</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-fi.html"><div class="cc">FI</div>
+ <div class="nm">Finland</div>
+ <div class="row">
+  <div><div class="n">5</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">16</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-fr.html"><div class="cc">FR</div>
+ <div class="nm">France</div>
+ <div class="row">
+  <div><div class="n">35</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">46</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-de.html"><div class="cc">DE</div>
+ <div class="nm">Germany</div>
+ <div class="row">
+  <div><div class="n">73</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><div class="jc flagged"><div class="cc">GR</div>
+ <div class="nm">Greece</div>
+ <div class="row">
+  <div><div class="n">0</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><div class="jc flagged"><div class="cc">HU</div>
+ <div class="nm">Hungary</div>
+ <div class="row">
+  <div><div class="n">0</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">6</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc eea link" href="j-is.html"><div class="cc">IS</div>
+ <div class="nm">Iceland</div>
+ <div class="row">
+  <div><div class="n">1</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><a class="jc link" href="j-ie.html"><div class="cc">IE</div>
+ <div class="nm">Ireland</div>
+ <div class="row">
+  <div><div class="n">12</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">1</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-it.html"><div class="cc">IT</div>
+ <div class="nm">Italy</div>
+ <div class="row">
+  <div><div class="n">9</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">2</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">165</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-lv.html"><div class="cc">LV</div>
+ <div class="nm">Latvia</div>
+ <div class="row">
+  <div><div class="n">10</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">6</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc eea link" href="j-li.html"><div class="cc">LI</div>
+ <div class="nm">Liechtenstein</div>
+ <div class="row">
+  <div><div class="n">12</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><a class="jc link" href="j-lt.html"><div class="cc">LT</div>
+ <div class="nm">Lithuania</div>
+ <div class="row">
+  <div><div class="n">6</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">11</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-lu.html"><div class="cc">LU</div>
+ <div class="nm">Luxembourg</div>
+ <div class="row">
+  <div><div class="n">13</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-mt.html"><div class="cc">MT</div>
+ <div class="nm">Malta</div>
+ <div class="row">
+  <div><div class="n">22</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-nl.html"><div class="cc">NL</div>
+ <div class="nm">Netherlands</div>
+ <div class="row">
+  <div><div class="n">29</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">2</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">1</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc eea link" href="j-no.html"><div class="cc">NO</div>
+ <div class="nm">Norway</div>
+ <div class="row">
+  <div><div class="n">6</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><div class="jc flagged"><div class="cc">PL</div>
+ <div class="nm">Poland</div>
+ <div class="row">
+  <div><div class="n">0</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">9</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc link" href="j-pt.html"><div class="cc">PT</div>
+ <div class="nm">Portugal</div>
+ <div class="row">
+  <div><div class="n">1</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">9</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><div class="jc flagged"><div class="cc">RO</div>
+ <div class="nm">Romania</div>
+ <div class="row">
+  <div><div class="n">0</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc link" href="j-sk.html"><div class="cc">SK</div>
+ <div class="nm">Slovakia</div>
+ <div class="row">
+  <div><div class="n">6</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">8</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">1</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-si.html"><div class="cc">SI</div>
+ <div class="nm">Slovenia</div>
+ <div class="row">
+  <div><div class="n">3</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-es.html"><div class="cc">ES</div>
+ <div class="nm">Spain</div>
+ <div class="row">
+  <div><div class="n">15</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">9</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-se.html"><div class="cc">SE</div>
+ <div class="nm">Sweden</div>
+ <div class="row">
+  <div><div class="n">1</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">20</div><div class="lbl">DAC8 acts</div></div>
+  <div><div class="n">0</div><div class="lbl">Flagged</div></div>
+ </div><span class="open">Open register &rarr;</span></a></div>
+  <div class="feed"><h2 class="sec">Entities named by a national regulator</h2><p class="sub">Straight from the register's own non-compliant file. No severity score is shown, because none is published.</p><div class="ev"><div class="d">12/02/2025</div>
+ <div><div class="b">Dobibo &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">12/02/2025</div>
+ <div><div class="b">Fameexn &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">04/03/2025</div>
+ <div><div class="b">Spazio Finanziario &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">04/03/2025</div>
+ <div><div class="b">HTXcoin-az &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">04/03/2025</div>
+ <div><div class="b">Stock Credit Wallet &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">04/03/2025</div>
+ <div><div class="b">Paycraftv.top - Paycraftn.top &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">04/03/2025</div>
+ <div><div class="b">CoinBank Exchange &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">19/03/2025</div>
+ <div><div class="b">AKQ &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">19/03/2025</div>
+ <div><div class="b">Fameexn &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">19/03/2025</div>
+ <div><div class="b">ArgonInternational &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">26/03/2025</div>
+ <div><div class="b">Deroka UAB &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">26/03/2025</div>
+ <div><div class="b">DTSocialize Holding PLC &mdash; IT</div>
+ <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div></div>
+ </div>
+ <div class="rail">
+  <div class="gaps"><h3>What we do not hold</h3>
+   <p style="font-size:.83rem;color:var(--soft);margin:0">This panel is where a dashboard
+   would normally put a compliance score. There isn&rsquo;t one, and this is more useful.</p>
+   <ul><li>Direct taxation is national competence. No tax rate, holding period or filing deadline is held for ANY jurisdiction, and none is shown.</li><li>The non-compliant register is not a harmonised EU blacklist: 165 of 167 entries are IT. Absence from it outside IT means the register is quiet, not that an entity is clean.</li><li>National licensing procedure (which NCA, what the application demands) is not held for any Member State.</li></ul></div>
+  <div class="cta"><div style="font-family:'Cormorant Garamond',Georgia,serif;
+   font-size:1.2rem;font-weight:600">Does an obligation apply to you?</div>
+   <div style="font-size:.83rem;color:var(--soft);margin-top:.3rem">Answer what you know.
+   Every verdict carries the provision it rests on, and says UNKNOWN where the law is
+   national.</div><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#InterimMiCARegister" target="_blank" rel="noopener">See the source register</a></div>
+ </div>
+</div>
+
+<div class="prov"><b>Provenance.</b> Built 2026-08-13T01:16:25Z from
+<code>docs_evidence/eu-market-access/mica-register/20260812T102755Z</code>.
+CASPS.csv <code>sha256 6695cd09464c354a58250fc49dddd87eb0663f5254bac8924e144025c5938a11</code> (385 rows,
+modified Wed, 12 Aug 2026 08:47:01 GMT) &middot;
+NCASP.csv <code>sha256 fb778670226ec6d53e2cc23f210736ce02ab832c78a3a5e5ea08138deaf8dc5f</code> (167 rows) &middot;
+ARTZZ.csv <code>sha256 fa1ef4da123e3d49642c69f90a81a88f6c2cc2a0b9471b2108e4dfc635ca7c67</code> (0 rows).
+DAC8 transposition from EUR-Lex, CELEX 32023L2226.
+Rendered from <code>state/crypto_jurisdictions.json</code> — this page never reads a
+register file directly, so any front end can consume the same contract.</div>
+</div></body></html>
