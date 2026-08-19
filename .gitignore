@@ -1,4 +1,2 @@
-.vercel
-.env*
-.worklog.lock
-law_crypto.json
+.vercel/
+.DS_Store

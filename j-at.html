@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,7 +156,17 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
@@ -163,56 +179,57 @@ CASPs</span> <span class="stat"><b>1</b> DAC8 acts</span>
 <h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
 <p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
 holds the licence, which is routinely not the brand a group trades under.</p>
-<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>AMINA (Austria) AG</b>
+	<div class="register-tools"><label for="entity-search">Find a held entity record</label><input id="entity-search" type="search" placeholder="Entity, brand, LEI, website, or service" autocomplete="off"><span class="count" id="entity-count"></span></div><table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr data-entity-row data-search="amina (austria) ag amina eu 5299005i4lyifw7gkb54 https://eu.aminagroup.com a c d i j"><td class="ent"><b>AMINA (Austria) AG</b>
  <span class="brand">AMINA EU</span></td>
  <td class="mono">5299005I4LYIFW7GKB54</td><td><a href="https://eu.aminagroup.com" target="_blank" rel="noopener">eu.aminagroup.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">29/10/2025</td></tr><tr><td class="ent"><b>Bitpanda GmbH</b>
+ <td class="mono">29/10/2025</td></tr><tr data-entity-row data-search="bitpanda gmbh bitpanda 5493007wz7ifulil8g21 https://www.bitpanda.com a c d e f g j"><td class="ent"><b>Bitpanda GmbH</b>
  <span class="brand">Bitpanda</span></td>
  <td class="mono">5493007WZ7IFULIL8G21</td><td><a href="https://www.bitpanda.com" target="_blank" rel="noopener">www.bitpanda.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">09/04/2025</td></tr><tr><td class="ent"><b>Bybit EU GmbH</b>
+ <td class="mono">09/04/2025</td></tr><tr data-entity-row data-search="bybit eu gmbh bybit 5299005v5gbsn2a4c303 https://www.bybit.eu a c d f j"><td class="ent"><b>Bybit EU GmbH</b>
  <span class="brand">Bybit</span></td>
  <td class="mono">5299005V5GBSN2A4C303</td><td><a href="https://www.bybit.eu" target="_blank" rel="noopener">www.bybit.eu</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">28/05/2025</td></tr><tr><td class="ent"><b>Coinfinity GmbH</b>
+ <td class="mono">28/05/2025</td></tr><tr data-entity-row data-search="coinfinity gmbh coinfinity 529900bsnr4xpz6wbk17 https://coinfinity.co a c d h j"><td class="ent"><b>Coinfinity GmbH</b>
  <span class="brand">Coinfinity</span></td>
  <td class="mono">529900BSNR4XPZ6WBK17</td><td><a href="https://coinfinity.co" target="_blank" rel="noopener">coinfinity.co</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">19/12/2025</td></tr><tr><td class="ent"><b>Cryptonow GmbH</b>
+ <td class="mono">19/12/2025</td></tr><tr data-entity-row data-search="cryptonow gmbh cryptonow 529900lzm6x3gbfnlg10 https://www.cryptonow.at a c d j"><td class="ent"><b>Cryptonow GmbH</b>
  <span class="brand">Cryptonow</span></td>
  <td class="mono">529900LZM6X3GBFNLG10</td><td><a href="https://www.cryptonow.at" target="_blank" rel="noopener">www.cryptonow.at</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">15/10/2025</td></tr><tr><td class="ent"><b>DADAT Krypto GmbH</b>
+ <td class="mono">15/10/2025</td></tr><tr data-entity-row data-search="dadat krypto gmbh dadat 529900ktp3y86bzky754 https://www.dad.at e"><td class="ent"><b>DADAT Krypto GmbH</b>
  <span class="brand">DADAT</span></td>
  <td class="mono">529900KTP3Y86BZKY754</td><td><a href="https://www.dad.at" target="_blank" rel="noopener">www.dad.at</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">16/12/2025</td></tr><tr><td class="ent"><b>FIOR Digital GmbH</b>
+ <td class="mono">16/12/2025</td></tr><tr data-entity-row data-search="fior digital gmbh 21bitcoin 529900hmyyjr2nhvz124 https://www.21bitcoin.app a c j"><td class="ent"><b>FIOR Digital GmbH</b>
  <span class="brand">21bitcoin</span></td>
  <td class="mono">529900HMYYJR2NHVZ124</td><td><a href="https://www.21bitcoin.app" target="_blank" rel="noopener">www.21bitcoin.app</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">27/11/2025</td></tr><tr><td class="ent"><b>KuCoin EU Exchange GmbH</b>
+ <td class="mono">27/11/2025</td></tr><tr data-entity-row data-search="kucoin eu exchange gmbh kucoin eu 529900b4g0egk7z9kt45 https://www.kucoin.eu a c d f j"><td class="ent"><b>KuCoin EU Exchange GmbH</b>
  <span class="brand">KuCoin EU</span></td>
  <td class="mono">529900B4G0EGK7Z9KT45</td><td><a href="https://www.kucoin.eu" target="_blank" rel="noopener">www.kucoin.eu</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">27/11/2025</td></tr><tr><td class="ent"><b>OSL EU GmbH</b>
+ <td class="mono">27/11/2025</td></tr><tr data-entity-row data-search="osl eu gmbh osl eu 8945001tkx2a5ojmnr45 https://www.osl.com/eu a c d j"><td class="ent"><b>OSL EU GmbH</b>
  <span class="brand">OSL EU</span></td>
  <td class="mono">8945001TKX2A5OJMNR45</td><td><a href="https://www.osl.com/eu" target="_blank" rel="noopener">www.osl.com/eu</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">07/07/2026</td></tr><tr><td class="ent"><b>Validvent Technology GmbH</b>
+ <td class="mono">07/07/2026</td></tr><tr data-entity-row data-search="validvent technology gmbh validvent 9845002bec2c588cc678 https://validvent.com h"><td class="ent"><b>Validvent Technology GmbH</b>
  <span class="brand">Validvent</span></td>
  <td class="mono">9845002BEC2C588CC678</td><td><a href="https://validvent.com" target="_blank" rel="noopener">validvent.com</a></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span></td>
- <td class="mono">15/04/2026</td></tr><tr><td class="ent"><b>WB-Shields Innovations GmbH</b>
+ <td class="mono">15/04/2026</td></tr><tr data-entity-row data-search="wb-shields innovations gmbh whitebit eu 254900erdz4cz5if7p56 https://whitebit.eu a c d f j"><td class="ent"><b>WB-Shields Innovations GmbH</b>
  <span class="brand">WhiteBIT EU</span></td>
  <td class="mono">254900ERDZ4CZ5IF7P56</td><td><a href="https://whitebit.eu" target="_blank" rel="noopener">whitebit.eu</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
  <td class="mono">18/06/2026</td></tr></tbody></table>
-<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
+	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
 <div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
-CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
-(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
+(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
 <code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
 are national competence and are not held for any jurisdiction.</div>
 </div></body></html>

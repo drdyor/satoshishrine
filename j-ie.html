@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,7 +156,17 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
@@ -163,62 +179,64 @@ CASPs</span> <span class="stat"><b>1</b> DAC8 acts</span>
 <h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
 <p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
 holds the licence, which is routinely not the brand a group trades under.</p>
-<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>CoinJar Europe Limited</b>
+	<div class="register-tools"><label for="entity-search">Find a held entity record</label><input id="entity-search" type="search" placeholder="Entity, brand, LEI, website, or service" autocomplete="off"><span class="count" id="entity-count"></span></div><table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr data-entity-row data-search="coinjar europe limited coinjar 98450066q3a1g1a4t786 https://www.coinjar.com a c d j"><td class="ent"><b>CoinJar Europe Limited</b>
  <span class="brand">CoinJar</span></td>
  <td class="mono">98450066Q3A1G1A4T786</td><td><a href="https://www.coinjar.com" target="_blank" rel="noopener">www.coinjar.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">09/12/2025</td></tr><tr><td class="ent"><b>Confirmo Limited</b>
+ <td class="mono">09/12/2025</td></tr><tr data-entity-row data-search="confirmo limited confirmo limited 984500f75cj82d8b7d76 confirmo.eu c d j"><td class="ent"><b>Confirmo Limited</b>
  </td>
- <td class="mono">984500F75CJ82D8B7D76</td><td><a href="confirmo.eu" target="_blank" rel="noopener">confirmo.eu</a></td>
+ <td class="mono">984500F75CJ82D8B7D76</td><td><span class="muted" title="Source value not a valid absolute URL: confirmo.eu">confirmo.eu</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">16/12/2025</td></tr><tr><td class="ent"><b>Interactive Brokers Ireland Limited</b>
+ <td class="mono">16/12/2025</td></tr><tr data-entity-row data-search="interactive brokers ireland limited interactive brokers ireland limited 5493001b9ldfcquy9273 https://www.interactivebrokers.ie g"><td class="ent"><b>Interactive Brokers Ireland Limited</b>
  </td>
  <td class="mono">5493001B9LDFCQUY9273</td><td><a href="https://www.interactivebrokers.ie" target="_blank" rel="noopener">www.interactivebrokers.ie</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">22/01/2026</td></tr><tr><td class="ent"><b>Legend Financial Ireland Limited</b>
+ <td class="mono">22/01/2026</td></tr><tr data-entity-row data-search="legend financial ireland limited legend trading 9845007fa1a8e1de3989 www.legendtrading.com c d"><td class="ent"><b>Legend Financial Ireland Limited</b>
  <span class="brand">Legend Trading</span></td>
- <td class="mono">9845007FA1A8E1DE3989</td><td><a href="www.legendtrading.com" target="_blank" rel="noopener">www.legendtrading.com</a></td>
+ <td class="mono">9845007FA1A8E1DE3989</td><td><span class="muted" title="Source value not a valid absolute URL: www.legendtrading.com">www.legendtrading.com</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span></td>
- <td class="mono">10/10/2025</td></tr><tr><td class="ent"><b>Paysafe Payment Solutions Limited.</b>
+ <td class="mono">10/10/2025</td></tr><tr data-entity-row data-search="paysafe payment solutions limited. skrill, neteller 213800qbqvhwrbhjta89 www.skrill.com
+www.neteller.com a c d j"><td class="ent"><b>Paysafe Payment Solutions Limited.</b>
  <span class="brand">Skrill, NETELLER</span></td>
- <td class="mono">213800QBQVHWRBHJTA89</td><td><a href="www.skrill.com
-www.neteller.com" target="_blank" rel="noopener">www.skrill.com
-www.neteller.com</a></td>
+ <td class="mono">213800QBQVHWRBHJTA89</td><td><span class="muted" title="Source value not a valid absolute URL: www.skrill.com
+www.neteller.com">www.skrill.com
+www.neteller.com</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">03/12/2025</td></tr><tr><td class="ent"><b>Payward Europe Solutions Limited</b>
+ <td class="mono">03/12/2025</td></tr><tr data-entity-row data-search="payward europe solutions limited kraken digital asset exchange (�kraken�) 254900641d8knhuzyx24 https://www.kraken.com/ a c d e f g i j"><td class="ent"><b>Payward Europe Solutions Limited</b>
  <span class="brand">Kraken Digital Asset Exchange (�Kraken�)</span></td>
  <td class="mono">254900641D8KNHUZYX24</td><td><a href="https://www.kraken.com/" target="_blank" rel="noopener">www.kraken.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">25/06/2025</td></tr><tr><td class="ent"><b>Payward Global Solutions Limited</b>
+ <td class="mono">25/06/2025</td></tr><tr data-entity-row data-search="payward global solutions limited kraken, kraken digital asset exchange 9845003d98scc2851458 https://www.kraken.com/ b"><td class="ent"><b>Payward Global Solutions Limited</b>
  <span class="brand">Kraken, Kraken Digital Asset Exchange</span></td>
  <td class="mono">9845003D98SCC2851458</td><td><a href="https://www.kraken.com/" target="_blank" rel="noopener">www.kraken.com</a></td>
  <td class="svcs"><span class="svc" title="Operation of a trading platform">b</span></td>
- <td class="mono">25/06/2025</td></tr><tr><td class="ent"><b>Pionew Ireland Limited</b>
+ <td class="mono">25/06/2025</td></tr><tr data-entity-row data-search="pionew ireland limited webot 984500fd0nz8949f4363 www.webot.com/eu a b c j"><td class="ent"><b>Pionew Ireland Limited</b>
  <span class="brand">Webot</span></td>
- <td class="mono">984500FD0NZ8949F4363</td><td><a href="www.webot.com/eu" target="_blank" rel="noopener">www.webot.com/eu</a></td>
+ <td class="mono">984500FD0NZ8949F4363</td><td><span class="muted" title="Source value not a valid absolute URL: www.webot.com/eu">www.webot.com/eu</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">18/12/2025</td></tr><tr><td class="ent"><b>Push Virtual Assets Ireland Limited</b>
+ <td class="mono">18/12/2025</td></tr><tr data-entity-row data-search="push virtual assets ireland limited push  / aave push 635400nedojdejeqzq77 push.co c d"><td class="ent"><b>Push Virtual Assets Ireland Limited</b>
  <span class="brand">Push  / Aave Push</span></td>
- <td class="mono">635400NEDOJDEJEQZQ77</td><td><a href="push.co" target="_blank" rel="noopener">push.co</a></td>
+ <td class="mono">635400NEDOJDEJEQZQ77</td><td><span class="muted" title="Source value not a valid absolute URL: push.co">push.co</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span></td>
- <td class="mono">12/11/2025</td></tr><tr><td class="ent"><b>Ramp Swaps (Ireland) Limited</b>
+ <td class="mono">12/11/2025</td></tr><tr data-entity-row data-search="ramp swaps (ireland) limited ramp network 89450036uw3id72t1m84. rampnetwork.com c"><td class="ent"><b>Ramp Swaps (Ireland) Limited</b>
  <span class="brand">Ramp Network</span></td>
- <td class="mono">89450036UW3ID72T1M84.</td><td><a href="rampnetwork.com" target="_blank" rel="noopener">rampnetwork.com</a></td>
+ <td class="mono">89450036UW3ID72T1M84.</td><td><span class="muted" title="Source value not a valid absolute URL: rampnetwork.com">rampnetwork.com</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span></td>
- <td class="mono">02/12/2025</td></tr><tr><td class="ent"><b>StoneX Digital International Limited</b>
+ <td class="mono">02/12/2025</td></tr><tr data-entity-row data-search="stonex digital international limited stonex 98450043fb90t6rea408 www.stonex.com a c d e g j"><td class="ent"><b>StoneX Digital International Limited</b>
  <span class="brand">StoneX</span></td>
- <td class="mono">98450043FB90T6REA408</td><td><a href="www.stonex.com" target="_blank" rel="noopener">www.stonex.com</a></td>
+ <td class="mono">98450043FB90T6REA408</td><td><span class="muted" title="Source value not a valid absolute URL: www.stonex.com">www.stonex.com</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">19/12/2025</td></tr><tr><td class="ent"><b>Virtu Financial Ireland Limited</b>
+ <td class="mono">19/12/2025</td></tr><tr data-entity-row data-search="virtu financial ireland limited virtu financial ireland limited 549300xg5lfgn1igyc71 https://www.virtu.com/ c d"><td class="ent"><b>Virtu Financial Ireland Limited</b>
  </td>
  <td class="mono">549300XG5LFGN1IGYC71</td><td><a href="https://www.virtu.com/" target="_blank" rel="noopener">www.virtu.com</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span></td>
  <td class="mono">28/04/2026</td></tr></tbody></table>
-<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
+	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
 <div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
-CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
-(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
+(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
 <code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
 are national competence and are not held for any jurisdiction.</div>
 </div></body></html>

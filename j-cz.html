@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,7 +156,17 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
@@ -163,56 +179,57 @@ CASPs</span> <span class="stat"><b>2</b> DAC8 acts</span>
 <h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
 <p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
 holds the licence, which is routinely not the brand a group trades under.</p>
-<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>COINMATE a.s.</b>
+	<div class="register-tools"><label for="entity-search">Find a held entity record</label><input id="entity-search" type="search" placeholder="Entity, brand, LEI, website, or service" autocomplete="off"><span class="count" id="entity-count"></span></div><table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr data-entity-row data-search="coinmate a.s.  3157005qcm6y91cuv844 https://coinmate.io/cs a b c d j"><td class="ent"><b>COINMATE a.s.</b>
  </td>
  <td class="mono">3157005QCM6Y91CUV844</td><td><a href="https://coinmate.io/cs" target="_blank" rel="noopener">coinmate.io/cs</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">27/02/2026</td></tr><tr><td class="ent"><b>GG Digital, a.s.</b>
+ <td class="mono">27/02/2026</td></tr><tr data-entity-row data-search="gg digital, a.s.  984500c0oe94nda81b62 https://www.goldengate.cz/ a c d h j"><td class="ent"><b>GG Digital, a.s.</b>
  </td>
  <td class="mono">984500C0OE94NDA81B62</td><td><a href="https://www.goldengate.cz/" target="_blank" rel="noopener">www.goldengate.cz</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">14/05/2026</td></tr><tr><td class="ent"><b>ILAVO GROUP a.s.</b>
+ <td class="mono">14/05/2026</td></tr><tr data-entity-row data-search="ilavo group a.s.  315700dwn9fhxppthd55 https://www.ilavo.cz/cs a c d e g j"><td class="ent"><b>ILAVO GROUP a.s.</b>
  </td>
  <td class="mono">315700DWN9FHXPPTHD55</td><td><a href="https://www.ilavo.cz/cs" target="_blank" rel="noopener">www.ilavo.cz/cs</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">12/02/2026</td></tr><tr><td class="ent"><b>Invity Finance s.r.o.</b>
+ <td class="mono">12/02/2026</td></tr><tr data-entity-row data-search="invity finance s.r.o.  64880741u1sn9tuwj897 www.invity.io a c d e g j"><td class="ent"><b>Invity Finance s.r.o.</b>
  </td>
- <td class="mono">64880741U1SN9TUWJ897</td><td><a href="www.invity.io" target="_blank" rel="noopener">www.invity.io</a></td>
+ <td class="mono">64880741U1SN9TUWJ897</td><td><span class="muted" title="Source value not a valid absolute URL: www.invity.io">www.invity.io</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">11/02/2026</td></tr><tr><td class="ent"><b>IP wBTCb solutions, s.r.o.</b>
+ <td class="mono">11/02/2026</td></tr><tr data-entity-row data-search="ip wbtcb solutions, s.r.o.  315700i7v6w7blai9z32 https://bit.plus a c d j"><td class="ent"><b>IP wBTCb solutions, s.r.o.</b>
  </td>
  <td class="mono">315700I7V6W7BLAI9Z32</td><td><a href="https://bit.plus" target="_blank" rel="noopener">bit.plus</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">13/06/2026</td></tr><tr><td class="ent"><b>MipSoftware s.r.o.</b>
+ <td class="mono">13/06/2026</td></tr><tr data-entity-row data-search="mipsoftware s.r.o.  9845006074db79bfa392 https://coinero.cz a e j"><td class="ent"><b>MipSoftware s.r.o.</b>
  </td>
  <td class="mono">9845006074DB79BFA392</td><td><a href="https://coinero.cz" target="_blank" rel="noopener">coinero.cz</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">27/02/2026</td></tr><tr><td class="ent"><b>MP Developers s.r.o.</b>
+ <td class="mono">27/02/2026</td></tr><tr data-entity-row data-search="mp developers s.r.o.  64889kawpmo81x649843 www.anycoin.cz a b c d e"><td class="ent"><b>MP Developers s.r.o.</b>
  </td>
- <td class="mono">64889KAWPMO81X649843</td><td><a href="www.anycoin.cz" target="_blank" rel="noopener">www.anycoin.cz</a></td>
+ <td class="mono">64889KAWPMO81X649843</td><td><span class="muted" title="Source value not a valid absolute URL: www.anycoin.cz">www.anycoin.cz</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">11/02/2026</td></tr><tr><td class="ent"><b>Partners Banka, a.s.</b>
+ <td class="mono">11/02/2026</td></tr><tr data-entity-row data-search="partners banka, a.s.  315700j0qgfrkn11mf15 https://www.partnersbanka.cz/ g"><td class="ent"><b>Partners Banka, a.s.</b>
  </td>
  <td class="mono">315700J0QGFRKN11MF15</td><td><a href="https://www.partnersbanka.cz/" target="_blank" rel="noopener">www.partnersbanka.cz</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">29/07/2026</td></tr><tr><td class="ent"><b>Pluso a.s.</b>
+ <td class="mono">29/07/2026</td></tr><tr data-entity-row data-search="pluso a.s.  315700gxg7kizflv9r66 https://www.pluso.cz/ a c d j"><td class="ent"><b>Pluso a.s.</b>
  </td>
  <td class="mono">315700GXG7KIZFLV9R66</td><td><a href="https://www.pluso.cz/" target="_blank" rel="noopener">www.pluso.cz</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">27/02/2026</td></tr><tr><td class="ent"><b>Simple Coin s.r.o.</b>
+ <td class="mono">27/02/2026</td></tr><tr data-entity-row data-search="simple coin s.r.o.  3157008pwkp5lp7ar251 https://www.simplecoin.eu a c d j"><td class="ent"><b>Simple Coin s.r.o.</b>
  </td>
  <td class="mono">3157008PWKP5LP7AR251</td><td><a href="https://www.simplecoin.eu" target="_blank" rel="noopener">www.simplecoin.eu</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/06/2026</td></tr><tr><td class="ent"><b>wBTCb.cz, s.r.o.</b>
+ <td class="mono">23/06/2026</td></tr><tr data-entity-row data-search="wbtcb.cz, s.r.o.  3157009r9j4ohll5ny32 https://bit.plus c"><td class="ent"><b>wBTCb.cz, s.r.o.</b>
  </td>
  <td class="mono">3157009R9J4OHLL5NY32</td><td><a href="https://bit.plus" target="_blank" rel="noopener">bit.plus</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span></td>
  <td class="mono">26/06/2026</td></tr></tbody></table>
-<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
+	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
 <div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
-CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
-(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
+(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
 <code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
 are national competence and are not held for any jurisdiction.</div>
 </div></body></html>

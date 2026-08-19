@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,11 +156,22 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
-<div class="topnav"><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#InterimMiCARegister" target="_blank" rel="noopener">ESMA source register &rarr;</a></div></div>
+	<div class="topnav"><a href="index.html">&larr; Home</a><a href="history.html">Evidence history</a><a href="sources.html">Sources</a><a href="markets.html">Global map</a>
+</div></div>
 
 <div class="hero">
  <div>
@@ -176,8 +193,8 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 <div class="regions"><span class="region on">European Union <span class="n">27 + EEA</span></span><span class="region off" title="No federal register of authorised crypto entities and no transposition table exist. Answering here would mean reading SEC litigation releases, 50 state money-transmitter regimes and pending bills — legal research per jurisdiction, not a held source. Nothing is held; nothing is shown.">United States <span class="n">nothing held</span></span><span class="region off" title="FCA and FINMA publish registers, but this repo holds neither. Until one is fetched, hashed and dated, there is nothing to display.">UK &amp; Switzerland <span class="n">nothing held</span></span><span class="region off" title="MAS, SFC, FSA and ASIC each publish separately. None held.">Asia-Pacific <span class="n">nothing held</span></span><span class="region off" title="VARA, and the Brazilian and Mexican regimes. None held.">MEA &amp; Americas <span class="n">nothing held</span></span></div>
 <div class="tiles">
 <div class="tile"><div class="k">Authorised CASPs</div>
- <div class="v">329</div>
- <div class="s">across 26 states</div><div class="src">CASPS.csv &middot; sha256 6695cd09464c&hellip; &middot; Wed, 12 Aug 2026 08:47:01 GMT</div></div>
+ <div class="v">330</div>
+ <div class="s">across 26 states</div><div class="src">CASPS.csv &middot; sha256 cdc4a27f5d68&hellip; &middot; Tue, 18 Aug 2026 09:10:25 GMT</div></div>
 <div class="tile warn"><div class="k">Asset-referenced token issuers</div>
  <div class="v">0</div>
  <div class="s">EU-wide. File unchanged since Fri, 14 Feb 2025 15:37:53 GMT</div>
@@ -190,7 +207,7 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 <div class="tile"><div class="k">Non-compliant entries</div>
  <div class="v">167</div>
  <div class="s">165 of them
- IT &mdash; read the skew</div><div class="src">NCASP.csv &middot; sha256 fb778670226e&hellip; &middot; Wed, 12 Aug 2026 08:47:41 GMT</div></div>
+ IT &mdash; read the skew</div><div class="src">NCASP.csv &middot; sha256 fb778670226e&hellip; &middot; Tue, 18 Aug 2026 09:11:19 GMT</div></div>
 </div>
 
 <div class="cols">
@@ -199,187 +216,229 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
   <p class="sub">Authorisations, DAC8 implementing acts and flagged entities per state.
   Labels are facts from the register — never a judgement like &ldquo;crypto-friendly&rdquo;,
   which nothing on disk could support.</p>
-  <div class="cards"><a class="jc link" href="j-at.html"><div class="cc">AT</div>
+  <div class="register-tools"><label for="jurisdiction-search">Find a jurisdiction</label><input id="jurisdiction-search" type="search" placeholder="Country, code, or register signal" autocomplete="off"><span class="count" id="jurisdiction-count"></span></div><div class="market-filters" aria-label="Filter EU jurisdiction cards"><button class="on" type="button" data-jurisdiction-filter="all">All</button><button type="button" data-jurisdiction-filter="eu">EU-27</button><button type="button" data-jurisdiction-filter="eea">EEA</button><button type="button" data-jurisdiction-filter="named">Named regulator record</button><button type="button" data-jurisdiction-filter="none-named">No named record</button><button type="button" data-jurisdiction-filter="dac8-recorded">DAC8 NIM measure recorded</button><button type="button" data-jurisdiction-filter="dac8-no-record">No DAC8 NIM measure recorded</button></div><div class="cards" id="jurisdiction-cards"><a class="jc link" data-register-card data-search="at austria" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-at.html"><div class="cc">AT</div>
  <div class="nm">Austria</div>
  <div class="row">
   <div><div class="n">11</div><div class="lbl">CASPs</div></div>
   <div><div class="n">1</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-be.html"><div class="cc">BE</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="be belgium" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-be.html"><div class="cc">BE</div>
  <div class="nm">Belgium</div>
  <div class="row">
   <div><div class="n">2</div><div class="lbl">CASPs</div></div>
   <div><div class="n">21</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc flagged link" href="j-bg.html"><div class="cc">BG</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc flagged link" data-register-card data-search="bg bulgaria dac8: no nim measure recorded" data-scope="eu" data-named="false" data-dac8="no_measure_recorded" href="j-bg.html"><div class="cc">BG</div>
  <div class="nm">Bulgaria</div>
  <div class="row">
   <div><div class="n">4</div><div class="lbl">CASPs</div></div>
   <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag">DAC8 NOT NOTIFIED</span> <span class="open">Open register &rarr;</span></a><a class="jc link" href="j-hr.html"><div class="cc">HR</div>
+ </div><span class="flag">DAC8: NO NIM MEASURE RECORDED</span> <span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="hr croatia" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-hr.html"><div class="cc">HR</div>
  <div class="nm">Croatia</div>
  <div class="row">
   <div><div class="n">6</div><div class="lbl">CASPs</div></div>
   <div><div class="n">8</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-cy.html"><div class="cc">CY</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="cy cyprus" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-cy.html"><div class="cc">CY</div>
  <div class="nm">Cyprus</div>
  <div class="row">
   <div><div class="n">26</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-cz.html"><div class="cc">CZ</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="cz czechia" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-cz.html"><div class="cc">CZ</div>
  <div class="nm">Czechia</div>
  <div class="row">
   <div><div class="n">11</div><div class="lbl">CASPs</div></div>
   <div><div class="n">2</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-dk.html"><div class="cc">DK</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="dk denmark" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-dk.html"><div class="cc">DK</div>
  <div class="nm">Denmark</div>
  <div class="row">
   <div><div class="n">7</div><div class="lbl">CASPs</div></div>
   <div><div class="n">16</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-ee.html"><div class="cc">EE</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="ee estonia" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-ee.html"><div class="cc">EE</div>
  <div class="nm">Estonia</div>
  <div class="row">
   <div><div class="n">3</div><div class="lbl">CASPs</div></div>
   <div><div class="n">6</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-fi.html"><div class="cc">FI</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="fi finland" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-fi.html"><div class="cc">FI</div>
  <div class="nm">Finland</div>
  <div class="row">
   <div><div class="n">5</div><div class="lbl">CASPs</div></div>
   <div><div class="n">16</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-fr.html"><div class="cc">FR</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="fr france" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-fr.html"><div class="cc">FR</div>
  <div class="nm">France</div>
  <div class="row">
   <div><div class="n">35</div><div class="lbl">CASPs</div></div>
   <div><div class="n">46</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-de.html"><div class="cc">DE</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="de germany" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-de.html"><div class="cc">DE</div>
  <div class="nm">Germany</div>
  <div class="row">
-  <div><div class="n">73</div><div class="lbl">CASPs</div></div>
+  <div><div class="n">74</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><div class="jc flagged"><div class="cc">GR</div>
+ </div><span class="open">Open register &rarr;</span></a><div class="jc flagged" data-register-card data-search="gr greece no authorised casp" data-scope="eu" data-named="false" data-dac8="measure_recorded"><div class="cc">GR</div>
  <div class="nm">Greece</div>
  <div class="row">
   <div><div class="n">0</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag">NO AUTHORISED CASP</span> </div><div class="jc flagged"><div class="cc">HU</div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><div class="jc flagged" data-register-card data-search="hu hungary no authorised casp" data-scope="eu" data-named="false" data-dac8="measure_recorded"><div class="cc">HU</div>
  <div class="nm">Hungary</div>
  <div class="row">
   <div><div class="n">0</div><div class="lbl">CASPs</div></div>
   <div><div class="n">6</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc eea link" href="j-is.html"><div class="cc">IS</div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc eea link" data-register-card data-search="is iceland eea, not an eu member state" data-scope="eea" data-named="false" data-dac8="out_of_scope" href="j-is.html"><div class="cc">IS</div>
  <div class="nm">Iceland</div>
  <div class="row">
   <div><div class="n">1</div><div class="lbl">CASPs</div></div>
   <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><a class="jc link" href="j-ie.html"><div class="cc">IE</div>
+ </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="ie ireland" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-ie.html"><div class="cc">IE</div>
  <div class="nm">Ireland</div>
  <div class="row">
   <div><div class="n">12</div><div class="lbl">CASPs</div></div>
   <div><div class="n">1</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-it.html"><div class="cc">IT</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="it italy" data-scope="eu" data-named="true" data-dac8="measure_recorded" href="j-it.html"><div class="cc">IT</div>
  <div class="nm">Italy</div>
  <div class="row">
   <div><div class="n">9</div><div class="lbl">CASPs</div></div>
   <div><div class="n">2</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">165</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-lv.html"><div class="cc">LV</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="lv latvia" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-lv.html"><div class="cc">LV</div>
  <div class="nm">Latvia</div>
  <div class="row">
   <div><div class="n">10</div><div class="lbl">CASPs</div></div>
   <div><div class="n">6</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc eea link" href="j-li.html"><div class="cc">LI</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc eea link" data-register-card data-search="li liechtenstein eea, not an eu member state" data-scope="eea" data-named="false" data-dac8="out_of_scope" href="j-li.html"><div class="cc">LI</div>
  <div class="nm">Liechtenstein</div>
  <div class="row">
   <div><div class="n">12</div><div class="lbl">CASPs</div></div>
   <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><a class="jc link" href="j-lt.html"><div class="cc">LT</div>
+ </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="lt lithuania" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-lt.html"><div class="cc">LT</div>
  <div class="nm">Lithuania</div>
  <div class="row">
   <div><div class="n">6</div><div class="lbl">CASPs</div></div>
   <div><div class="n">11</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-lu.html"><div class="cc">LU</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="lu luxembourg" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-lu.html"><div class="cc">LU</div>
  <div class="nm">Luxembourg</div>
  <div class="row">
   <div><div class="n">13</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-mt.html"><div class="cc">MT</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="mt malta" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-mt.html"><div class="cc">MT</div>
  <div class="nm">Malta</div>
  <div class="row">
   <div><div class="n">22</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-nl.html"><div class="cc">NL</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="nl netherlands" data-scope="eu" data-named="true" data-dac8="measure_recorded" href="j-nl.html"><div class="cc">NL</div>
  <div class="nm">Netherlands</div>
  <div class="row">
   <div><div class="n">29</div><div class="lbl">CASPs</div></div>
   <div><div class="n">2</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">1</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc eea link" href="j-no.html"><div class="cc">NO</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc eea link" data-register-card data-search="no norway eea, not an eu member state" data-scope="eea" data-named="false" data-dac8="out_of_scope" href="j-no.html"><div class="cc">NO</div>
  <div class="nm">Norway</div>
  <div class="row">
   <div><div class="n">6</div><div class="lbl">CASPs</div></div>
   <div><div class="n">—</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><div class="jc flagged"><div class="cc">PL</div>
+ </div><span class="flag grey">EEA, NOT AN EU MEMBER STATE</span> <span class="open">Open register &rarr;</span></a><div class="jc flagged" data-register-card data-search="pl poland no authorised casp" data-scope="eu" data-named="false" data-dac8="measure_recorded"><div class="cc">PL</div>
  <div class="nm">Poland</div>
  <div class="row">
   <div><div class="n">0</div><div class="lbl">CASPs</div></div>
   <div><div class="n">9</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc link" href="j-pt.html"><div class="cc">PT</div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc link" data-register-card data-search="pt portugal" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-pt.html"><div class="cc">PT</div>
  <div class="nm">Portugal</div>
  <div class="row">
   <div><div class="n">1</div><div class="lbl">CASPs</div></div>
   <div><div class="n">9</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><div class="jc flagged"><div class="cc">RO</div>
+ </div><span class="open">Open register &rarr;</span></a><div class="jc flagged" data-register-card data-search="ro romania no authorised casp" data-scope="eu" data-named="false" data-dac8="measure_recorded"><div class="cc">RO</div>
  <div class="nm">Romania</div>
  <div class="row">
   <div><div class="n">0</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc link" href="j-sk.html"><div class="cc">SK</div>
+ </div><span class="flag">NO AUTHORISED CASP</span> </div><a class="jc link" data-register-card data-search="sk slovakia" data-scope="eu" data-named="true" data-dac8="measure_recorded" href="j-sk.html"><div class="cc">SK</div>
  <div class="nm">Slovakia</div>
  <div class="row">
   <div><div class="n">6</div><div class="lbl">CASPs</div></div>
   <div><div class="n">8</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">1</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-si.html"><div class="cc">SI</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="si slovenia" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-si.html"><div class="cc">SI</div>
  <div class="nm">Slovenia</div>
  <div class="row">
   <div><div class="n">3</div><div class="lbl">CASPs</div></div>
   <div><div class="n">3</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-es.html"><div class="cc">ES</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="es spain" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-es.html"><div class="cc">ES</div>
  <div class="nm">Spain</div>
  <div class="row">
   <div><div class="n">15</div><div class="lbl">CASPs</div></div>
   <div><div class="n">9</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a><a class="jc link" href="j-se.html"><div class="cc">SE</div>
+ </div><span class="open">Open register &rarr;</span></a><a class="jc link" data-register-card data-search="se sweden" data-scope="eu" data-named="false" data-dac8="measure_recorded" href="j-se.html"><div class="cc">SE</div>
  <div class="nm">Sweden</div>
  <div class="row">
   <div><div class="n">1</div><div class="lbl">CASPs</div></div>
   <div><div class="n">20</div><div class="lbl">DAC8 acts</div></div>
   <div><div class="n">0</div><div class="lbl">Flagged</div></div>
- </div><span class="open">Open register &rarr;</span></a></div>
+ </div><span class="open">Open register &rarr;</span></a></div><script>(()=>{const input=document.querySelector('#jurisdiction-search'),cards=[...document.querySelectorAll('[data-register-card]')],buttons=[...document.querySelectorAll('[data-jurisdiction-filter]')],count=document.querySelector('#jurisdiction-count');let filter='all';const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;cards.forEach(card=>{const matchesFilter=filter==='all'||(filter==='eu'&&card.dataset.scope==='eu')||(filter==='eea'&&card.dataset.scope==='eea')||(filter==='named'&&card.dataset.named==='true')||(filter==='none-named'&&card.dataset.named==='false')||(filter==='dac8-recorded'&&card.dataset.dac8==='measure_recorded')||(filter==='dac8-no-record'&&card.dataset.dac8==='no_measure_recorded');const ok=matchesFilter&&(!q||card.dataset.search.includes(q));card.hidden=!ok;if(ok)shown++});count.textContent=`${shown} jurisdiction${shown===1?'':'s'} shown`;};input.addEventListener('input',render);buttons.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.jurisdictionFilter;buttons.forEach(item=>item.classList.toggle('on',item===button));render()}));render();})();</script>
+  <h2 class="sec" style="margin-top:1.9rem">International markets</h2><p class="sub">A card names the regulatory topology, not a market-access verdict. Open it for source families, jurisdiction boundaries and stated gaps.</p><div class="cards"><a class="jc market link" href="m-au.html">
+ <div class="market-head"><span class="market-type">AML + financial-product map</span><span class="market-state">partial</span></div>
+ <div class="cc">AU</div><div class="nm">Australia</div>
+ <div class="row"><div><div class="n">2</div><div class="lbl">surfaces</div></div>
+ <div><div class="n">1</div><div class="lbl">lead regulator</div></div></div>
+ <div class="market-lanes">Australia · AUSTRAC</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-hk.html">
+ <div class="market-head"><span class="market-type">VATP status surface</span><span class="market-state">partial</span></div>
+ <div class="cc">HK</div><div class="nm">Hong Kong</div>
+ <div class="row"><div><div class="n">1</div><div class="lbl">surface</div></div>
+ <div><div class="n">1</div><div class="lbl">lead regulator</div></div></div>
+ <div class="market-lanes">Hong Kong · SFC</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-jp.html">
+ <div class="market-head"><span class="market-type">Statutory + SRO map</span><span class="market-state">partial</span></div>
+ <div class="cc">JP</div><div class="nm">Japan</div>
+ <div class="row"><div><div class="n">2</div><div class="lbl">surfaces</div></div>
+ <div><div class="n">1</div><div class="lbl">lead regulator</div></div></div>
+ <div class="market-lanes">Japan · FSA</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-sg.html">
+ <div class="market-head"><span class="market-type">Regulatory surface</span><span class="market-state">partial</span></div>
+ <div class="cc">SG</div><div class="nm">Singapore</div>
+ <div class="row"><div><div class="n">1</div><div class="lbl">surface</div></div>
+ <div><div class="n">1</div><div class="lbl">lead regulator</div></div></div>
+ <div class="market-lanes">Singapore · MAS</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-ch.html">
+ <div class="market-head"><span class="market-type">Regulatory surface</span><span class="market-state">partial</span></div>
+ <div class="cc">CH</div><div class="nm">Switzerland</div>
+ <div class="row"><div><div class="n">1</div><div class="lbl">surface</div></div>
+ <div><div class="n">1</div><div class="lbl">lead regulator</div></div></div>
+ <div class="market-lanes">Switzerland · FINMA</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-ae.html">
+ <div class="market-head"><span class="market-type">Regulator map</span><span class="market-state">partial</span></div>
+ <div class="cc">AE</div><div class="nm">United Arab Emirates</div>
+ <div class="row"><div><div class="n">3</div><div class="lbl">surfaces</div></div>
+ <div><div class="n">2</div><div class="lbl">free-zone lanes</div></div></div>
+ <div class="market-lanes">Dubai · VARA<br>2 financial centres · DFSA, FSRA<br>Federal overlay · SCA</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-gb.html">
+ <div class="market-head"><span class="market-type">Registration boundary</span><span class="market-state">partial</span></div>
+ <div class="cc">GB</div><div class="nm">United Kingdom</div>
+ <div class="row"><div><div class="n">1</div><div class="lbl">surface</div></div>
+ <div><div class="n">1</div><div class="lbl">lead regulator</div></div></div>
+ <div class="market-lanes">FCA MLR registration · UK business test<br>Financial promotions · UK marketing boundary</div><span class="open">Open coverage passport &rarr;</span></a><a class="jc market link" href="m-us.html">
+ <div class="market-head"><span class="market-type">Federal + state map</span><span class="market-state">partial</span></div>
+ <div class="cc">US</div><div class="nm">United States</div>
+ <div class="row"><div><div class="n">5</div><div class="lbl">federal surfaces</div></div>
+ <div><div class="n">1</div><div class="lbl">state lane</div></div></div>
+ <div class="market-lanes"><b>Federal</b> · FinCEN · CFTC/NFA · SEC + 2<br><b>State</b> · NY · NYDFS</div>
+ <span class="open">Open coverage passport &rarr;</span></a></div>
   <div class="feed"><h2 class="sec">Entities named by a national regulator</h2><p class="sub">Straight from the register's own non-compliant file. No severity score is shown, because none is published.</p><div class="ev"><div class="d">12/02/2025</div>
  <div><div class="b">Dobibo &mdash; IT</div>
  <div class="who">Commissione Nazionale per le Societa e la Borsa (CONSOB)</div></div></div><div class="ev"><div class="d">12/02/2025</div>
@@ -415,14 +474,18 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
    font-size:1.2rem;font-weight:600">Does an obligation apply to you?</div>
    <div style="font-size:.83rem;color:var(--soft);margin-top:.3rem">Answer what you know.
    Every verdict carries the provision it rests on, and says UNKNOWN where the law is
-   national.</div><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#InterimMiCARegister" target="_blank" rel="noopener">See the source register</a></div>
- </div>
+	  national.</div><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#InterimMiCARegister" target="_blank" rel="noopener">See the source register</a></div>
+	  <div class="cta"><div style="font-family:'Cormorant Garamond',Georgia,serif;
+	   font-size:1.2rem;font-weight:600">Evidence updates</div>
+	   <div style="font-size:.83rem;color:var(--soft);margin-top:.3rem">Receive source-diff updates when a complete comparison is available. Buttondown manages the signup flow; SatoshiShrine does not store email addresses.</div>
+	   <form action="https://buttondown.com/api/emails/embed-subscribe/satoshishrine" method="post" class="subscribe-form"><label for="bd-email">Enter your email</label><input type="email" name="email" id="bd-email" required><input type="submit" value="Subscribe"><p class="subscribe-note"><a href="https://buttondown.com/refer/satoshishrine" target="_blank" rel="noopener">Powered by Buttondown.</a> No subscriber count is shown because none is held in this public build.</p></form></div>
+	 </div>
 </div>
 
-<div class="prov"><b>Provenance.</b> Built 2026-08-13T01:16:25Z from
-<code>docs_evidence/eu-market-access/mica-register/20260812T102755Z</code>.
-CASPS.csv <code>sha256 6695cd09464c354a58250fc49dddd87eb0663f5254bac8924e144025c5938a11</code> (385 rows,
-modified Wed, 12 Aug 2026 08:47:01 GMT) &middot;
+<div class="prov"><b>Provenance.</b> Built 2026-08-19T03:24:56Z from
+<code>docs_evidence/eu-market-access/mica-register/20260819T031624Z</code>.
+CASPS.csv <code>sha256 cdc4a27f5d68f992870a97a50d7f9bf99c0ecd1cef656aa8f3c256d5bb0cfa2c</code> (388 rows,
+modified Tue, 18 Aug 2026 09:10:25 GMT) &middot;
 NCASP.csv <code>sha256 fb778670226ec6d53e2cc23f210736ce02ab832c78a3a5e5ea08138deaf8dc5f</code> (167 rows) &middot;
 ARTZZ.csv <code>sha256 fa1ef4da123e3d49642c69f90a81a88f6c2cc2a0b9471b2108e4dfc635ca7c67</code> (0 rows).
 DAC8 transposition from EUR-Lex, CELEX 32023L2226.

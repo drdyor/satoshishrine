@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "surface": {
+    "code": "DK",
+    "name": "Denmark",
+    "member_state": true
+  },
+  "method_boundary": "This bundle inventories SatoshiShrine-held source surfaces and declared scope gaps. It does not identify an NCA, measure regulatory activity, or establish a legal or entity status.",
+  "held_sources": [
+    {
+      "category": "EU framework source",
+      "state": "source_held",
+      "name": "CASPS.csv",
+      "description": "Authorised crypto-asset service providers (Title V)",
+      "official_url": "https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv",
+      "sha256": "cdc4a27f5d68f992870a97a50d7f9bf99c0ecd1cef656aa8f3c256d5bb0cfa2c",
+      "retrieved_at": "20260819T031624Z",
+      "held_path": "docs_evidence/eu-market-access/mica-register/20260819T031624Z/CASPS.csv",
+      "adapter": "sources/mica_register.py",
+      "adapter_version": "not_declared_in_held_manifest",
+      "parser_warning": null
+    },
+    {
+      "category": "EU framework source",
+      "state": "source_held",
+      "name": "NCASP.csv",
+      "description": "Non-compliant entities providing crypto-asset services",
+      "official_url": "https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv",
+      "sha256": "fb778670226ec6d53e2cc23f210736ce02ab832c78a3a5e5ea08138deaf8dc5f",
+      "retrieved_at": "20260819T031624Z",
+      "held_path": "docs_evidence/eu-market-access/mica-register/20260819T031624Z/NCASP.csv",
+      "adapter": "sources/mica_register.py",
+      "adapter_version": "not_declared_in_held_manifest",
+      "parser_warning": null
+    },
+    {
+      "category": "EU framework source",
+      "state": "source_held",
+      "name": "ARTZZ.csv",
+      "description": "Issuers of asset-referenced tokens (Title III)",
+      "official_url": "https://www.esma.europa.eu/sites/default/files/2024-12/ARTZZ.csv",
+      "sha256": "fa1ef4da123e3d49642c69f90a81a88f6c2cc2a0b9471b2108e4dfc635ca7c67",
+      "retrieved_at": "20260819T031624Z",
+      "held_path": "docs_evidence/eu-market-access/mica-register/20260819T031624Z/ARTZZ.csv",
+      "adapter": "sources/mica_register.py",
+      "adapter_version": "not_declared_in_held_manifest",
+      "parser_warning": null
+    },
+    {
+      "category": "EU framework source",
+      "state": "source_held",
+      "name": "EMTWP.csv",
+      "description": "Issuers of e-money tokens (Title IV)",
+      "official_url": "https://www.esma.europa.eu/sites/default/files/2024-12/EMTWP.csv",
+      "sha256": "33f4546a460ba5d4d3a95e4398c82bd2761a6fa87d5f9e77cd47cb30a8694c59",
+      "retrieved_at": "20260819T031624Z",
+      "held_path": "docs_evidence/eu-market-access/mica-register/20260819T031624Z/EMTWP.csv",
+      "adapter": "sources/mica_register.py",
+      "adapter_version": "not_declared_in_held_manifest",
+      "parser_warning": null
+    },
+    {
+      "category": "EU framework source",
+      "state": "source_held",
+      "name": "OTHER.csv",
+      "description": "White papers, crypto-assets other than ART and EMT (Title II)",
+      "official_url": "https://www.esma.europa.eu/sites/default/files/2024-12/OTHER.csv",
+      "sha256": "90a39de8825832a202f26789886bc4033de76b027934136c63d4c7f6efd6b899",
+      "retrieved_at": "20260819T031624Z",
+      "held_path": "docs_evidence/eu-market-access/mica-register/20260819T031624Z/OTHER.csv",
+      "adapter": "sources/mica_register.py",
+      "adapter_version": "not_declared_in_held_manifest",
+      "parser_warning": null
+    },
+    {
+      "category": "EU framework source",
+      "state": "source_held",
+      "name": "Description_of_the_fields_in_the_interim_MiCA_register.csv",
+      "description": "Field definitions",
+      "official_url": "https://www.esma.europa.eu/sites/default/files/2024-12/Description_of_the_fields_in_the_interim_MiCA_register.csv",
+      "sha256": "7d89b5d4ff83ccf07bb2673e864def28dfed410eef5add3a2c5a623ceb8ad295",
+      "retrieved_at": "20260819T031624Z",
+      "held_path": "docs_evidence/eu-market-access/mica-register/20260819T031624Z/Description_of_the_fields_in_the_interim_MiCA_register.csv",
+      "adapter": "sources/mica_register.py",
+      "adapter_version": "not_declared_in_held_manifest",
+      "parser_warning": null
+    }
+  ],
+  "source_states": [
+    {
+      "category": "EU framework CASP source",
+      "state": "source_held",
+      "basis": "ESMA CASPS.csv held and filtered by Member State in the contract."
+    },
+    {
+      "category": "EU framework non-compliant source",
+      "state": "source_held",
+      "basis": "ESMA NCASP.csv held and filtered by Member State in the contract."
+    },
+    {
+      "category": "EUR-Lex DAC8 national-measure source",
+      "state": "source_held",
+      "basis": "Held source-record state: measure_recorded."
+    },
+    {
+      "category": "Direct national regulator source surface",
+      "state": "not_yet_checked",
+      "basis": "No NCA identity or direct national-source retrieval attempt is held in the current EU contract."
+    }
+  ],
+  "explicit_gaps": [
+    {
+      "category": "National tax guidance",
+      "state": "not_in_scope",
+      "basis": "Direct taxation is explicitly outside the EU evidence contract."
+    },
+    {
+      "category": "National licensing procedure",
+      "state": "not_in_scope",
+      "basis": "NCA procedure and application requirements are not held in the current EU contract."
+    },
+    {
+      "category": "NCA identity and direct register coverage",
+      "state": "not_yet_checked",
+      "basis": "The existing source map does not yet hold a verified NCA identity or direct regulator-route attempt for this jurisdiction."
+    }
+  ]
+}

@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,7 +156,17 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
@@ -163,152 +179,153 @@ CASPs</span> <span class="stat"><b>46</b> DAC8 acts</span>
 <h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
 <p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
 holds the licence, which is routinely not the brand a group trades under.</p>
-<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>ALPHACAP DIGITAL ASSETS SAS</b>
+	<div class="register-tools"><label for="entity-search">Find a held entity record</label><input id="entity-search" type="search" placeholder="Entity, brand, LEI, website, or service" autocomplete="off"><span class="count" id="entity-count"></span></div><table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr data-entity-row data-search="alphacap digital assets sas alphacap 969500ulpb59u51bg334 https://alphacap.fr/ a h i j"><td class="ent"><b>ALPHACAP DIGITAL ASSETS SAS</b>
  <span class="brand">ALPHACAP</span></td>
  <td class="mono">969500ULPB59U51BG334</td><td><a href="https://alphacap.fr/" target="_blank" rel="noopener">alphacap.fr</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">25/06/2026</td></tr><tr><td class="ent"><b>APLO SAS</b>
+ <td class="mono">25/06/2026</td></tr><tr data-entity-row data-search="aplo sas aplo 984500ab011s3aef6706 https://www.aplo.io/ a c d e j"><td class="ent"><b>APLO SAS</b>
  <span class="brand">APLO</span></td>
  <td class="mono">984500AB011S3AEF6706</td><td><a href="https://www.aplo.io/" target="_blank" rel="noopener">www.aplo.io</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">30/06/2026</td></tr><tr><td class="ent"><b>BANQUE DELUBAC ET CIE</b>
+ <td class="mono">30/06/2026</td></tr><tr data-entity-row data-search="banque delubac et cie banque delubac 969500a4ipkvubh3ca90 07160 le cheylard a c d e h i j"><td class="ent"><b>BANQUE DELUBAC ET CIE</b>
  <span class="brand">BANQUE DELUBAC</span></td>
- <td class="mono">969500A4IPKVUBH3CA90</td><td><a href="07160 LE CHEYLARD" target="_blank" rel="noopener">07160 LE CHEYLARD</a></td>
+ <td class="mono">969500A4IPKVUBH3CA90</td><td><span class="muted" title="Source value not a valid absolute URL: 07160 LE CHEYLARD">07160 LE CHEYLARD</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/10/2025</td></tr><tr><td class="ent"><b>BITSTACK DIGITAL ASSETS SAS</b>
+ <td class="mono">23/10/2025</td></tr><tr data-entity-row data-search="bitstack digital assets sas bitstack 894500rkz3tvtpif7v84 https://bitstack-app.com/ a c d e j"><td class="ent"><b>BITSTACK DIGITAL ASSETS SAS</b>
  <span class="brand">BITSTACK</span></td>
  <td class="mono">894500RKZ3TVTPIF7V84</td><td><a href="https://bitstack-app.com/" target="_blank" rel="noopener">bitstack-app.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">30/06/2025</td></tr><tr><td class="ent"><b>BLOCKCHAIN PROCESS SECURITY (B.P.S.) SAS</b>
+ <td class="mono">30/06/2025</td></tr><tr data-entity-row data-search="blockchain process security (b.p.s.) sas feel mining / wigl et othila 9695000vfdeg5z4jiy48 https://feel-mining.com/ a c d e i j"><td class="ent"><b>BLOCKCHAIN PROCESS SECURITY (B.P.S.) SAS</b>
  <span class="brand">FEEL MINING / WIGL ET OTHILA</span></td>
  <td class="mono">9695000VFDEG5Z4JIY48</td><td><a href="https://feel-mining.com/" target="_blank" rel="noopener">feel-mining.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">24/07/2026</td></tr><tr><td class="ent"><b>BLOCKNODES SAS</b>
+ <td class="mono">24/07/2026</td></tr><tr data-entity-row data-search="blocknodes sas swissborg 969500pzjwt3td1sui59 https://swissborg.com/ a e f h i j"><td class="ent"><b>BLOCKNODES SAS</b>
  <span class="brand">SWISSBORG</span></td>
  <td class="mono">969500PZJWT3TD1SUI59</td><td><a href="https://swissborg.com/" target="_blank" rel="noopener">swissborg.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">05/03/2026</td></tr><tr><td class="ent"><b>Bpifrance Investissement</b>
+ <td class="mono">05/03/2026</td></tr><tr data-entity-row data-search="bpifrance investissement bpifrance investissement 96950082z6kuva6tw686 https://www.bpifrance.fr/ h"><td class="ent"><b>Bpifrance Investissement</b>
  </td>
  <td class="mono">96950082Z6KUVA6TW686</td><td><a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">www.bpifrance.fr</a></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span></td>
- <td class="mono">18/06/2026</td></tr><tr><td class="ent"><b>CACEIS BANK</b>
+ <td class="mono">18/06/2026</td></tr><tr data-entity-row data-search="caceis bank caceis bank 96950023scr9x9f3l662 http://www.caceis.com a g j"><td class="ent"><b>CACEIS BANK</b>
  </td>
  <td class="mono">96950023SCR9X9F3L662</td><td><a href="http://www.caceis.com" target="_blank" rel="noopener">www.caceis.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/06/2025</td></tr><tr><td class="ent"><b>CIRCLE INTERNET FINANCIAL EUROPE SAS</b>
+ <td class="mono">23/06/2025</td></tr><tr data-entity-row data-search="circle internet financial europe sas circle 969500oyudadgzkcr583 https://www.circle.com/en/ a j"><td class="ent"><b>CIRCLE INTERNET FINANCIAL EUROPE SAS</b>
  <span class="brand">CIRCLE</span></td>
  <td class="mono">969500OYUDADGZKCR583</td><td><a href="https://www.circle.com/en/" target="_blank" rel="noopener">www.circle.com/en</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/04/2026</td></tr><tr><td class="ent"><b>COINHOUSE SAS</b>
+ <td class="mono">23/04/2026</td></tr><tr data-entity-row data-search="coinhouse sas coinhouse 969500e5gfhk2rkf8251 https://www.coinhouse.com/ a c d e h i j"><td class="ent"><b>COINHOUSE SAS</b>
  <span class="brand">COINHOUSE</span></td>
  <td class="mono">969500E5GFHK2RKF8251</td><td><a href="https://www.coinhouse.com/" target="_blank" rel="noopener">www.coinhouse.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">07/05/2026</td></tr><tr><td class="ent"><b>COINSHARES ASSET MANAGEMENT</b>
+ <td class="mono">07/05/2026</td></tr><tr data-entity-row data-search="coinshares asset management coinshares asset management 969500dbf3zl9u0kua51 https://coinshares.com/ h i"><td class="ent"><b>COINSHARES ASSET MANAGEMENT</b>
  </td>
  <td class="mono">969500DBF3ZL9U0KUA51</td><td><a href="https://coinshares.com/" target="_blank" rel="noopener">coinshares.com</a></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">17/07/2025</td></tr><tr><td class="ent"><b>COMETH SAS</b>
+ <td class="mono">17/07/2025</td></tr><tr data-entity-row data-search="cometh sas cometh 894500r5ksx3zkihsa46 https://cometh.io/ a d j"><td class="ent"><b>COMETH SAS</b>
  <span class="brand">COMETH</span></td>
  <td class="mono">894500R5KSX3ZKIHSA46</td><td><a href="https://cometh.io/" target="_blank" rel="noopener">cometh.io</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">04/12/2025</td></tr><tr><td class="ent"><b>DEBLOCK SAS</b>
+ <td class="mono">04/12/2025</td></tr><tr data-entity-row data-search="deblock sas deblock 254900xtui35bgibxp21 https://deblock.com/ c d e"><td class="ent"><b>DEBLOCK SAS</b>
  <span class="brand">DEBLOCK</span></td>
  <td class="mono">254900XTUI35BGIBXP21</td><td><a href="https://deblock.com/" target="_blank" rel="noopener">deblock.com</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">23/05/2025</td></tr><tr><td class="ent"><b>DESKOIN SAS</b>
+ <td class="mono">23/05/2025</td></tr><tr data-entity-row data-search="deskoin sas deskoin 969500qh6wd4fo79b261 https://www.deskoin.com/ a c d e h j"><td class="ent"><b>DESKOIN SAS</b>
  <span class="brand">DESKOIN</span></td>
  <td class="mono">969500QH6WD4FO79B261</td><td><a href="https://www.deskoin.com/" target="_blank" rel="noopener">www.deskoin.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">28/04/2026</td></tr><tr><td class="ent"><b>FINARY SAS</b>
+ <td class="mono">28/04/2026</td></tr><tr data-entity-row data-search="finary sas finary 969500rqh18pu24dm081 https://finary.com/en a g j"><td class="ent"><b>FINARY SAS</b>
  <span class="brand">FINARY</span></td>
  <td class="mono">969500RQH18PU24DM081</td><td><a href="https://finary.com/en" target="_blank" rel="noopener">finary.com/en</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">06/07/2026</td></tr><tr><td class="ent"><b>FINCTEK UE SAS</b>
+ <td class="mono">06/07/2026</td></tr><tr data-entity-row data-search="finctek ue sas finctek 969500ptjjztce0i3b60 https://finctek.com a c d e f j"><td class="ent"><b>FINCTEK UE SAS</b>
  <span class="brand">FINCTEK</span></td>
  <td class="mono">969500PTJJZTCE0I3B60</td><td><a href="https://finctek.com" target="_blank" rel="noopener">finctek.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">11/09/2025</td></tr><tr><td class="ent"><b>FIPTO PI SAS</b>
+ <td class="mono">11/09/2025</td></tr><tr data-entity-row data-search="fipto pi sas fipto 969500a0dyunf5nx9r84 https://www.fipto.com/ a c d e j"><td class="ent"><b>FIPTO PI SAS</b>
  <span class="brand">FIPTO</span></td>
  <td class="mono">969500A0DYUNF5NX9R84</td><td><a href="https://www.fipto.com/" target="_blank" rel="noopener">www.fipto.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/01/2026</td></tr><tr><td class="ent"><b>FLOWDESK EUROPE SAS</b>
+ <td class="mono">23/01/2026</td></tr><tr data-entity-row data-search="flowdesk europe sas flowdesk europe 984500ab011s3aef6706 https://www.flowdesk.co/ a c d e j"><td class="ent"><b>FLOWDESK EUROPE SAS</b>
  <span class="brand">FLOWDESK EUROPE</span></td>
  <td class="mono">984500AB011S3AEF6706</td><td><a href="https://www.flowdesk.co/" target="_blank" rel="noopener">www.flowdesk.co</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">25/06/2026</td></tr><tr><td class="ent"><b>GOin SAS</b>
+ <td class="mono">25/06/2026</td></tr><tr data-entity-row data-search="goin sas goin 894500lm6dicd790fq34 https://goin-invest.com a c d e h i j"><td class="ent"><b>GOin SAS</b>
  <span class="brand">GOIN</span></td>
  <td class="mono">894500LM6DICD790FQ34</td><td><a href="https://goin-invest.com" target="_blank" rel="noopener">goin-invest.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">19/06/2025</td></tr><tr><td class="ent"><b>HEXARQ SAS</b>
+ <td class="mono">19/06/2025</td></tr><tr data-entity-row data-search="hexarq sas hexarq 969500td4vxaopxpvw02 https://www.hexarq.com/ a c d e j"><td class="ent"><b>HEXARQ SAS</b>
  <span class="brand">HEXARQ</span></td>
  <td class="mono">969500TD4VXAOPXPVW02</td><td><a href="https://www.hexarq.com/" target="_blank" rel="noopener">www.hexarq.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">05/02/2026</td></tr><tr><td class="ent"><b>ICEBLOCK SAS</b>
+ <td class="mono">05/02/2026</td></tr><tr data-entity-row data-search="iceblock sas iceblock 9695005cvrzdk63zst85 https://www.iceblockinvestments.com/ a i j"><td class="ent"><b>ICEBLOCK SAS</b>
  <span class="brand">ICEBLOCK</span></td>
  <td class="mono">9695005CVRZDK63ZST85</td><td><a href="https://www.iceblockinvestments.com/" target="_blank" rel="noopener">www.iceblockinvestments.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">30/06/2026</td></tr><tr><td class="ent"><b>KEYROCK FR SAS</b>
+ <td class="mono">30/06/2026</td></tr><tr data-entity-row data-search="keyrock fr sas keyrock 9845001bafc53odn8c90 https://keyrock.com/ a c d e j"><td class="ent"><b>KEYROCK FR SAS</b>
  <span class="brand">KEYROCK</span></td>
  <td class="mono">9845001BAFC53ODN8C90</td><td><a href="https://keyrock.com/" target="_blank" rel="noopener">keyrock.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">12/06/2026</td></tr><tr><td class="ent"><b>LEONOD SARL</b>
+ <td class="mono">12/06/2026</td></tr><tr data-entity-row data-search="leonod sarl leonod 969500o878f3mgjcyv50 https://app.bullbitcoin.com/ c"><td class="ent"><b>LEONOD SARL</b>
  <span class="brand">LEONOD</span></td>
  <td class="mono">969500O878F3MGJCYV50</td><td><a href="https://app.bullbitcoin.com/" target="_blank" rel="noopener">app.bullbitcoin.com</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span></td>
- <td class="mono">22/06/2026</td></tr><tr><td class="ent"><b>MEREAU FINANCE SAS</b>
+ <td class="mono">22/06/2026</td></tr><tr data-entity-row data-search="mereau finance sas crypto-am 969500usey22t9zzrq98 https://crypto-assets-management.com/ h i"><td class="ent"><b>MEREAU FINANCE SAS</b>
  <span class="brand">CRYPTO-AM</span></td>
  <td class="mono">969500USEY22T9ZZRQ98</td><td><a href="https://crypto-assets-management.com/" target="_blank" rel="noopener">crypto-assets-management.com</a></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">30/06/2026</td></tr><tr><td class="ent"><b>MERIA SAS</b>
+ <td class="mono">30/06/2026</td></tr><tr data-entity-row data-search="meria sas meria 969500ujswu20fexq504 https://www.meria.com/ a c e h i j"><td class="ent"><b>MERIA SAS</b>
  <span class="brand">MERIA</span></td>
  <td class="mono">969500UJSWU20FEXQ504</td><td><a href="https://www.meria.com/" target="_blank" rel="noopener">www.meria.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">22/06/2026</td></tr><tr><td class="ent"><b>METAL GEAR SAS</b>
+ <td class="mono">22/06/2026</td></tr><tr data-entity-row data-search="metal gear sas meatal gear 969500pqylqg3csj5041 https://metalgear.xyz/ a c e j"><td class="ent"><b>METAL GEAR SAS</b>
  <span class="brand">MEATAL GEAR</span></td>
  <td class="mono">969500PQYLQG3CSJ5041</td><td><a href="https://metalgear.xyz/" target="_blank" rel="noopener">metalgear.xyz</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">04/07/2025</td></tr><tr><td class="ent"><b>PAYMIUM SAS</b>
+ <td class="mono">04/07/2025</td></tr><tr data-entity-row data-search="paymium sas paymium 969500d241wxu9j7mi33 https://www.paymium.com/ a b c d e j"><td class="ent"><b>PAYMIUM SAS</b>
  <span class="brand">PAYMIUM</span></td>
  <td class="mono">969500D241WXU9J7MI33</td><td><a href="https://www.paymium.com/" target="_blank" rel="noopener">www.paymium.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Operation of a trading platform">b</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">22/06/2026</td></tr><tr><td class="ent"><b>PAYTOP SAS</b>
+ <td class="mono">22/06/2026</td></tr><tr data-entity-row data-search="paytop sas paytop 969500va4a8crcs2n988 https://www.paytop.com/ a c j"><td class="ent"><b>PAYTOP SAS</b>
  <span class="brand">PAYTOP</span></td>
  <td class="mono">969500VA4A8CRCS2N988</td><td><a href="https://www.paytop.com/" target="_blank" rel="noopener">www.paytop.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">21/05/2026</td></tr><tr><td class="ent"><b>QWARKS SAS</b>
+ <td class="mono">21/05/2026</td></tr><tr data-entity-row data-search="qwarks sas qwarks 969500cmlnbivuud9a09 https://www.qwarks.fr/ a c d e i j"><td class="ent"><b>QWARKS SAS</b>
  <span class="brand">QWARKS</span></td>
  <td class="mono">969500CMLNBIVUUD9A09</td><td><a href="https://www.qwarks.fr/" target="_blank" rel="noopener">www.qwarks.fr</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">21/05/2026</td></tr><tr><td class="ent"><b>RCUBE ASSET MANAGEMENT</b>
+ <td class="mono">21/05/2026</td></tr><tr data-entity-row data-search="rcube asset management rcube asset management 529900x4prl0dznpt990 https://rcube.com/ h i"><td class="ent"><b>RCUBE ASSET MANAGEMENT</b>
  </td>
  <td class="mono">529900X4PRL0DZNPT990</td><td><a href="https://rcube.com/" target="_blank" rel="noopener">rcube.com</a></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">18/06/2026</td></tr><tr><td class="ent"><b>RELAI EU SASU</b>
+ <td class="mono">18/06/2026</td></tr><tr data-entity-row data-search="relai eu sasu relai 9695003ekrfomyxjql11 75012 paris c"><td class="ent"><b>RELAI EU SASU</b>
  <span class="brand">RELAI</span></td>
- <td class="mono">9695003EKRFOMYXJQL11</td><td><a href="75012 Paris" target="_blank" rel="noopener">75012 Paris</a></td>
+ <td class="mono">9695003EKRFOMYXJQL11</td><td><span class="muted" title="Source value not a valid absolute URL: 75012 Paris">75012 Paris</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span></td>
- <td class="mono">23/10/2025</td></tr><tr><td class="ent"><b>RUFIJI CAPITAL SAS</b>
+ <td class="mono">23/10/2025</td></tr><tr data-entity-row data-search="rufiji capital sas rufiji 969500fuwskqeo5j7h72 https://www.rufiji.capital/ a e h i j"><td class="ent"><b>RUFIJI CAPITAL SAS</b>
  <span class="brand">RUFIJI</span></td>
  <td class="mono">969500FUWSKQEO5J7H72</td><td><a href="https://www.rufiji.capital/" target="_blank" rel="noopener">www.rufiji.capital</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">12/06/2026</td></tr><tr><td class="ent"><b>SHARES FINANCIAL ASSETS SAS</b>
+ <td class="mono">12/06/2026</td></tr><tr data-entity-row data-search="shares financial assets sas shares 9695001lqmttvpiiqi05 https://www.shares.io/ a g j"><td class="ent"><b>SHARES FINANCIAL ASSETS SAS</b>
  <span class="brand">SHARES</span></td>
  <td class="mono">9695001LQMTTVPIIQI05</td><td><a href="https://www.shares.io/" target="_blank" rel="noopener">www.shares.io</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">28/07/2026</td></tr><tr><td class="ent"><b>SOCIETE GENERALE - FORGE</b>
+ <td class="mono">28/07/2026</td></tr><tr data-entity-row data-search="societe generale - forge societe generale - forge 969500fx8k40zdw4f377 92800 puteaux a j"><td class="ent"><b>SOCIETE GENERALE - FORGE</b>
  </td>
- <td class="mono">969500FX8K40ZDW4F377</td><td><a href="92800 PUTEAUX" target="_blank" rel="noopener">92800 PUTEAUX</a></td>
+ <td class="mono">969500FX8K40ZDW4F377</td><td><span class="muted" title="Source value not a valid absolute URL: 92800 PUTEAUX">92800 PUTEAUX</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/10/2025</td></tr><tr><td class="ent"><b>WOORTON SAS</b>
+ <td class="mono">23/10/2025</td></tr><tr data-entity-row data-search="woorton sas woorton 213800rf9fdnj92ae175 https://www.woorton.com/ c d e"><td class="ent"><b>WOORTON SAS</b>
  <span class="brand">WOORTON</span></td>
  <td class="mono">213800RF9FDNJ92AE175</td><td><a href="https://www.woorton.com/" target="_blank" rel="noopener">www.woorton.com</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span></td>
  <td class="mono">23/07/2026</td></tr></tbody></table>
-<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
+	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
 <div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
-CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
-(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
+(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
 <code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
 are national competence and are not held for any jurisdiction.</div>
 </div></body></html>

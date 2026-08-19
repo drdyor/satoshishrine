@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,7 +156,17 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
@@ -163,36 +179,37 @@ CASPs</span> <span class="stat"><b>11</b> DAC8 acts</span>
 <h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
 <p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
 holds the licence, which is routinely not the brand a group trades under.</p>
-<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>Newrails, UAB</b>
+	<div class="register-tools"><label for="entity-search">Find a held entity record</label><input id="entity-search" type="search" placeholder="Entity, brand, LEI, website, or service" autocomplete="off"><span class="count" id="entity-count"></span></div><table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr data-entity-row data-search="newrails, uab newrails 875500onk4e5xgip7o24 https://www.newrails.xyz a j"><td class="ent"><b>Newrails, UAB</b>
  <span class="brand">Newrails</span></td>
  <td class="mono">875500ONK4E5XGIP7O24</td><td><a href="https://www.newrails.xyz" target="_blank" rel="noopener">www.newrails.xyz</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">14/11/2025</td></tr><tr><td class="ent"><b>Nuvei Liquidity UAB</b>
+ <td class="mono">14/11/2025</td></tr><tr data-entity-row data-search="nuvei liquidity uab simplex 894500iy99qll9m0sr28 https://simplex.com a c d j"><td class="ent"><b>Nuvei Liquidity UAB</b>
  <span class="brand">Simplex</span></td>
  <td class="mono">894500IY99QLL9M0SR28</td><td><a href="https://simplex.com" target="_blank" rel="noopener">simplex.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">16/12/2025</td></tr><tr><td class="ent"><b>Robinhood Europe UAB</b>
+ <td class="mono">16/12/2025</td></tr><tr data-entity-row data-search="robinhood europe uab robinhood 254900gtp4uxqo1umi36 https://www.robinhood.com a e g j"><td class="ent"><b>Robinhood Europe UAB</b>
  <span class="brand">Robinhood</span></td>
  <td class="mono">254900GTP4UXQO1UMI36</td><td><a href="https://www.robinhood.com" target="_blank" rel="noopener">www.robinhood.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">29/05/2025</td></tr><tr><td class="ent"><b>UAB BLUE EMI LT</b>
+ <td class="mono">29/05/2025</td></tr><tr data-entity-row data-search="uab blue emi lt blue emi 254900xfmacgd0l7ai73 https://blueemi.com a"><td class="ent"><b>UAB BLUE EMI LT</b>
  <span class="brand">BLUE EMI</span></td>
  <td class="mono">254900XFMACGD0L7AI73</td><td><a href="https://blueemi.com" target="_blank" rel="noopener">blueemi.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span></td>
- <td class="mono">13/05/2025</td></tr><tr><td class="ent"><b>UAB Decentralized</b>
+ <td class="mono">13/05/2025</td></tr><tr data-entity-row data-search="uab decentralized coingate 6488907mv9xaa08e4e40 https://coingate.com a c d j"><td class="ent"><b>UAB Decentralized</b>
  <span class="brand">Coingate</span></td>
  <td class="mono">6488907MV9XAA08E4E40</td><td><a href="https://coingate.com" target="_blank" rel="noopener">coingate.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">16/12/2025</td></tr><tr><td class="ent"><b>UAB Micar assets</b>
+ <td class="mono">16/12/2025</td></tr><tr data-entity-row data-search="uab micar assets myriad capital 894500r6hjp62bzx4m89 https://myriadcapital.lt a c d e g j"><td class="ent"><b>UAB Micar assets</b>
  <span class="brand">Myriad Capital</span></td>
  <td class="mono">894500R6HJP62BZX4M89</td><td><a href="https://myriadcapital.lt" target="_blank" rel="noopener">myriadcapital.lt</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
  <td class="mono">26/02/2026</td></tr></tbody></table>
-<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
+	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
 <div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
-CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
-(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
+(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
 <code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
 are national competence and are not held for any jurisdiction.</div>
 </div></body></html>

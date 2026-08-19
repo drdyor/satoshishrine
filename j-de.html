@@ -108,6 +108,12 @@ line-height:1}
 text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
 border-radius:6px;padding:.1rem .45rem}
 .jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
 .feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
 margin-top:1.6rem}
 .ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
@@ -150,317 +156,332 @@ border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cur
 .legend b{color:var(--gold);font-weight:600}
 .rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
 .muted{color:var(--faint)}
-@media print{.regions,.cta{display:none}}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta{display:none}}
+	.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
 </style></head><body><div class="wrap">
 <div class="top"><div class="mark">&#167;</div>
 <div class="brand">SatoshiShrine<small>EU Crypto Register</small></div>
 <div class="topnav"><a href="index.html">&larr; All jurisdictions</a></div></div>
 <p class="eyebrow" style="margin-top:1.6rem">Jurisdiction &middot; MiCA interim register</p>
 <h1>Germany <em>DE</em></h1>
-<div style="margin:1.2rem 0 .4rem"><span class="stat"><b>73</b> authorised
+<div style="margin:1.2rem 0 .4rem"><span class="stat"><b>74</b> authorised
 CASPs</span> <span class="stat"><b>3</b> DAC8 acts</span>
 <span class="stat"><b>0</b> flagged</span> </div>
 <h2 class="sec" style="margin-top:1.8rem">Authorised crypto-asset service providers</h2>
 <p class="sub">Public entries from ESMA's interim MiCA register &mdash; the legal entity that
 holds the licence, which is routinely not the brand a group trades under.</p>
-<table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr><td class="ent"><b>360 Treasury Systems AG</b>
+	<div class="register-tools"><label for="entity-search">Find a held entity record</label><input id="entity-search" type="search" placeholder="Entity, brand, LEI, website, or service" autocomplete="off"><span class="count" id="entity-count"></span></div><table class="reg"><thead><tr><th>Authorised entity</th><th>LEI</th><th>Licensed site</th><th>Services</th><th>Authorised</th></tr></thead><tbody><tr data-entity-row data-search="360 treasury systems ag flatexdegiro bank ag 529900p0204w9ha8jp36 www.360t.com b"><td class="ent"><b>360 Treasury Systems AG</b>
  <span class="brand">flatexDEGIRO Bank AG</span></td>
- <td class="mono">529900P0204W9HA8JP36</td><td><a href="www.360t.com" target="_blank" rel="noopener">www.360t.com</a></td>
+ <td class="mono">529900P0204W9HA8JP36</td><td><span class="muted" title="Source value not a valid absolute URL: www.360t.com">www.360t.com</span></td>
  <td class="svcs"><span class="svc" title="Operation of a trading platform">b</span></td>
- <td class="mono">02/04/2025</td></tr><tr><td class="ent"><b>AnCeKa Vermögensbetreuungs Aktiengesellschaft</b>
+ <td class="mono">02/04/2025</td></tr><tr data-entity-row data-search="anceka vermögensbetreuungs aktiengesellschaft anceka vermögensbetreuungs aktiengesellschaft 529900fnje1h184jv164 www.anceka.de g h i"><td class="ent"><b>AnCeKa Vermögensbetreuungs Aktiengesellschaft</b>
  </td>
- <td class="mono">529900FNJE1H184JV164</td><td><a href="www.anceka.de" target="_blank" rel="noopener">www.anceka.de</a></td>
+ <td class="mono">529900FNJE1H184JV164</td><td><span class="muted" title="Source value not a valid absolute URL: www.anceka.de">www.anceka.de</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">04/03/2026</td></tr><tr><td class="ent"><b>Baader Bank Aktiengesellschaft</b>
+ <td class="mono">04/03/2026</td></tr><tr data-entity-row data-search="baader bank aktiengesellschaft baader bank ag 529900jfoppedur61h13 https://www.baaderbank.de/ e"><td class="ent"><b>Baader Bank Aktiengesellschaft</b>
  <span class="brand">Baader Bank AG</span></td>
  <td class="mono">529900JFOPPEDUR61H13</td><td><a href="https://www.baaderbank.de/" target="_blank" rel="noopener">www.baaderbank.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">16/05/2025</td></tr><tr><td class="ent"><b>Baden-Württembergische Wertpapierbörse GmbH</b>
+ <td class="mono">16/05/2025</td></tr><tr data-entity-row data-search="baden-württembergische wertpapierbörse gmbh baden-württembergische wertpapierbörse gmbh 529900a0wha0nvxy0g45 https://www.bsdex.de/de/ b"><td class="ent"><b>Baden-Württembergische Wertpapierbörse GmbH</b>
  </td>
  <td class="mono">529900A0WHA0NVXY0G45</td><td><a href="https://www.bsdex.de/de/" target="_blank" rel="noopener">www.bsdex.de/de</a></td>
  <td class="svcs"><span class="svc" title="Operation of a trading platform">b</span></td>
- <td class="mono">03/07/2025</td></tr><tr><td class="ent"><b>Bankhaus Scheich Wertpapierspezialist AG</b>
+ <td class="mono">03/07/2025</td></tr><tr data-entity-row data-search="bankhaus scheich wertpapierspezialist ag bankhaus scheich wertpapierspezialist ag 54930079hj1jtmktw637 www.bankhaus-scheich.de c e f g h"><td class="ent"><b>Bankhaus Scheich Wertpapierspezialist AG</b>
  </td>
- <td class="mono">54930079HJ1JTMKTW637</td><td><a href="www.bankhaus-scheich.de" target="_blank" rel="noopener">www.bankhaus-scheich.de</a></td>
+ <td class="mono">54930079HJ1JTMKTW637</td><td><span class="muted" title="Source value not a valid absolute URL: www.bankhaus-scheich.de">www.bankhaus-scheich.de</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing advice on crypto-assets">h</span></td>
- <td class="mono">07/08/2025</td></tr><tr><td class="ent"><b>BitGo Europe GmbH</b>
+ <td class="mono">07/08/2025</td></tr><tr data-entity-row data-search="bitgo europe gmbh bitgo europe gmbh 391200ij3b1ip7993o16 https://www.bitgo.de/entities/bitgoeuropegmbh/ a c d e g j"><td class="ent"><b>BitGo Europe GmbH</b>
  </td>
  <td class="mono">391200IJ3B1IP7993O16</td><td><a href="https://www.bitgo.de/entities/bitgoeuropegmbh/" target="_blank" rel="noopener">www.bitgo.de/entities/bitgoeuropegmbh</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">09/05/2025</td></tr><tr><td class="ent"><b>Bitpanda Asset Management GmbH</b>
+ <td class="mono">09/05/2025</td></tr><tr data-entity-row data-search="bitpanda asset management gmbh bitpanda asset management gmbh 9845005x9b7n610k0093 www.bitpanda.com a c d j"><td class="ent"><b>Bitpanda Asset Management GmbH</b>
  </td>
- <td class="mono">9845005X9B7N610K0093</td><td><a href="www.bitpanda.com" target="_blank" rel="noopener">www.bitpanda.com</a></td>
+ <td class="mono">9845005X9B7N610K0093</td><td><span class="muted" title="Source value not a valid absolute URL: www.bitpanda.com">www.bitpanda.com</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">24/01/2025</td></tr><tr><td class="ent"><b>Boerse Stuttgart Digital Custody GmbH</b>
+ <td class="mono">24/01/2025</td></tr><tr data-entity-row data-search="boerse stuttgart digital custody gmbh boerse stuttgart digital custody gmbh 529900rc04fr9ehut228 www.bsdigital.com a j"><td class="ent"><b>Boerse Stuttgart Digital Custody GmbH</b>
  </td>
- <td class="mono">529900RC04FR9EHUT228</td><td><a href="www.bsdigital.com" target="_blank" rel="noopener">www.bsdigital.com</a></td>
+ <td class="mono">529900RC04FR9EHUT228</td><td><span class="muted" title="Source value not a valid absolute URL: www.bsdigital.com">www.bsdigital.com</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">17/01/2025</td></tr><tr><td class="ent"><b>Bullish Europe GmbH</b>
+ <td class="mono">17/01/2025</td></tr><tr data-entity-row data-search="bullish europe gmbh bullish europe gmbh 2549008cbask5q680x12 https://bullish.com/home-de/ a c d e j"><td class="ent"><b>Bullish Europe GmbH</b>
  </td>
  <td class="mono">2549008CBASK5Q680X12</td><td><a href="https://bullish.com/home-de/" target="_blank" rel="noopener">bullish.com/home-de</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">04/09/2025</td></tr><tr><td class="ent"><b>BV &amp; P Vermögen AG</b>
+ <td class="mono">04/09/2025</td></tr><tr data-entity-row data-search="bv &amp; p vermögen ag bv &amp; p vermögen ag 529900r4q9ucq25iaa05 www.bvp-vermoegen.de g i"><td class="ent"><b>BV &amp; P Vermögen AG</b>
  </td>
- <td class="mono">529900R4Q9UCQ25IAA05</td><td><a href="www.bvp-vermoegen.de" target="_blank" rel="noopener">www.bvp-vermoegen.de</a></td>
+ <td class="mono">529900R4Q9UCQ25IAA05</td><td><span class="muted" title="Source value not a valid absolute URL: www.bvp-vermoegen.de">www.bvp-vermoegen.de</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">13/03/2026</td></tr><tr><td class="ent"><b>Commerzbank Aktiengesellschaft</b>
+ <td class="mono">13/03/2026</td></tr><tr data-entity-row data-search="commerzbank aktiengesellschaft commerzbank aktiengesellschaft 851wygnluqlfzbsygb56 commerzbank ag – investor relations a j"><td class="ent"><b>Commerzbank Aktiengesellschaft</b>
  </td>
- <td class="mono">851WYGNLUQLFZBSYGB56</td><td><a href="Commerzbank AG – Investor Relations" target="_blank" rel="noopener">Commerzbank AG – Investor Relations</a></td>
+ <td class="mono">851WYGNLUQLFZBSYGB56</td><td><span class="muted" title="Source value not a valid absolute URL: Commerzbank AG – Investor Relations">Commerzbank AG – Investor Relations</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">07/04/2025</td></tr><tr><td class="ent"><b>CONCEDUS GmbH</b>
+ <td class="mono">07/04/2025</td></tr><tr data-entity-row data-search="concedus gmbh concedus gmbh 529900114q5xq6klyr24 https://concedus.com/ g h"><td class="ent"><b>CONCEDUS GmbH</b>
  </td>
  <td class="mono">529900114Q5XQ6KLYR24</td><td><a href="https://concedus.com/" target="_blank" rel="noopener">concedus.com</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing advice on crypto-assets">h</span></td>
- <td class="mono">15/01/2026</td></tr><tr><td class="ent"><b>Crypto Finance (Deutschland) GmbH</b>
+ <td class="mono">15/01/2026</td></tr><tr data-entity-row data-search="crypto finance (deutschland) gmbh crypto finance (deutschland) gmbh 3912009zge8258ompe28 https://www.crypto-finance.com/germany/de/ a c d e j"><td class="ent"><b>Crypto Finance (Deutschland) GmbH</b>
  </td>
  <td class="mono">3912009ZGE8258OMPE28</td><td><a href="https://www.crypto-finance.com/germany/de/" target="_blank" rel="noopener">www.crypto-finance.com/germany/de</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">24/01/2025</td></tr><tr><td class="ent"><b>DekaBank Deutsche Girozentrale</b>
+ <td class="mono">24/01/2025</td></tr><tr data-entity-row data-search="dekabank deutsche girozentrale dekabank deutsche girozentrale 0w2pzjm8xoy22m4gg883 https://www.deka.de/deka-gruppe a e j"><td class="ent"><b>DekaBank Deutsche Girozentrale</b>
  </td>
  <td class="mono">0W2PZJM8XOY22M4GG883</td><td><a href="https://www.deka.de/deka-gruppe" target="_blank" rel="noopener">www.deka.de/deka-gruppe</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">01/12/2025</td></tr><tr><td class="ent"><b>DekaBank Deutsche Girozentrale</b>
+ <td class="mono">01/12/2025</td></tr><tr data-entity-row data-search="dekabank deutsche girozentrale dekabank deutsche girozentrale 0w2pzjm8xoy22m4gg883 https://www.deka.de/deka-gruppe c"><td class="ent"><b>DekaBank Deutsche Girozentrale</b>
  </td>
  <td class="mono">0W2PZJM8XOY22M4GG883</td><td><a href="https://www.deka.de/deka-gruppe" target="_blank" rel="noopener">www.deka.de/deka-gruppe</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span></td>
- <td class="mono">25/06/2026</td></tr><tr><td class="ent"><b>Deutsche WertpapierService Bank AG</b>
+ <td class="mono">25/06/2026</td></tr><tr data-entity-row data-search="deutsche wertpapierservice bank ag deutsche wertpapierservice bank ag (dwpbank) 529900exg2pm316iso63 https://dwpbank.de e"><td class="ent"><b>Deutsche WertpapierService Bank AG</b>
  <span class="brand">Deutsche WertpapierService Bank AG (dwpbank)</span></td>
  <td class="mono">529900EXG2PM316ISO63</td><td><a href="https://dwpbank.de" target="_blank" rel="noopener">dwpbank.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">04/12/2025</td></tr><tr><td class="ent"><b>Deutsche WertpapierService Bank AG</b>
+ <td class="mono">04/12/2025</td></tr><tr data-entity-row data-search="deutsche wertpapierservice bank ag deutsche wertpapierservice bank ag 529900exg2pm316iso63 https://dwpbank.de a c d j"><td class="ent"><b>Deutsche WertpapierService Bank AG</b>
  </td>
  <td class="mono">529900EXG2PM316ISO63</td><td><a href="https://dwpbank.de" target="_blank" rel="noopener">dwpbank.de</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">28/08/2026</td></tr><tr><td class="ent"><b>Dietrich &amp; Richter Private Asset Management AG</b>
+ <td class="mono">28/08/2026</td></tr><tr data-entity-row data-search="dietrich &amp; richter private asset management ag dietrich &amp; richter private asset management ag 98450068f88bdf3e8d32 https://www.drpam.de/ h i"><td class="ent"><b>Dietrich &amp; Richter Private Asset Management AG</b>
  </td>
  <td class="mono">98450068F88BDF3E8D32</td><td><a href="https://www.drpam.de/" target="_blank" rel="noopener">www.drpam.de</a></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">18/08/2025</td></tr><tr><td class="ent"><b>DLT Securities GmbH</b>
+ <td class="mono">18/08/2025</td></tr><tr data-entity-row data-search="dlt securities gmbh dlt securities gmbh 391200eyhdbm1yqi7a32 www.dlt-finance.com c d e f"><td class="ent"><b>DLT Securities GmbH</b>
  </td>
- <td class="mono">391200EYHDBM1YQI7A32</td><td><a href="www.dlt-finance.com" target="_blank" rel="noopener">www.dlt-finance.com</a></td>
+ <td class="mono">391200EYHDBM1YQI7A32</td><td><span class="muted" title="Source value not a valid absolute URL: www.dlt-finance.com">www.dlt-finance.com</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span></td>
- <td class="mono">18/12/2025</td></tr><tr><td class="ent"><b>Donau-Iller-Bank eG</b>
+ <td class="mono">18/12/2025</td></tr><tr data-entity-row data-search="donau-iller-bank eg donau-iller-bank eg 529900p8okwo25xe4251 www.donau-iller-bank.de e"><td class="ent"><b>Donau-Iller-Bank eG</b>
  </td>
- <td class="mono">529900P8OKWO25XE4251</td><td><a href="www.donau-iller-bank.de" target="_blank" rel="noopener">www.donau-iller-bank.de</a></td>
+ <td class="mono">529900P8OKWO25XE4251</td><td><span class="muted" title="Source value not a valid absolute URL: www.donau-iller-bank.de">www.donau-iller-bank.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">01/07/2026</td></tr><tr><td class="ent"><b>DonauCapital Wertpapier GmbH</b>
+ <td class="mono">01/07/2026</td></tr><tr data-entity-row data-search="donaucapital wertpapier gmbh donaucapital wertpapier gmbh 894500c1qm5xbu31pt95 https://www.donaucapital.de g"><td class="ent"><b>DonauCapital Wertpapier GmbH</b>
  </td>
  <td class="mono">894500C1QM5XBU31PT95</td><td><a href="https://www.donaucapital.de" target="_blank" rel="noopener">www.donaucapital.de</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">27/10/2025</td></tr><tr><td class="ent"><b>DZ BANK AG Deutsche Zentral-Genossenschaftsbank</b>
+ <td class="mono">27/10/2025</td></tr><tr data-entity-row data-search="dz bank ag deutsche zentral-genossenschaftsbank dz bank ag deutsche zentral-genossenschaftsbank 529900hnoaa1kxqjuq27 https://www.dzbank.de a e j"><td class="ent"><b>DZ BANK AG Deutsche Zentral-Genossenschaftsbank</b>
  </td>
  <td class="mono">529900HNOAA1KXQJUQ27</td><td><a href="https://www.dzbank.de" target="_blank" rel="noopener">www.dzbank.de</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">23/12/2025</td></tr><tr><td class="ent"><b>EUWAX AG</b>
+ <td class="mono">23/12/2025</td></tr><tr data-entity-row data-search="euwax ag euwax ag 529900032tyr45xiew79 www.euwax-ag.de c d"><td class="ent"><b>EUWAX AG</b>
  </td>
- <td class="mono">529900032TYR45XIEW79</td><td><a href="www.euwax-ag.de" target="_blank" rel="noopener">www.euwax-ag.de</a></td>
+ <td class="mono">529900032TYR45XIEW79</td><td><span class="muted" title="Source value not a valid absolute URL: www.euwax-ag.de">www.euwax-ag.de</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span></td>
- <td class="mono">01/04/2025</td></tr><tr><td class="ent"><b>EUWAX AG</b>
+ <td class="mono">01/04/2025</td></tr><tr data-entity-row data-search="euwax ag euwax ag 529900032tyr45xiew79 www.euwax-ag.de e"><td class="ent"><b>EUWAX AG</b>
  </td>
- <td class="mono">529900032TYR45XIEW79</td><td><a href="www.euwax-ag.de" target="_blank" rel="noopener">www.euwax-ag.de</a></td>
+ <td class="mono">529900032TYR45XIEW79</td><td><span class="muted" title="Source value not a valid absolute URL: www.euwax-ag.de">www.euwax-ag.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">21/11/2025</td></tr><tr><td class="ent"><b>Fels wealth GmbH</b>
+ <td class="mono">21/11/2025</td></tr><tr data-entity-row data-search="fels wealth gmbh fels wealth gmbh 391200luyjy880gpsy38 https://followmymoney.de/ e g h i"><td class="ent"><b>Fels wealth GmbH</b>
  </td>
  <td class="mono">391200LUYJY880GPSY38</td><td><a href="https://followmymoney.de/" target="_blank" rel="noopener">followmymoney.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">10/12/2025</td></tr><tr><td class="ent"><b>FIDUS Finanz AG</b>
+ <td class="mono">10/12/2025</td></tr><tr data-entity-row data-search="fidus finanz ag fidus finanz ag 529900xcsueubt5tx310 https://fidus-ag.de e g h i"><td class="ent"><b>FIDUS Finanz AG</b>
  </td>
  <td class="mono">529900XCSUEUBT5TX310</td><td><a href="https://fidus-ag.de" target="_blank" rel="noopener">fidus-ag.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing advice on crypto-assets">h</span> <span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">19/12/2025</td></tr><tr><td class="ent"><b>flatexDEGIRO Bank AG</b>
+ <td class="mono">19/12/2025</td></tr><tr data-entity-row data-search="flatexdegiro bank ag flatexdegiro bank ag 529900mkyc1fz83v3121 www.flatexdegiro.com/de/flatexdegiro-bank/login e"><td class="ent"><b>flatexDEGIRO Bank AG</b>
  </td>
- <td class="mono">529900MKYC1FZ83V3121</td><td><a href="www.flatexdegiro.com/de/flatexdegiro-bank/login" target="_blank" rel="noopener">www.flatexdegiro.com/de/flatexdegiro-bank/login</a></td>
+ <td class="mono">529900MKYC1FZ83V3121</td><td><span class="muted" title="Source value not a valid absolute URL: www.flatexdegiro.com/de/flatexdegiro-bank/login">www.flatexdegiro.com/de/flatexdegiro-bank/login</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">04/04/2025</td></tr><tr><td class="ent"><b>Hannoversche Volksbank eG</b>
+ <td class="mono">04/04/2025</td></tr><tr data-entity-row data-search="hannoversche volksbank eg hannoversche volksbank eg 529900mqjiqgd8n3yv53 https://www.hannoversche-volksbank.de/ e"><td class="ent"><b>Hannoversche Volksbank eG</b>
  </td>
  <td class="mono">529900MQJIQGD8N3YV53</td><td><a href="https://www.hannoversche-volksbank.de/" target="_blank" rel="noopener">www.hannoversche-volksbank.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">12/12/2025</td></tr><tr><td class="ent"><b>Hauck Aufhäuser Digital Custody GmbH</b>
+ <td class="mono">12/12/2025</td></tr><tr data-entity-row data-search="hauck aufhäuser digital custody gmbh hauck aufhäuser digital custody gmbh 391200lacj601i2onv49 https://www.hal-privatbank.com/asset-servicing/digitale-assets/regulierte-kryptoverwahrung a j"><td class="ent"><b>Hauck Aufhäuser Digital Custody GmbH</b>
  </td>
  <td class="mono">391200LACJ601I2ONV49</td><td><a href="https://www.hal-privatbank.com/asset-servicing/digitale-assets/regulierte-kryptoverwahrung" target="_blank" rel="noopener">www.hal-privatbank.com/asset-servicing/digitale-assets/regulierte-kryptoverwahrung</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">28/11/2025</td></tr><tr><td class="ent"><b>Huddlestock GmbH</b>
+ <td class="mono">28/11/2025</td></tr><tr data-entity-row data-search="huddlestock gmbh huddlestock gmbh 549300y6tsd1ducxd871 www.huddlestock.com g"><td class="ent"><b>Huddlestock GmbH</b>
  </td>
- <td class="mono">549300Y6TSD1DUCXD871</td><td><a href="www.huddlestock.com" target="_blank" rel="noopener">www.huddlestock.com</a></td>
+ <td class="mono">549300Y6TSD1DUCXD871</td><td><span class="muted" title="Source value not a valid absolute URL: www.huddlestock.com">www.huddlestock.com</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">06/11/2025</td></tr><tr><td class="ent"><b>Hyphe Markets GmbH</b>
+ <td class="mono">06/11/2025</td></tr><tr data-entity-row data-search="hyphe markets gmbh hyphe markets gmbh 3912000k5naa00m4hh04 https://hyphe.com/ c"><td class="ent"><b>Hyphe Markets GmbH</b>
  </td>
  <td class="mono">3912000K5NAA00M4HH04</td><td><a href="https://hyphe.com/" target="_blank" rel="noopener">hyphe.com</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span></td>
- <td class="mono">24/11/2025</td></tr><tr><td class="ent"><b>IG Europe GmbH</b>
+ <td class="mono">24/11/2025</td></tr><tr data-entity-row data-search="ig europe gmbh ig europe gmbh 213800hfc5g4v293bn91 https://www.ig.com/de a c d e"><td class="ent"><b>IG Europe GmbH</b>
  </td>
  <td class="mono">213800HFC5G4V293BN91</td><td><a href="https://www.ig.com/de" target="_blank" rel="noopener">www.ig.com/de</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">21/11/2025</td></tr><tr><td class="ent"><b>ISF Institut Deutsch-Schweizer Finanzdienstleistungen GmbH</b>
+ <td class="mono">21/11/2025</td></tr><tr data-entity-row data-search="isf institut deutsch-schweizer finanzdienstleistungen gmbh isf institut deutsch-schweizer finanzdienstleistungen gmbh 529900n0vn8j4s4scg77 www.isf-institut.de g"><td class="ent"><b>ISF Institut Deutsch-Schweizer Finanzdienstleistungen GmbH</b>
  </td>
- <td class="mono">529900N0VN8J4S4SCG77</td><td><a href="www.isf-institut.de" target="_blank" rel="noopener">www.isf-institut.de</a></td>
+ <td class="mono">529900N0VN8J4S4SCG77</td><td><span class="muted" title="Source value not a valid absolute URL: www.isf-institut.de">www.isf-institut.de</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">28/01/2026</td></tr><tr><td class="ent"><b>Joh. Berenberg, Gossler &amp; Co. KG</b>
+ <td class="mono">28/01/2026</td></tr><tr data-entity-row data-search="joh. berenberg, gossler &amp; co. kg joh. berenberg, gossler &amp; co. kg 529900uc2od7ii24z667 www.berenberg.de a c d e g j"><td class="ent"><b>Joh. Berenberg, Gossler &amp; Co. KG</b>
  </td>
- <td class="mono">529900UC2OD7II24Z667</td><td><a href="www.berenberg.de" target="_blank" rel="noopener">www.berenberg.de</a></td>
+ <td class="mono">529900UC2OD7II24Z667</td><td><span class="muted" title="Source value not a valid absolute URL: www.berenberg.de">www.berenberg.de</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">06/03/2026</td></tr><tr><td class="ent"><b>JT Technologies GmbH</b>
+ <td class="mono">06/03/2026</td></tr><tr data-entity-row data-search="jt technologies gmbh justtrade 529900yerl5tv5yjcr45 https://www.justtrade.com/ e g"><td class="ent"><b>JT Technologies GmbH</b>
  <span class="brand">justTRADE</span></td>
  <td class="mono">529900YERL5TV5YJCR45</td><td><a href="https://www.justtrade.com/" target="_blank" rel="noopener">www.justtrade.com</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">14/07/2026</td></tr><tr><td class="ent"><b>Lang &amp; Schwarz TradeCenter AG &amp; Co. KG</b>
+ <td class="mono">14/07/2026</td></tr><tr data-entity-row data-search="lang &amp; schwarz tradecenter ag &amp; co. kg lang &amp; schwarz tradecenter ag &amp; co. kg 5299000tz4osoogu1120 https://www.ls-tc.de/de/ c d"><td class="ent"><b>Lang &amp; Schwarz TradeCenter AG &amp; Co. KG</b>
  </td>
  <td class="mono">5299000TZ4OSOOGU1120</td><td><a href="https://www.ls-tc.de/de/" target="_blank" rel="noopener">www.ls-tc.de/de</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span></td>
- <td class="mono">22/10/2025</td></tr><tr><td class="ent"><b>MLP Banking AG</b>
+ <td class="mono">22/10/2025</td></tr><tr data-entity-row data-search="mlp banking ag mlp banking ag 529900yobxee8zym4v56 www.mlp.de e"><td class="ent"><b>MLP Banking AG</b>
  </td>
- <td class="mono">529900YOBXEE8ZYM4V56</td><td><a href="www.mlp.de" target="_blank" rel="noopener">www.mlp.de</a></td>
+ <td class="mono">529900YOBXEE8ZYM4V56</td><td><span class="muted" title="Source value not a valid absolute URL: www.mlp.de">www.mlp.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">11/03/2026</td></tr><tr><td class="ent"><b>N26 Bank SE</b>
+ <td class="mono">11/03/2026</td></tr><tr data-entity-row data-search="n26 bank se n26 bank se 529900jb9xyz8e87n345 n26 – die erste onlinebank, die du lieben wirst g"><td class="ent"><b>N26 Bank SE</b>
  </td>
- <td class="mono">529900JB9XYZ8E87N345</td><td><a href="N26 – Die erste Onlinebank, die du lieben wirst" target="_blank" rel="noopener">N26 – Die erste Onlinebank, die du lieben wirst</a></td>
+ <td class="mono">529900JB9XYZ8E87N345</td><td><span class="muted" title="Source value not a valid absolute URL: N26 – Die erste Onlinebank, die du lieben wirst">N26 – Die erste Onlinebank, die du lieben wirst</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">14/05/2025</td></tr><tr><td class="ent"><b>Plutos Vermögensverwaltung AG</b>
+ <td class="mono">14/05/2025</td></tr><tr data-entity-row data-search="plutos vermögensverwaltung ag plutos vermögensverwaltung ag 391200pnj2skona02n07 www.plutos.de i"><td class="ent"><b>Plutos Vermögensverwaltung AG</b>
  </td>
- <td class="mono">391200PNJ2SKONA02N07</td><td><a href="www.plutos.de" target="_blank" rel="noopener">www.plutos.de</a></td>
+ <td class="mono">391200PNJ2SKONA02N07</td><td><span class="muted" title="Source value not a valid absolute URL: www.plutos.de">www.plutos.de</span></td>
  <td class="svcs"><span class="svc" title="Providing portfolio management">i</span></td>
- <td class="mono">25/02/2026</td></tr><tr><td class="ent"><b>Raiffeisebank Auerbach-Freihung eG</b>
+ <td class="mono">25/02/2026</td></tr><tr data-entity-row data-search="raiffeisebank auerbach-freihung eg raiffeisebank auerbach-freihung eg 529900r1a7tn1lm06875 www.rb-af.de e"><td class="ent"><b>Raiffeisebank Auerbach-Freihung eG</b>
  </td>
- <td class="mono">529900R1A7TN1LM06875</td><td><a href="www.rb-af.de" target="_blank" rel="noopener">www.rb-af.de</a></td>
+ <td class="mono">529900R1A7TN1LM06875</td><td><span class="muted" title="Source value not a valid absolute URL: www.rb-af.de">www.rb-af.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">19/06/2026</td></tr><tr><td class="ent"><b>Raiffeisenbank Falkenstein-Wörth</b>
+ <td class="mono">19/06/2026</td></tr><tr data-entity-row data-search="raiffeisenbank aidlingen eg raiffeisenbank aidlingen eg 529900jeklbm7sstqs98 www.ihrziel.de e"><td class="ent"><b>Raiffeisenbank Aidlingen eG</b>
  </td>
- <td class="mono">391200236O6D9SGBE882</td><td><a href="www.rbfalkenstein-woerth.de" target="_blank" rel="noopener">www.rbfalkenstein-woerth.de</a></td>
+ <td class="mono">529900JEKLBM7SSTQS98</td><td><span class="muted" title="Source value not a valid absolute URL: www.IhrZiel.de">www.IhrZiel.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">13/07/2026</td></tr><tr><td class="ent"><b>Raiffeisenbank Kreis Kelheim eG</b>
+ <td class="mono">07/08/2026</td></tr><tr data-entity-row data-search="raiffeisenbank falkenstein-wörth raiffeisenbank falkenstein-wörth 391200236o6d9sgbe882 www.rbfalkenstein-woerth.de e"><td class="ent"><b>Raiffeisenbank Falkenstein-Wörth</b>
  </td>
- <td class="mono">529900UYTAE51VW2TG15</td><td><a href="www.rbkk.de" target="_blank" rel="noopener">www.rbkk.de</a></td>
+ <td class="mono">391200236O6D9SGBE882</td><td><span class="muted" title="Source value not a valid absolute URL: www.rbfalkenstein-woerth.de">www.rbfalkenstein-woerth.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">13/05/2026</td></tr><tr><td class="ent"><b>Scalable Capital Bank GmbH</b>
+ <td class="mono">13/07/2026</td></tr><tr data-entity-row data-search="raiffeisenbank kreis kelheim eg raiffeisenbank kreis kelheim eg 529900uytae51vw2tg15 www.rbkk.de e"><td class="ent"><b>Raiffeisenbank Kreis Kelheim eG</b>
  </td>
- <td class="mono">391200Y3EUNL4LTXRP94</td><td><a href="www.scalable.capital" target="_blank" rel="noopener">www.scalable.capital</a></td>
+ <td class="mono">529900UYTAE51VW2TG15</td><td><span class="muted" title="Source value not a valid absolute URL: www.rbkk.de">www.rbkk.de</span></td>
+ <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
+ <td class="mono">13/05/2026</td></tr><tr data-entity-row data-search="scalable capital bank gmbh scalable capital bank gmbh 391200y3eunl4ltxrp94 www.scalable.capital h"><td class="ent"><b>Scalable Capital Bank GmbH</b>
+ </td>
+ <td class="mono">391200Y3EUNL4LTXRP94</td><td><span class="muted" title="Source value not a valid absolute URL: www.scalable.capital">www.scalable.capital</span></td>
  <td class="svcs"><span class="svc" title="Providing advice on crypto-assets">h</span></td>
- <td class="mono">02/03/2026</td></tr><tr><td class="ent"><b>sino Aktiengesellschaft</b>
+ <td class="mono">02/03/2026</td></tr><tr data-entity-row data-search="sino aktiengesellschaft sino aktiengesellschaft 5299008gfcqy16m45r85 https://www.sino.de/ g"><td class="ent"><b>sino Aktiengesellschaft</b>
  </td>
  <td class="mono">5299008GFCQY16M45R85</td><td><a href="https://www.sino.de/" target="_blank" rel="noopener">www.sino.de</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">24/11/2025</td></tr><tr><td class="ent"><b>Smartbroker AG</b>
+ <td class="mono">24/11/2025</td></tr><tr data-entity-row data-search="smartbroker ag smartbroker ag 391200n0byczf2f43264 https://www.smartbrokerplus.de/de-de/ g"><td class="ent"><b>Smartbroker AG</b>
  </td>
  <td class="mono">391200N0BYCZF2F43264</td><td><a href="https://www.smartbrokerplus.de/de-de/" target="_blank" rel="noopener">www.smartbrokerplus.de/de-de</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">11/08/2025</td></tr><tr><td class="ent"><b>Spar- und Kreditbank Rheinstetten eG</b>
+ <td class="mono">11/08/2025</td></tr><tr data-entity-row data-search="spar- und kreditbank rheinstetten eg spar- und kreditbank rheinstetten eg 529900793u3p5c6yyc70 www.skb-rheinstetten.de e"><td class="ent"><b>Spar- und Kreditbank Rheinstetten eG</b>
  </td>
- <td class="mono">529900793U3P5C6YYC70</td><td><a href="www.skb-rheinstetten.de" target="_blank" rel="noopener">www.skb-rheinstetten.de</a></td>
+ <td class="mono">529900793U3P5C6YYC70</td><td><span class="muted" title="Source value not a valid absolute URL: www.skb-rheinstetten.de">www.skb-rheinstetten.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">27/07/2026</td></tr><tr><td class="ent"><b>Sutor Bank GmbH</b>
+ <td class="mono">27/07/2026</td></tr><tr data-entity-row data-search="sutor bank gmbh sutor bank gmbh 529900bqbp4jmdpm6q19 https://www.sutorbank.de/ e"><td class="ent"><b>Sutor Bank GmbH</b>
  </td>
  <td class="mono">529900BQBP4JMDPM6Q19</td><td><a href="https://www.sutorbank.de/" target="_blank" rel="noopener">www.sutorbank.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">18/12/2025</td></tr><tr><td class="ent"><b>Tangany GmbH</b>
+ <td class="mono">18/12/2025</td></tr><tr data-entity-row data-search="tangany gmbh tangany gmbh 529900wkxs5zpjy9w498 www.tangany.com a j"><td class="ent"><b>Tangany GmbH</b>
  </td>
- <td class="mono">529900WKXS5ZPJY9W498</td><td><a href="www.tangany.com" target="_blank" rel="noopener">www.tangany.com</a></td>
+ <td class="mono">529900WKXS5ZPJY9W498</td><td><span class="muted" title="Source value not a valid absolute URL: www.tangany.com">www.tangany.com</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">08/08/2025</td></tr><tr><td class="ent"><b>Trade Republic Bank GmbH</b>
+ <td class="mono">08/08/2025</td></tr><tr data-entity-row data-search="trade republic bank gmbh trade republic bank gmbh 5299009ifx1xtkdy4568 https://traderepublic.com/ a e g j"><td class="ent"><b>Trade Republic Bank GmbH</b>
  </td>
  <td class="mono">5299009IFX1XTKDY4568</td><td><a href="https://traderepublic.com/" target="_blank" rel="noopener">traderepublic.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">28/04/2025</td></tr><tr><td class="ent"><b>Traders Place GmbH &amp; Co. KGaA</b>
+ <td class="mono">28/04/2025</td></tr><tr data-entity-row data-search="traders place gmbh &amp; co. kgaa traders place gmbh &amp; co. kgaa 5299005y5t6lxfaxdq78 https://tradersplace.de/angebot/uebersicht/kryptowaehrungen g"><td class="ent"><b>Traders Place GmbH &amp; Co. KGaA</b>
  </td>
  <td class="mono">5299005Y5T6LXFAXDQ78</td><td><a href="https://tradersplace.de/angebot/uebersicht/kryptowaehrungen" target="_blank" rel="noopener">tradersplace.de/angebot/uebersicht/kryptowaehrungen</a></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
- <td class="mono">21/07/2025</td></tr><tr><td class="ent"><b>Tradevest Digital Assets GmbH</b>
+ <td class="mono">21/07/2025</td></tr><tr data-entity-row data-search="tradevest digital assets gmbh tradevest 529900suzqe32vscs310 www.tradevest.ai a j"><td class="ent"><b>Tradevest Digital Assets GmbH</b>
  <span class="brand">Tradevest</span></td>
- <td class="mono">529900SUZQE32VSCS310</td><td><a href="www.tradevest.ai" target="_blank" rel="noopener">www.tradevest.ai</a></td>
+ <td class="mono">529900SUZQE32VSCS310</td><td><span class="muted" title="Source value not a valid absolute URL: www.tradevest.ai">www.tradevest.ai</span></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">19/12/2025</td></tr><tr><td class="ent"><b>Tradevest Markets AG</b>
+ <td class="mono">19/12/2025</td></tr><tr data-entity-row data-search="tradevest markets ag tradevest markets ag 391200kfwd74zyneea30 https://www.tradevest.ai/de c d e"><td class="ent"><b>Tradevest Markets AG</b>
  </td>
  <td class="mono">391200KFWD74ZYNEEA30</td><td><a href="https://www.tradevest.ai/de" target="_blank" rel="noopener">www.tradevest.ai/de</a></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">19/12/2025</td></tr><tr><td class="ent"><b>Tradias GmbH</b>
+ <td class="mono">19/12/2025</td></tr><tr data-entity-row data-search="tradias gmbh tradias gmbh 529900fybtagios54m10 www.tradias.de c d e f j"><td class="ent"><b>Tradias GmbH</b>
  </td>
- <td class="mono">529900FYBTAGIOS54M10</td><td><a href="www.tradias.de" target="_blank" rel="noopener">www.tradias.de</a></td>
+ <td class="mono">529900FYBTAGIOS54M10</td><td><span class="muted" title="Source value not a valid absolute URL: www.tradias.de">www.tradias.de</span></td>
  <td class="svcs"><span class="svc" title="Exchange of crypto-assets for funds">c</span> <span class="svc" title="Exchange of crypto-assets for other crypto-assets">d</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Placing of crypto-assets">f</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">19/03/2025</td></tr><tr><td class="ent"><b>V-Bank AG</b>
+ <td class="mono">19/03/2025</td></tr><tr data-entity-row data-search="v-bank ag v-bank ag 529900fb29c36lktaw50 https://www.v-bank.com/ a e j"><td class="ent"><b>V-Bank AG</b>
  </td>
  <td class="mono">529900FB29C36LKTAW50</td><td><a href="https://www.v-bank.com/" target="_blank" rel="noopener">www.v-bank.com</a></td>
  <td class="svcs"><span class="svc" title="Custody and administration of crypto-assets">a</span> <span class="svc" title="Execution of orders for crypto-assets">e</span> <span class="svc" title="Providing transfer services for crypto-assets">j</span></td>
- <td class="mono">19/09/2025</td></tr><tr><td class="ent"><b>VBU Volksbank im Unterland eG</b>
+ <td class="mono">19/09/2025</td></tr><tr data-entity-row data-search="vbu volksbank im unterland eg vbu volksbank im unterland eg 52990053qe1m1v4p6u87 www.vbu-volksbank.de e"><td class="ent"><b>VBU Volksbank im Unterland eG</b>
  </td>
- <td class="mono">52990053QE1M1V4P6U87</td><td><a href="www.vbu-volksbank.de" target="_blank" rel="noopener">www.vbu-volksbank.de</a></td>
+ <td class="mono">52990053QE1M1V4P6U87</td><td><span class="muted" title="Source value not a valid absolute URL: www.vbu-volksbank.de">www.vbu-volksbank.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">03/08/2026</td></tr><tr><td class="ent"><b>Vermögensbutler GmbH</b>
+ <td class="mono">03/08/2026</td></tr><tr data-entity-row data-search="vermögensbutler gmbh vermögensbutler gmbh 529900adw3q5twadil41 www.vermoegensbutler.de g h"><td class="ent"><b>Vermögensbutler GmbH</b>
  </td>
- <td class="mono">529900ADW3Q5TWADIL41</td><td><a href="www.vermoegensbutler.de" target="_blank" rel="noopener">www.vermoegensbutler.de</a></td>
+ <td class="mono">529900ADW3Q5TWADIL41</td><td><span class="muted" title="Source value not a valid absolute URL: www.vermoegensbutler.de">www.vermoegensbutler.de</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span> <span class="svc" title="Providing advice on crypto-assets">h</span></td>
- <td class="mono">06/05/2026</td></tr><tr><td class="ent"><b>Volksbank Beilstein-Ilsfeld-Abstatt eG</b>
+ <td class="mono">06/05/2026</td></tr><tr data-entity-row data-search="volksbank beilstein-ilsfeld-abstatt eg volksbank beilstein-ilsfeld-abstatt eg 5299002rcy3d5m211g35 www.vb-bia.de e"><td class="ent"><b>Volksbank Beilstein-Ilsfeld-Abstatt eG</b>
  </td>
- <td class="mono">5299002RCY3D5M211G35</td><td><a href="www.vb-bia.de" target="_blank" rel="noopener">www.vb-bia.de</a></td>
+ <td class="mono">5299002RCY3D5M211G35</td><td><span class="muted" title="Source value not a valid absolute URL: www.vb-bia.de">www.vb-bia.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">06/08/2026</td></tr><tr><td class="ent"><b>Volksbank eG - Die Gestalterbank</b>
+ <td class="mono">06/08/2026</td></tr><tr data-entity-row data-search="volksbank eg - die gestalterbank volksbank eg - die gestalterbank 52990093inyljnwhq228 www.gestalterbank.de e"><td class="ent"><b>Volksbank eG - Die Gestalterbank</b>
  </td>
- <td class="mono">52990093INYLJNWHQ228</td><td><a href="www.gestalterbank.de" target="_blank" rel="noopener">www.gestalterbank.de</a></td>
+ <td class="mono">52990093INYLJNWHQ228</td><td><span class="muted" title="Source value not a valid absolute URL: www.gestalterbank.de">www.gestalterbank.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">27/07/2026</td></tr><tr><td class="ent"><b>Volksbank Heiden eG</b>
+ <td class="mono">27/07/2026</td></tr><tr data-entity-row data-search="volksbank heiden eg volksbank heiden eg 391200cc11kvfa4hgg45 www.vbheiden.de e"><td class="ent"><b>Volksbank Heiden eG</b>
  </td>
- <td class="mono">391200CC11KVFA4HGG45</td><td><a href="www.vbheiden.de" target="_blank" rel="noopener">www.vbheiden.de</a></td>
+ <td class="mono">391200CC11KVFA4HGG45</td><td><span class="muted" title="Source value not a valid absolute URL: www.vbheiden.de">www.vbheiden.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">02/06/2026</td></tr><tr><td class="ent"><b>Volksbank Mittlerer Schwarzwald eG</b>
+ <td class="mono">02/06/2026</td></tr><tr data-entity-row data-search="volksbank mittlerer schwarzwald eg volksbank mittlerer schwarzwald eg 5299009a1sal2urxg283 https://www.voba-msw.de e"><td class="ent"><b>Volksbank Mittlerer Schwarzwald eG</b>
  </td>
  <td class="mono">5299009A1SAL2URXG283</td><td><a href="https://www.voba-msw.de" target="_blank" rel="noopener">www.voba-msw.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">05/11/2025</td></tr><tr><td class="ent"><b>Volksbank Raiffeisenbank Bayern Mitte eG</b>
+ <td class="mono">05/11/2025</td></tr><tr data-entity-row data-search="volksbank raiffeisenbank bayern mitte eg volksbank raiffeisenbank bayern mitte eg 529900zw3qh424ny3959 www.vr-bayernmitte.de e"><td class="ent"><b>Volksbank Raiffeisenbank Bayern Mitte eG</b>
  </td>
- <td class="mono">529900ZW3QH424NY3959</td><td><a href="www.vr-bayernmitte.de" target="_blank" rel="noopener">www.vr-bayernmitte.de</a></td>
+ <td class="mono">529900ZW3QH424NY3959</td><td><span class="muted" title="Source value not a valid absolute URL: www.vr-bayernmitte.de">www.vr-bayernmitte.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">05/11/2025</td></tr><tr><td class="ent"><b>Volksbank Raiffeisenbank Oberbayern Südost eG</b>
+ <td class="mono">05/11/2025</td></tr><tr data-entity-row data-search="volksbank raiffeisenbank oberbayern südost eg volksbank raiffeisenbank oberbayern südost eg 5299005o2lpwv9ip2z21 www-vrbank-obb-so.de e"><td class="ent"><b>Volksbank Raiffeisenbank Oberbayern Südost eG</b>
  </td>
- <td class="mono">5299005O2LPWV9IP2Z21</td><td><a href="www-vrbank-obb-so.de" target="_blank" rel="noopener">www-vrbank-obb-so.de</a></td>
+ <td class="mono">5299005O2LPWV9IP2Z21</td><td><span class="muted" title="Source value not a valid absolute URL: www-vrbank-obb-so.de">www-vrbank-obb-so.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">24/07/2026</td></tr><tr><td class="ent"><b>Volksbank Raiffeisenbank Würzburg eG</b>
+ <td class="mono">24/07/2026</td></tr><tr data-entity-row data-search="volksbank raiffeisenbank würzburg eg volksbank raiffeisenbank würzburg eg 529900yt5vcryq5wi821 https://www.vr-bank-wuerzburg.de e"><td class="ent"><b>Volksbank Raiffeisenbank Würzburg eG</b>
  </td>
  <td class="mono">529900YT5VCRYQ5WI821</td><td><a href="https://www.vr-bank-wuerzburg.de" target="_blank" rel="noopener">www.vr-bank-wuerzburg.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">17/12/2025</td></tr><tr><td class="ent"><b>Volksbank Schwarzwald-Donau-Neckar eG</b>
+ <td class="mono">17/12/2025</td></tr><tr data-entity-row data-search="volksbank schwarzwald-donau-neckar eg volksbank schwarzwald-donau-neckar eg 5299009adj9xfqvukz50 www.vbsdn.de e"><td class="ent"><b>Volksbank Schwarzwald-Donau-Neckar eG</b>
  </td>
- <td class="mono">5299009ADJ9XFQVUKZ50</td><td><a href="www.vbsdn.de" target="_blank" rel="noopener">www.vbsdn.de</a></td>
+ <td class="mono">5299009ADJ9XFQVUKZ50</td><td><span class="muted" title="Source value not a valid absolute URL: www.vbsdn.de">www.vbsdn.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">02/07/2026</td></tr><tr><td class="ent"><b>VR Bank Schleswig-Holstein Mitte eG</b>
+ <td class="mono">02/07/2026</td></tr><tr data-entity-row data-search="vr bank schleswig-holstein mitte eg vr bank schleswig-holstein mitte eg 52990017dzkeh3q6pv63 https://www.vrbank-sh-mitte.de e"><td class="ent"><b>VR Bank Schleswig-Holstein Mitte eG</b>
  </td>
  <td class="mono">52990017DZKEH3Q6PV63</td><td><a href="https://www.vrbank-sh-mitte.de" target="_blank" rel="noopener">www.vrbank-sh-mitte.de</a></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">21/07/2026</td></tr><tr><td class="ent"><b>VR Bank Südpfalz eG</b>
+ <td class="mono">21/07/2026</td></tr><tr data-entity-row data-search="vr bank südpfalz eg vr bank südpfalz eg 529900mbfu46n7u7mf46 www.vrbank-suedpfalz.de e"><td class="ent"><b>VR Bank Südpfalz eG</b>
  </td>
- <td class="mono">529900MBFU46N7U7MF46</td><td><a href="www.vrbank-suedpfalz.de" target="_blank" rel="noopener">www.vrbank-suedpfalz.de</a></td>
+ <td class="mono">529900MBFU46N7U7MF46</td><td><span class="muted" title="Source value not a valid absolute URL: www.vrbank-suedpfalz.de">www.vrbank-suedpfalz.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">12/12/2025</td></tr><tr><td class="ent"><b>VR TeilhaberBank Metropolregion Nürnberg eG</b>
+ <td class="mono">12/12/2025</td></tr><tr data-entity-row data-search="vr teilhaberbank metropolregion nürnberg eg vr teilhaberbank metropolregion nürnberg eg 529900zmdtsqyeyckl45 www.vr-teilhaberbank.de e"><td class="ent"><b>VR TeilhaberBank Metropolregion Nürnberg eG</b>
  </td>
- <td class="mono">529900ZMDTSQYEYCKL45</td><td><a href="www.vr-teilhaberbank.de" target="_blank" rel="noopener">www.vr-teilhaberbank.de</a></td>
+ <td class="mono">529900ZMDTSQYEYCKL45</td><td><span class="muted" title="Source value not a valid absolute URL: www.vr-teilhaberbank.de">www.vr-teilhaberbank.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">12/12/2025</td></tr><tr><td class="ent"><b>VR-Bank Augsburg-Ostallgäu eG</b>
+ <td class="mono">12/12/2025</td></tr><tr data-entity-row data-search="vr-bank augsburg-ostallgäu eg vr-bank augsburg-ostallgäu eg 529900cg5hheut0ahk10 www.vrbank-augsburg-ostallgaeu.de e"><td class="ent"><b>VR-Bank Augsburg-Ostallgäu eG</b>
  </td>
- <td class="mono">529900CG5HHEUT0AHK10</td><td><a href="www.vrbank-augsburg-ostallgaeu.de" target="_blank" rel="noopener">www.vrbank-augsburg-ostallgaeu.de</a></td>
+ <td class="mono">529900CG5HHEUT0AHK10</td><td><span class="muted" title="Source value not a valid absolute URL: www.vrbank-augsburg-ostallgaeu.de">www.vrbank-augsburg-ostallgaeu.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">21/07/2026</td></tr><tr><td class="ent"><b>VR-Bank Erding eG</b>
+ <td class="mono">21/07/2026</td></tr><tr data-entity-row data-search="vr-bank erding eg vr-bank erding eg 529900iaz7k53lg7bt89 www.vr-bank-erding.de e"><td class="ent"><b>VR-Bank Erding eG</b>
  </td>
- <td class="mono">529900IAZ7K53LG7BT89</td><td><a href="www.vr-bank-erding.de" target="_blank" rel="noopener">www.vr-bank-erding.de</a></td>
+ <td class="mono">529900IAZ7K53LG7BT89</td><td><span class="muted" title="Source value not a valid absolute URL: www.vr-bank-erding.de">www.vr-bank-erding.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">04/08/2026</td></tr><tr><td class="ent"><b>VR-Bank Landau-Mengkofen eG</b>
+ <td class="mono">04/08/2026</td></tr><tr data-entity-row data-search="vr-bank landau-mengkofen eg vr-bank landau-mengkofen eg 529900e9as5rg8ybf660 www.vrbanklm.de e"><td class="ent"><b>VR-Bank Landau-Mengkofen eG</b>
  </td>
- <td class="mono">529900E9AS5RG8YBF660</td><td><a href="www.vrbanklm.de" target="_blank" rel="noopener">www.vrbanklm.de</a></td>
+ <td class="mono">529900E9AS5RG8YBF660</td><td><span class="muted" title="Source value not a valid absolute URL: www.vrbanklm.de">www.vrbanklm.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">29/07/2026</td></tr><tr><td class="ent"><b>VR-Bank Rottal-Inn eG</b>
+ <td class="mono">29/07/2026</td></tr><tr data-entity-row data-search="vr-bank rottal-inn eg vr-bank rottal-inn eg 529900apx10rf2pbtb22 www.vrbk.de e"><td class="ent"><b>VR-Bank Rottal-Inn eG</b>
  </td>
- <td class="mono">529900APX10RF2PBTB22</td><td><a href="www.vrbk.de" target="_blank" rel="noopener">www.vrbk.de</a></td>
+ <td class="mono">529900APX10RF2PBTB22</td><td><span class="muted" title="Source value not a valid absolute URL: www.vrbk.de">www.vrbk.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">16/12/2025</td></tr><tr><td class="ent"><b>Westerwald Bank eG Volks- und Raiffeisenbank</b>
+ <td class="mono">16/12/2025</td></tr><tr data-entity-row data-search="westerwald bank eg volks- und raiffeisenbank westerwald bank eg volks- und raiffeisenbank 52990071yx99sh321f74 www.westerwaldbank.de e"><td class="ent"><b>Westerwald Bank eG Volks- und Raiffeisenbank</b>
  </td>
- <td class="mono">52990071YX99SH321F74</td><td><a href="www.westerwaldbank.de" target="_blank" rel="noopener">www.westerwaldbank.de</a></td>
+ <td class="mono">52990071YX99SH321F74</td><td><span class="muted" title="Source value not a valid absolute URL: www.westerwaldbank.de">www.westerwaldbank.de</span></td>
  <td class="svcs"><span class="svc" title="Execution of orders for crypto-assets">e</span></td>
- <td class="mono">11/12/2025</td></tr><tr><td class="ent"><b>wSw PortfolioManagement AG</b>
+ <td class="mono">11/12/2025</td></tr><tr data-entity-row data-search="wsw portfoliomanagement ag wsw portfoliomanagement ag 3912005ceqv0xygfeo78 www.wsw-pm.de g"><td class="ent"><b>wSw PortfolioManagement AG</b>
  </td>
- <td class="mono">3912005CEQV0XYGFEO78</td><td><a href="www.wsw-pm.de" target="_blank" rel="noopener">www.wsw-pm.de</a></td>
+ <td class="mono">3912005CEQV0XYGFEO78</td><td><span class="muted" title="Source value not a valid absolute URL: www.wsw-pm.de">www.wsw-pm.de</span></td>
  <td class="svcs"><span class="svc" title="Reception and transmission of orders">g</span></td>
  <td class="mono">19/12/2025</td></tr></tbody></table>
-<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
+	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
+	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
 <div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
-CASPS.csv <code>sha256 6695cd09464c354a&hellip;</code>
-(385 rows, Wed, 12 Aug 2026 08:47:01 GMT). Rendered from
+CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
+(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
 <code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
 are national competence and are not held for any jurisdiction.</div>
 </div></body></html>
