@@ -10,17 +10,17 @@
     },
     "provisions": {
       "file": "search/provisions.json",
-      "entries": 28,
-      "bytes": 143013,
-      "gzip_bytes": 27694,
-      "sha256": "b4d1773618c46bb1ea86b958f9c3530a3a5b68fdb6f34ba5f1de2528b528097e"
+      "entries": 30,
+      "bytes": 150025,
+      "gzip_bytes": 29118,
+      "sha256": "c60eb24db16a97177c0f263630758a149d97c3b9b03e35c82633f2bda8722646"
     },
     "pages": {
       "file": "search/pages.json",
       "entries": 41,
       "bytes": 29310,
-      "gzip_bytes": 4998,
-      "sha256": "6fea93271c7fc797e98135d69811c2a9fb7e7cadc98e682730b01f2b834a467d"
+      "gzip_bytes": 5004,
+      "sha256": "5524f452c72036de7b8f5556e7dcb260beaa76c5e3b9ac94a32703413883b26c"
     }
   },
   "boundary": "All search results are references to held sources. Absence from held registers does not establish that an entity is clean."
