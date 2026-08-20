@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-20T20:03:20Z",
+  "catalog": {
+    "path": "watchlist/catalog.json",
+    "sha256": "e146d5057cc9e5dc5849c2d66d8aa45efc161c27c7be7f033c4440edca786008",
+    "items": 4422
+  },
+  "latest_weekly_archive": {
+    "state": "held_archive_record",
+    "route": "/week/2026-W34",
+    "week": "2026-W34",
+    "checked_records": [
+      {
+        "source_file": "content/digest/2026-08-20.txt",
+        "sha256": "7a41b970d07ff753b67478f5bef114066d63b85add0274c94ee819d6e140cc93",
+        "date": "2026-08-20"
+      }
+    ],
+    "message": "The latest retained weekly archive record is a source-comparison record. A missing literal item mention is not a finding about the item."
+  },
+  "boundary": "Watch entries are stored only in the visitor's browser. The catalog shows held source state and literal weekly archive mentions; it does not infer changes, legal status, applicability, or an absence from a register."
+}
