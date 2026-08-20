@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "shards": {
+    "entities": {
+      "file": "search/entities.json",
+      "entries": 4362,
+      "bytes": 3339810,
+      "gzip_bytes": 220243,
+      "sha256": "d35f58cc64a0375cb57a1657cb94ea98aacc191a8c25e73c557ed425be8818de"
+    },
+    "provisions": {
+      "file": "search/provisions.json",
+      "entries": 28,
+      "bytes": 142565,
+      "gzip_bytes": 27677,
+      "sha256": "7cb65aa1d79a8b5923bdc5c5d0ac4ccef967e5d355bc468052bf7df0066376fa"
+    },
+    "pages": {
+      "file": "search/pages.json",
+      "entries": 41,
+      "bytes": 28299,
+      "gzip_bytes": 5007,
+      "sha256": "9c5c7bb0d11c220f24346ae51998436d0883e995ee73309e558e2b60fdecdb86"
+    }
+  },
+  "boundary": "All search results are references to held sources. Absence from held registers does not establish that an entity is clean."
+}
