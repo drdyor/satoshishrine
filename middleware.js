@@ -3,7 +3,7 @@
 // public repo. Remove this file (and preview.html) to open the site fully.
 export const config = { matcher: '/:path*' };
 
-const PUBLIC_PATHS = new Set(['/preview.html', '/robots.txt', '/favicon.ico']);
+const PUBLIC_PATHS = new Set(['/preview', '/preview.html', '/robots.txt', '/favicon.ico']);
 
 function authed(request) {
   const expected = process.env.SHRINE_GATE || '';
@@ -26,7 +26,7 @@ export default function middleware(request) {
   if (PUBLIC_PATHS.has(path)) return;
   if (path === '/') {
     return new Response(null, {
-      headers: { 'x-middleware-rewrite': new URL('/preview.html', url).toString() },
+      headers: { 'x-middleware-rewrite': new URL('/preview', url).toString() },
     });
   }
   return new Response('SatoshiShrine private preview. Enter any username and the access password.', {
