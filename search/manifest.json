@@ -5,22 +5,22 @@
       "file": "search/entities.json",
       "entries": 4362,
       "bytes": 3666960,
-      "gzip_bytes": 339440,
-      "sha256": "30ed85576e3780c6a8d76e58109e1f4313fd948470a356f7c988c14ab919cda4"
+      "gzip_bytes": 339407,
+      "sha256": "825cd5523753c3536de5ff32f303c08fa94400e199c3053e5323c36c98b67141"
     },
     "provisions": {
       "file": "search/provisions.json",
       "entries": 28,
       "bytes": 143013,
-      "gzip_bytes": 27691,
-      "sha256": "ee1d7567720cabf6d00b38ab7b1025a83cfdd49713083ee08cc70ae3cc96f347"
+      "gzip_bytes": 27694,
+      "sha256": "b4d1773618c46bb1ea86b958f9c3530a3a5b68fdb6f34ba5f1de2528b528097e"
     },
     "pages": {
       "file": "search/pages.json",
       "entries": 41,
-      "bytes": 28955,
-      "gzip_bytes": 5021,
-      "sha256": "88acd7c7bfe8239a74cd0508dba7022e7bd7c050e15efe2644ad8fa734b07084"
+      "bytes": 29294,
+      "gzip_bytes": 4991,
+      "sha256": "4e910cce157e311b373f57e5b6f373e41e5f7711f27233d14265d56cf301eb9f"
     }
   },
   "boundary": "All search results are references to held sources. Absence from held registers does not establish that an entity is clean."
