@@ -1,0 +1,202 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-W34 source archive — SatoshiShrine</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+:root{--bg:#0a1f17;--panel:#0f2a20;--panel2:#123024;--ink:#f2ecdb;--soft:#9db0a4;
+--faint:#5f7568;--line:#1f4536;--line2:#163329;--gold:#cba95f;--green:#46a878;
+--warn:#d9a441;--no:#e0836a;
+--sh-sm:0 1px 2px rgba(0,0,0,.3);--sh:0 2px 4px rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.5)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:300;
+line-height:1.6;-webkit-font-smoothing:antialiased;
+background:var(--bg);
+background-image:radial-gradient(1200px 680px at 50% -12%,#123227 0%,rgba(18,50,39,0) 60%),
+radial-gradient(900px 500px at 88% 8%,rgba(203,169,95,.05) 0%,rgba(203,169,95,0) 55%);
+background-attachment:fixed}
+.wrap{max-width:1180px;margin:0 auto;padding:1.4rem 1.25rem 5rem}
+a{color:var(--gold)}
+h1,.brand,.jc .cc,.tile .v,h2.sec,.med .big{font-variant-numeric:tabular-nums}
+.top{display:flex;align-items:center;gap:.75rem;padding:.8rem 0 1.2rem;
+border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{width:38px;height:38px;border-radius:50%;border:1px solid rgba(203,169,95,.4);
+background:#1a3224;display:grid;place-items:center;color:var(--gold);
+font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;
+box-shadow:inset 0 1px 0 rgba(203,169,95,.25)}
+.brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:600;
+letter-spacing:.01em}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:.6rem;font-weight:500;
+letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin-top:-.15rem}
+.topnav{margin-left:auto;display:flex;gap:.45rem;flex-wrap:wrap}
+.topnav a{font-size:.8rem;text-decoration:none;color:var(--soft);border:1px solid var(--line);
+padding:.3rem .75rem;border-radius:9px}
+.topnav a:hover{border-color:var(--gold);color:var(--gold)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2.4rem;align-items:center;
+margin:2.4rem 0 2rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:1.6rem}}
+.eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+font-weight:600;margin:0 0 .55rem}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.02;margin:0}
+h1 em{font-style:italic;color:var(--gold)}
+h1::after{content:"";display:block;width:60px;height:2px;margin:.7rem 0 0;border-radius:2px;
+background:linear-gradient(90deg,var(--gold),transparent)}
+.lede{color:var(--soft);max-width:52ch;font-weight:400;margin:1.1rem 0 0;font-size:1.02rem}
+/* THE ONE LUX MOMENT — the single strongest finding, as a gold-ringed medallion. Fills the
+   hero's right column and leads with the number that most contradicts the market. */
+.med{justify-self:center;width:262px;text-align:center;padding:1.8rem 1.4rem;
+border-radius:22px;background:linear-gradient(180deg,#123227,#0d241b);
+border:1px solid rgba(203,169,95,.28);box-shadow:var(--sh),inset 0 1px 0 rgba(203,169,95,.18)}
+.med .ring{width:150px;height:150px;margin:0 auto .9rem;border-radius:50%;display:grid;
+place-items:center;background:radial-gradient(circle at 50% 38%,#16382a,#0c221a);
+border:1px solid rgba(203,169,95,.35);box-shadow:0 0 0 6px rgba(203,169,95,.05),
+inset 0 2px 14px rgba(0,0,0,.5)}
+.med .big{font-family:'Cormorant Garamond',Georgia,serif;font-size:4.4rem;font-weight:600;
+line-height:1;color:var(--gold)}
+.med .cap{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;
+margin-top:.3rem}
+.med .sub2{font-size:.76rem;color:var(--soft);margin-top:.35rem;line-height:1.4}
+.med .stamp{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--line)}
+.regions{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.region{border:1px solid var(--line);border-radius:11px;padding:.5rem .9rem;font-size:.84rem;
+background:var(--panel);color:var(--soft);display:flex;gap:.5rem;align-items:center}
+.region.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+.region .n{font-size:.68rem;color:var(--faint);border:1px solid var(--line);
+border-radius:6px;padding:.05rem .4rem}
+.region.off{opacity:.72}
+.region.off .n{color:var(--warn);border-color:rgba(217,164,65,.4)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;
+margin-bottom:1.8rem}
+.tile{background:linear-gradient(180deg,var(--panel),#0c2118);border:1px solid var(--line);
+border-radius:18px;padding:1.15rem 1.2rem;box-shadow:var(--sh-sm);position:relative;
+overflow:hidden}
+.tile::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,var(--gold),transparent)}
+.tile .k{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+font-weight:600}
+.tile .v{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.3rem;font-weight:600;
+line-height:1.05;margin:.2rem 0 .1rem}
+.tile .s{font-size:.79rem;color:var(--soft)}
+/* overflow-wrap:anywhere, NOT word-break:break-all — the latter split the retrieval date
+   mid-word ("Wed, 12 Au / g 2026") and a mangled date undermines the one thing this line
+   exists to prove. Long hashes still wrap; words stay whole. */
+.tile .src{font-size:.67rem;color:var(--faint);margin-top:.55rem;padding-top:.45rem;
+border-top:1px dashed var(--line);word-break:normal;overflow-wrap:anywhere;line-height:1.45}
+.tile.gold .v{color:var(--gold)} .tile.warn .v{color:var(--warn)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:1.4rem;align-items:start}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+h2.sec{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;
+margin:0 0 .3rem}
+.sub{color:var(--soft);font-size:.86rem;margin:0 0 .9rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:.7rem}
+.jc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1rem;
+position:relative;overflow:hidden;box-shadow:var(--sh-sm);
+transition:box-shadow .2s,border-color .2s,transform .2s}
+.jc:hover{box-shadow:var(--sh);border-color:rgba(203,169,95,.4);transform:translateY(-2px)}
+.jc::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,var(--green),transparent)}
+.jc.flagged::before{background:linear-gradient(90deg,var(--warn),transparent)}
+.jc.eea::before{background:linear-gradient(90deg,var(--faint),transparent)}
+.jc .cc{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;
+line-height:1}
+.jc .nm{font-size:.92rem;font-weight:500;margin-bottom:.5rem}
+.jc .row{display:flex;gap:1rem;margin-top:.5rem}
+.jc .n{font-size:1.15rem;font-weight:500}
+.jc .lbl{font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.jc .flag{display:inline-block;margin-top:.55rem;font-size:.64rem;letter-spacing:.08em;
+text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);
+border-radius:6px;padding:.1rem .45rem}
+.jc .flag.grey{color:var(--faint);border-color:var(--line)}
+.jc.market::before{background:linear-gradient(90deg,var(--gold),var(--warn),transparent)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.28rem}
+.market-type{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.market-state{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(217,164,65,.35);border-radius:6px;padding:.09rem .35rem}
+.market-lanes{margin-top:.65rem;padding-top:.55rem;border-top:1px dashed var(--line);font-size:.72rem;color:var(--soft);line-height:1.45}
+.market-lanes b{color:var(--ink);font-weight:500}.market-lanes .dim{color:var(--faint)}
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem;
+margin-top:1.6rem}
+.ev{display:flex;gap:.9rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.ev:first-of-type{border-top:none}
+.ev .d{font-size:.74rem;color:var(--faint);white-space:nowrap;min-width:82px}
+.ev .b{font-size:.88rem}
+.ev .who{color:var(--soft);font-size:.77rem}
+.rail{display:flex;flex-direction:column;gap:.8rem}
+.gaps{background:var(--panel);border:1px solid rgba(217,164,65,.3);
+border-left:3px solid var(--warn);border-radius:0 16px 16px 0;padding:1rem 1.1rem}
+.gaps h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;
+margin:0 0 .5rem;color:var(--warn)}
+.gaps li{font-size:.83rem;color:var(--soft);margin:.45rem 0}
+.cta{background:var(--panel2);border:1px solid rgba(203,169,95,.3);border-radius:16px;
+padding:1.1rem;text-align:center}
+.cta a{display:inline-block;margin-top:.6rem;padding:.55rem 1.1rem;border-radius:11px;
+background:var(--gold);color:#08150f;text-decoration:none;font-weight:600;font-size:.87rem}
+.prov{margin-top:2.4rem;padding-top:1.1rem;border-top:1px solid var(--line);
+font-size:.75rem;color:var(--faint)}
+.prov code{color:var(--soft);word-break:break-all}
+a.jc{text-decoration:none;color:inherit;display:block}
+a.jc .open{display:block;margin-top:.7rem;font-size:.68rem;letter-spacing:.08em;
+text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity .2s}
+a.jc:hover .open{opacity:1}
+.stat{display:inline-block;margin-right:1.1rem;font-size:.95rem;color:var(--soft)}
+.stat b{color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;
+font-weight:600;margin-right:.25rem}
+table.reg{width:100%;border-collapse:collapse;margin:.4rem 0 .6rem;font-size:.86rem}
+table.reg th{text-align:left;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;
+color:var(--faint);font-weight:600;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+table.reg td{padding:.6rem .6rem;border-bottom:1px solid var(--line2);vertical-align:top}
+table.reg tr:hover td{background:var(--panel)}
+table.reg .ent b{font-weight:500}
+table.reg .brand{display:block;font-size:.74rem;color:var(--faint)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;
+color:var(--soft)}
+.svc{display:inline-block;width:1.35rem;text-align:center;border:1px solid var(--line);
+border-radius:5px;font-size:.72rem;margin:.1rem .12rem 0 0;color:var(--gold);cursor:help}
+.legend{font-size:.72rem;color:var(--faint);line-height:1.7;margin:.4rem 0 0}
+.legend b{color:var(--gold);font-weight:600}
+.rz{font-size:.8rem;color:var(--soft);margin-top:.25rem}
+.muted{color:var(--faint)}
+.global-hero{display:flex;align-items:end;justify-content:space-between;gap:1.2rem;margin:2rem 0 1.25rem;flex-wrap:wrap}
+.global-hero .lede{margin:0;max-width:60ch}.global-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.global-count span{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.35rem}
+.market-filters{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.1rem 0 1.35rem}
+.market-filters button{border:1px solid var(--line);border-radius:999px;padding:.38rem .72rem;background:var(--panel);color:var(--soft);font:500 .72rem 'Jost',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+	.market-filters button:hover,.market-filters button.on{border-color:var(--gold);color:var(--ink);background:var(--panel2)}
+	.global-card[hidden]{display:none}.global-card .market-lanes{min-height:3.8rem}.global-card .market-state.not-held{color:var(--faint);border-color:var(--line)}
+	.nav-note{font-size:.72rem;color:var(--faint);margin:.8rem 0 1.35rem}.market-legend{display:flex;gap:.65rem;flex-wrap:wrap;font-size:.72rem;color:var(--soft);margin:.3rem 0 1.2rem}.market-legend b{color:var(--gold);font-weight:500}
+	.register-tools{display:flex;align-items:center;gap:.7rem;margin:1rem 0 1.1rem;flex-wrap:wrap}.register-tools label{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:600}.register-tools input{min-width:15rem;flex:1;padding:.62rem .75rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:400 .85rem 'Jost',sans-serif}.register-tools input:focus{outline:1px solid var(--gold);border-color:var(--gold)}.register-tools .count{font-size:.74rem;color:var(--soft)}.jc[hidden]{display:none}.history-table code{font-size:.7rem;word-break:break-all}
+	@media print{.regions,.cta,.topnav,.pathfinder-actions{display:none}.pathfinder-grid{display:block}.pathfinder-panel,.citation-card{break-inside:avoid;box-shadow:none}.pathfinder-shell{max-width:none;margin:0}.pathfinder-boundary{border-color:#555;color:#222}.pathfinder-panel,.citation-card{color:#111;background:#fff;border-color:#999}.pathfinder-panel p,.citation-card p,.citation-meta,.sub{color:#333!important}a{color:#111;text-decoration:underline}}
+		.subscribe-form{margin-top:.8rem;text-align:left}.subscribe-form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}.subscribe-form input[type="email"]{width:100%;padding:.6rem .7rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:400 .86rem 'Jost',sans-serif}.subscribe-form input[type="email"]:focus{outline:1px solid var(--gold);border-color:var(--gold)}.subscribe-form input[type="submit"]{width:100%;margin-top:.55rem;padding:.55rem 1.1rem;border:0;border-radius:11px;background:var(--gold);color:#08150f;font:600 .87rem 'Jost',sans-serif;cursor:pointer}.subscribe-note{font-size:.68rem;color:var(--faint);margin:.55rem 0 0;line-height:1.45}.subscribe-page{max-width:680px;margin:5rem auto 0}
+		.pathfinder-actions{display:grid;gap:.7rem;padding:.8rem 0 1rem}.pathfinder-actions button{width:100%;padding:.62rem .75rem;border:1px solid var(--gold);border-radius:10px;background:var(--gold);color:#08150f;font:600 .82rem 'Jost',sans-serif;cursor:pointer}.pathfinder-actions button:active{transform:scale(.98)}.pathfinder-actions .subscribe-form{margin:0}.pathfinder-actions .subscribe-note{margin:.45rem 0 0}
+	.pathfinder-link{display:inline-block;margin-top:1rem;padding:.65rem 1rem;border:1px solid rgba(203,169,95,.55);border-radius:11px;color:var(--gold);text-decoration:none;font-weight:500;font-size:.86rem;background:rgba(203,169,95,.06)}.pathfinder-link:hover{background:rgba(203,169,95,.14);color:var(--ink)}.pathfinder-shell{max-width:980px;margin:2.1rem auto 0}.pathfinder-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.82fr);gap:1.2rem;align-items:start}@media(max-width:820px){.pathfinder-grid{grid-template-columns:1fr}}.pathfinder-panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:1.15rem;box-shadow:var(--sh-sm)}.pathfinder-panel h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;margin:0 0 .45rem}.pathfinder-field{border:0;padding:0;margin:1.1rem 0}.pathfinder-field legend{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.5rem}.pathfinder-options{display:flex;gap:.45rem;flex-wrap:wrap}.pathfinder-options label{font-size:.78rem;color:var(--soft);padding:.38rem .55rem;border:1px solid var(--line);border-radius:8px;cursor:pointer}.pathfinder-options label:has(input:checked){border-color:var(--gold);color:var(--ink);background:var(--panel2)}.pathfinder-options input{accent-color:var(--gold);margin-right:.28rem}.pathfinder-output{display:flex;flex-direction:column;gap:.75rem}.citation-card{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:.9rem;background:#0c2118}.citation-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.18rem;margin:0 0 .35rem}.citation-card p{font-size:.8rem;color:var(--soft);margin:.45rem 0}.citation-card .quote{font-family:Georgia,serif;color:var(--ink);font-size:.84rem;line-height:1.55}.citation-meta{font-size:.67rem;color:var(--faint);overflow-wrap:anywhere}.state-card{border-top:1px dashed var(--line);padding:.7rem 0}.state-card:first-child{border-top:0;padding-top:0}.state-card b{font-weight:500}.pathfinder-boundary{background:rgba(217,164,65,.08);border:1px solid rgba(217,164,65,.32);border-radius:12px;padding:.9rem;font-size:.8rem;color:var(--soft)}
+.weekly-entry{margin:1.4rem 0;padding:1.2rem;border:1px solid var(--line);background:var(--panel)}.weekly-entry pre{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .84rem/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--soft)}.week-list{display:grid;gap:.7rem}.week-list a{display:block;padding:1rem;border:1px solid var(--line);background:var(--panel);text-decoration:none}.week-list a:hover{border-color:var(--gold)}</style></head><body><div class="wrap"><div class="top"><div class="mark">&#167;</div><div class="brand">SatoshiShrine<small>Weekly source archive</small></div><div class="topnav"><a href="../index.html">EU register</a><a href="../history.html">Evidence history</a><a href="../pathfinder.html">Pathfinder</a></div></div><p class="eyebrow" style="margin-top:1.8rem">Permanent public archive</p><h1>2026-W34<br><em>source records.</em></h1><p class="lede">This page groups retained digest drafts from one ISO week. It records held-source comparison outputs, not market-access, authorisation, enforcement, or compliance conclusions.</p><p class="sub"><a href="index.html">&larr; All archived weeks</a></p><section class="weekly-entry"><p class="eyebrow">Digest record · 2026-08-19</p><h2>2026-W34 source comparison</h2><p class="sub">Archived from <code>content/digest/2026-08-19.txt</code>. It was not sent as email. This page preserves the held-source comparison and its stated boundary; it does not add a legal or entity conclusion.</p><pre>EU Crypto Register source comparison — 2026-08-19
+
+EU source-file comparison
+
+No source-row changes were detected between the two held ESMA snapshots. This is not a claim of no regulatory change.
+
+FOR COUNSEL
+Source-file differences and held artifact provenance.
+- CASPS.csv: sha256 cdc4a27f5d68f992870a97a50d7f9bf99c0ecd1cef656aa8f3c256d5bb0cfa2c · <a href="https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv" target="_blank" rel="noopener">https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv</a>
+- NCASP.csv: sha256 fb778670226ec6d53e2cc23f210736ce02ab832c78a3a5e5ea08138deaf8dc5f · <a href="https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv" target="_blank" rel="noopener">https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv</a>
+
+IN PLAIN SIGHT
+No new, removed, or edited rows were detected in the tracked held CASPS.csv and NCASP.csv source files. This does not describe authorisations, enforcement, or regulatory activity beyond those two held files.
+Register-observation boundary: A regulator-observation interval requires repeated comparable source observations and is not inferred from this source comparison.
+
+Provenance boundary: A source-row addition, removal, or field edit is not a licence, revocation, compliance, or enforcement conclusion.
+
+Draft was not sent. This separate page is the permanent public source archive.</pre></section><section class="weekly-entry"><p class="eyebrow">Digest record · 2026-08-20</p><h2>2026-W34 source comparison</h2><p class="sub">Archived from <code>content/digest/2026-08-20.txt</code>. It was not sent as email. This page preserves the held-source comparison and its stated boundary; it does not add a legal or entity conclusion.</p><pre>EU Crypto Register source comparison — 2026-08-20
+
+EU source-file comparison
+
+No source-row changes were detected between the two held ESMA snapshots. This is not a claim of no regulatory change.
+
+FOR COUNSEL
+Source-file differences and held artifact provenance.
+- CASPS.csv: sha256 cdc4a27f5d68f992870a97a50d7f9bf99c0ecd1cef656aa8f3c256d5bb0cfa2c · <a href="https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv" target="_blank" rel="noopener">https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv</a>
+- NCASP.csv: sha256 fb778670226ec6d53e2cc23f210736ce02ab832c78a3a5e5ea08138deaf8dc5f · <a href="https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv" target="_blank" rel="noopener">https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv</a>
+
+IN PLAIN SIGHT
+No new, removed, or edited rows were detected in the tracked held CASPS.csv and NCASP.csv source files. This does not describe authorisations, enforcement, or regulatory activity beyond those two held files.
+Register-observation boundary: A regulator-observation interval requires repeated comparable source observations and is not inferred from this source comparison.
+
+Provenance boundary: A source-row addition, removal, or field edit is not a licence, revocation, compliance, or enforcement conclusion.
+
+Draft was not sent. This separate page is the permanent public source archive.</pre></section></div><style id="shrine-search-style">#shrine-search-open{margin-left:.45rem;border:1px solid #1f4536;border-radius:9px;padding:.3rem .75rem;background:#0f2a20;color:#9db0a4;font:500 .8rem Jost,system-ui,sans-serif;cursor:pointer}#shrine-search-open:hover{border-color:#cba95f;color:#f2ecdb}#shrine-search{position:fixed;inset:0;z-index:50;background:rgba(3,12,8,.78);padding:8vh 1rem;display:none}#shrine-search[data-open="true"]{display:block}.shrine-search-panel{max-width:820px;margin:auto;background:#0f2a20;border:1px solid rgba(203,169,95,.45);box-shadow:0 18px 40px rgba(0,0,0,.5);padding:1rem}.shrine-search-head{display:flex;gap:.7rem;align-items:center}.shrine-search-head input{width:100%;padding:.8rem;border:1px solid #1f4536;background:#0a1f17;color:#f2ecdb;font:400 1rem Jost,system-ui,sans-serif}.shrine-search-head button{border:0;background:transparent;color:#9db0a4;cursor:pointer}.shrine-search-note{margin:.7rem 0;color:#9db0a4;font:400 .8rem/1.5 Jost,system-ui,sans-serif}.shrine-search-group{border-top:1px solid #1f4536;padding-top:.55rem;margin-top:.7rem}.shrine-search-group h2{font:600 .68rem Jost,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#cba95f;margin:.1rem 0 .4rem}.shrine-search-result{display:block;padding:.55rem 0;color:#f2ecdb;text-decoration:none;border-top:1px solid #163329}.shrine-search-result:hover{color:#cba95f}.shrine-search-result small{display:block;color:#9db0a4;font:400 .74rem Jost,system-ui,sans-serif}.shrine-search-result code{font-size:.64rem;color:#5f7568;word-break:break-all}.shrine-search-empty{border-top:1px solid #1f4536;padding:.8rem 0;color:#d9a441;font:400 .85rem/1.45 Jost,system-ui,sans-serif}</style><button id="shrine-search-open" type="button" aria-haspopup="dialog" aria-controls="shrine-search">Search held sources</button><div id="shrine-search" role="dialog" aria-modal="true" aria-label="Search held sources" data-open="false"><div class="shrine-search-panel"><div class="shrine-search-head"><input id="shrine-search-input" type="search" autocomplete="off" placeholder="Entity, provision, jurisdiction, or market"><button id="shrine-search-close" type="button" aria-label="Close search">Close</button></div><p class="shrine-search-note">Typo-tolerant search across local held-source indexes. Your query stays in this browser.</p><div id="shrine-search-results"><p class="shrine-search-note">Enter at least two characters to load the local search indexes.</p></div></div></div><script id="shrine-search-script">(()=>{const open=document.querySelector('#shrine-search-open'),dialog=document.querySelector('#shrine-search'),input=document.querySelector('#shrine-search-input'),close=document.querySelector('#shrine-search-close'),results=document.querySelector('#shrine-search-results');const shards={},names=['entities','provisions','pages'];const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const norm=v=>String(v??'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();const dist=(a,b)=>{const p=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let prev=p[0];p[0]=i;for(let j=1;j<=b.length;j++){const next=p[j];p[j]=Math.min(p[j]+1,p[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=next}}return p[b.length]};const load=async()=>{await Promise.all(names.map(async n=>{if(!shards[n])shards[n]=await fetch('/search/'+n+'.json').then(r=>{if(!r.ok)throw new Error('Local '+n+' shard is unavailable');return r.json()})}));return names.flatMap(n=>shards[n].entries)};const score=(q,e)=>{const target=norm(e.search_text),terms=target.split(/\s+/),tokens=norm(q).split(/\s+/);let total=0;for(const token of tokens){if(target.includes(token)){total+=100;continue}const limit=Math.max(1,Math.floor(token.length*.25));const best=Math.min(...terms.filter(t=>Math.abs(t.length-token.length)<=limit+1).map(t=>dist(token,t)),99);if(best>limit)return -1;total+=40-best}return total};const render=async()=>{const q=input.value.trim();if(q.length<2){results.innerHTML='<p class="shrine-search-note">Enter at least two characters to search local held-source indexes.</p>';return}try{const matches=(await load()).map(e=>({e,s:score(q,e)})).filter(x=>x.s>=0).sort((a,b)=>b.s-a.s||a.e.title.localeCompare(b.e.title)).slice(0,24);if(!matches.length){results.innerHTML='<p class="shrine-search-empty"><b>Not in the held corpus.</b> Absence from held registers &ne; clean. Try a legal name, register identifier, provision title, jurisdiction, or market.</p>';return}const groups={entities:[],provisions:[],jurisdictions:[],markets:[]};matches.forEach(({e})=>groups[e.group]?.push(e));results.innerHTML=Object.entries(groups).filter(([,rows])=>rows.length).map(([group,rows])=>'<section class="shrine-search-group"><h2>'+esc(group)+'</h2>'+rows.slice(0,8).map(e=>'<a class="shrine-search-result" href="'+esc(e.route)+'"><b>'+esc(e.title)+'</b><small>'+esc(e.subtitle)+'</small><code>'+esc(e.evidence.artifact)+' · sha256 '+esc(e.evidence.sha256)+'</code></a>').join('')+'</section>').join('')}catch(error){results.innerHTML='<p class="shrine-search-empty">Local held-source indexes could not be loaded. No result is inferred.</p>'}};const show=()=>{dialog.dataset.open='true';input.focus()};const hide=()=>{dialog.dataset.open='false';open.focus()};open.addEventListener('click',show);close.addEventListener('click',hide);input.addEventListener('input',render);document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();show()}if(e.key==='Escape'&&dialog.dataset.open==='true')hide()});})();</script><script>document.querySelector(".topnav")?.append(document.querySelector("#shrine-search-open"));</script></body></html>
