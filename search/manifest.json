@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "shards": {
     "entities": {
       "file": "search/entities.json",
@@ -8,20 +8,87 @@
       "gzip_bytes": 339407,
       "sha256": "825cd5523753c3536de5ff32f303c08fa94400e199c3053e5323c36c98b67141"
     },
-    "provisions": {
-      "file": "search/provisions.json",
-      "entries": 30,
-      "bytes": 150025,
-      "gzip_bytes": 29118,
-      "sha256": "c60eb24db16a97177c0f263630758a149d97c3b9b03e35c82633f2bda8722646"
-    },
     "pages": {
       "file": "search/pages.json",
-      "entries": 41,
-      "bytes": 29310,
-      "gzip_bytes": 5004,
-      "sha256": "5524f452c72036de7b8f5556e7dcb260beaa76c5e3b9ac94a32703413883b26c"
+      "entries": 4386,
+      "bytes": 14006047,
+      "gzip_bytes": 367029,
+      "sha256": "5888e0db8ddee8297bd7110f777aa6bd415e249f1442ff4f7356531bfb401304"
+    },
+    "provisions-dac8-amendment": {
+      "file": "search/provisions-dac8-amendment.json",
+      "entries": 11,
+      "bytes": 118982,
+      "gzip_bytes": 26263,
+      "sha256": "8cbb2e30b7b8bfd9032de9380042e2a4641ea4ce90269c84dc40fc7cadf80567"
+    },
+    "provisions-level2-and-held-surfaces": {
+      "file": "search/provisions-level2-and-held-surfaces.json",
+      "entries": 13,
+      "bytes": 46126,
+      "gzip_bytes": 10257,
+      "sha256": "a15fd6d4d0800480a8b06842c08699b015c90191ae84da41fc345477776fac3b"
+    },
+    "provisions-mica-001-030": {
+      "file": "search/provisions-mica-001-030.json",
+      "entries": 30,
+      "bytes": 119892,
+      "gzip_bytes": 22832,
+      "sha256": "0ebf8c2dca2fcfc18f553c0f78c8ac9e64adead1b1e99d3d4ded5bae0263a9bb"
+    },
+    "provisions-mica-031-060": {
+      "file": "search/provisions-mica-031-060.json",
+      "entries": 30,
+      "bytes": 127583,
+      "gzip_bytes": 24713,
+      "sha256": "3c00086b679b6062251f6af0bcae60e0b278f804ecea31dd5f6a8d230518b76d"
+    },
+    "provisions-mica-061-090": {
+      "file": "search/provisions-mica-061-090.json",
+      "entries": 30,
+      "bytes": 112867,
+      "gzip_bytes": 22674,
+      "sha256": "efe0981e71dc3f218bcfc22adc993cabe527b16ea9c5f8d1315ffdf34955eb44"
+    },
+    "provisions-mica-091-120": {
+      "file": "search/provisions-mica-091-120.json",
+      "entries": 30,
+      "bytes": 105571,
+      "gzip_bytes": 19677,
+      "sha256": "1ce81673b7aae0bad64a2ea7fff85ee93295b7b71cd200f10518ef04e509be30"
+    },
+    "provisions-mica-121-149": {
+      "file": "search/provisions-mica-121-149.json",
+      "entries": 29,
+      "bytes": 96649,
+      "gzip_bytes": 18257,
+      "sha256": "5c720029cf1becb63ca3d34b2d2ef67c6ae876230857982c31b6590fbfdf62ef"
+    },
+    "provisions-mica-annexes": {
+      "file": "search/provisions-mica-annexes.json",
+      "entries": 6,
+      "bytes": 69608,
+      "gzip_bytes": 12514,
+      "sha256": "24d3abb7aa8c43b9a86b1215b0b79239b67c8898fd2c23113e00b0b0a37f7053"
+    },
+    "provisions-mica-recitals": {
+      "file": "search/provisions-mica-recitals.json",
+      "entries": 119,
+      "bytes": 185112,
+      "gzip_bytes": 32398,
+      "sha256": "7b3c95505284dc024a66bc8a65339bb54d8d28a5233bca4a8834a9740e135471"
     }
   },
-  "boundary": "All search results are references to held sources. Absence from held registers does not establish that an entity is clean."
+  "provision_shards": [
+    "provisions-dac8-amendment",
+    "provisions-level2-and-held-surfaces",
+    "provisions-mica-001-030",
+    "provisions-mica-031-060",
+    "provisions-mica-061-090",
+    "provisions-mica-091-120",
+    "provisions-mica-121-149",
+    "provisions-mica-annexes",
+    "provisions-mica-recitals"
+  ],
+  "boundary": "Search retrieves held records and source references. A missing result is not a finding about an entity or provision."
 }
