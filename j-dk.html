@@ -212,10 +212,11 @@ holds the licence, which is routinely not the brand a group trades under.</p>
  <td class="mono">30/06/2026</td></tr></tbody></table>
 	<p class="legend"><b>a</b> Custody and administration of crypto-assets &middot; <b>b</b> Operation of a trading platform &middot; <b>c</b> Exchange of crypto-assets for funds &middot; <b>d</b> Exchange of crypto-assets for other crypto-assets &middot; <b>e</b> Execution of orders for crypto-assets &middot; <b>f</b> Placing of crypto-assets &middot; <b>g</b> Reception and transmission of orders &middot; <b>h</b> Providing advice on crypto-assets &middot; <b>i</b> Providing portfolio management &middot; <b>j</b> Providing transfer services for crypto-assets</p>
 
-	<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
-<div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
+		<script>(()=>{const input=document.querySelector('#entity-search');if(!input)return;const rows=[...document.querySelectorAll('[data-entity-row]')],count=document.querySelector('#entity-count');const render=()=>{const q=input.value.trim().toLowerCase();let shown=0;rows.forEach(row=>{const ok=!q||row.dataset.search.includes(q);row.hidden=!ok;if(ok)shown++});count.textContent=`${shown} entity record${shown===1?'':'s'} shown`;};input.addEventListener('input',render);render();})();</script>
+		<h2 class="sec" style="margin-top:1.8rem">National MiCA source surfaces</h2><p class="sub">No national MiCA source surface is held for this jurisdiction in the current contract.</p>
+	<div class="prov" style="margin-top:2.2rem">Source: ESMA interim MiCA register &middot;
 CASPS.csv <code>sha256 cdc4a27f5d68f992&hellip;</code>
-(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
-<code>state/crypto_jurisdictions.json</code>. Tax, holding periods and licensing procedure
-are national competence and are not held for any jurisdiction.</div>
+	(388 rows, Tue, 18 Aug 2026 09:10:25 GMT). Rendered from
+	<code>state/crypto_jurisdictions.json</code>. Tax and holding periods remain outside this
+	source contract. National source surfaces, where held above, are not turned into a procedure or legal determination.</div>
 </div></body></html>
