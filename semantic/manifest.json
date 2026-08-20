@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-20T19:40:48Z",
+  "model": {
+    "repository": "Xenova/all-MiniLM-L6-v2",
+    "license": "Apache-2.0",
+    "feature": "feature-extraction",
+    "model_sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+    "runtime_sha256": "bcf7cf304e51f470ed59409622b9d6ffbad80dfcf5baf6a40c919e4b9c4ff812",
+    "wasm_sha256": "9bd07bababc65f53d061f457233eeae501be7ceb8a2adb9eef52d87fe776d865"
+  },
+  "runtime": {
+    "execution": "in-browser ONNX Runtime Web/WASM",
+    "allow_remote_models": false,
+    "query_network": "none"
+  },
+  "no_data_floor": {
+    "threshold": 0.43,
+    "message": "The held corpus contains nothing close to this.",
+    "self_test": {
+      "meaningful_query": "custody and administration of crypto-assets for clients",
+      "meaningful_top_score": 0.7455752979569289,
+      "gibberish_query": "QZXJ-absent-corpus-999",
+      "gibberish_top_score": 0.2648572545049311,
+      "gibberish_hits_floor": true
+    }
+  },
+  "shards": [
+    {
+      "path": "semantic/shards/held-sources.json",
+      "chunks": 161,
+      "gzip_bytes": 111809,
+      "sha256": "4b8fcae01c5ff27125fa3c9becc70e33be7849738d0ed958a8452b26134841e2"
+    }
+  ],
+  "method_boundary": "Semantic retrieval orders held, provenance-complete sources. It does not generate prose, determine applicability, or make a legal conclusion."
+}
