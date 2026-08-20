@@ -3,7 +3,11 @@
 // public repo. Remove this file (and preview.html) to open the site fully.
 export const config = { matcher: '/:path*' };
 
-const PUBLIC_PATHS = new Set(['/preview', '/preview.html', '/robots.txt', '/favicon.ico']);
+const PUBLIC_PATHS = new Set(['/preview', '/preview.html', '/robots.txt', '/favicon.ico',
+  '/sitemap.xml']);
+// The weekly archive stays public for crawlers: it is digest/marketing content with
+// hash-stamped register diffs — the data product itself remains gated.
+const PUBLIC_PREFIXES = ['/week'];
 
 function authed(request) {
   const expected = process.env.SHRINE_GATE || '';
@@ -24,6 +28,7 @@ export default function middleware(request) {
     return; // full site
   }
   if (PUBLIC_PATHS.has(path)) return;
+  if (PUBLIC_PREFIXES.some((p) => path === p || path.startsWith(p + '/'))) return;
   if (path === '/') {
     return new Response(null, {
       headers: { 'x-middleware-rewrite': new URL('/preview', url).toString() },
