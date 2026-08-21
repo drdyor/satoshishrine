@@ -44,7 +44,7 @@
       const ranked = rank(Array.from(output.data), loaded.corpus);
       const threshold = 0.43;
       if (!ranked.length || ranked[0].score < threshold) {
-        status.textContent = 'The held corpus contains nothing close to this. Review the held legislative and source-surface records above; this is not a conclusion about the described situation.';
+        status.textContent = 'The held corpus contains nothing close to this. Searched: held legislative and source-surface records in this browser’s local semantic index. Review those held records above; this does not establish an absence beyond that held index or a conclusion about the described situation.';
         results.innerHTML = '';
         return;
       }

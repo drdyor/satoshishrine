@@ -10,10 +10,10 @@
     },
     "pages": {
       "file": "search/pages.json",
-      "entries": 4386,
-      "bytes": 14006047,
-      "gzip_bytes": 367029,
-      "sha256": "5888e0db8ddee8297bd7110f777aa6bd415e249f1442ff4f7356531bfb401304"
+      "entries": 4401,
+      "bytes": 14051025,
+      "gzip_bytes": 370919,
+      "sha256": "2ca009ff2f1aab2a366ea2ac2eab335b436a4999e12fe23013f75f95b3475460"
     },
     "provisions-dac8-amendment": {
       "file": "search/provisions-dac8-amendment.json",

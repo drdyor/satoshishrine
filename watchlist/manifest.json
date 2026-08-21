@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T22:30:08Z",
+  "generated_at": "2026-08-21T14:05:42Z",
   "catalog": {
     "path": "watchlist/catalog.json",
-    "sha256": "0a6fe653314a5cd58e9187c00e4517d2fcdc34093d4e4f75a3abf90c09670b54",
+    "sha256": "e5eaf2a3a019be9869cc737b5bca6e5437ef4b675386ccb099e51c2ce8f9b4eb",
     "items": 4690
   },
   "latest_weekly_archive": {
