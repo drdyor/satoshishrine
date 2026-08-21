@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-21T14:05:41Z",
+  "generated_at": "2026-08-21T23:30:28Z",
   "boundary": "The observatory indexes held source observations and source-file comparisons. It does not determine legal status, regulatory activity, permission, compliance, or an entity outcome.",
   "stats": {
     "jurisdictions_with_monitored_sources": {
@@ -16,7 +16,7 @@
       "contract_path": "diffs.weekly_diff.summary"
     },
     "verified_unchanged": {
-      "value": 2,
+      "value": 3,
       "contract_path": "diffs.weekly_diff.summary"
     }
   },
@@ -128,6 +128,29 @@
         "changed": 0
       },
       "comparison_status": "compared"
+    },
+    {
+      "source": "Funding Radar source contract",
+      "route": "funding-changes.html",
+      "state": "unchanged",
+      "detected_at": "2026-08-21T20:30:21Z",
+      "from_snapshot": {
+        "retrieved_at": "",
+        "hold": ""
+      },
+      "to_snapshot": {
+        "retrieved_at": "2026-08-21T20:30:21Z",
+        "hold": "state/funding_programs.json"
+      },
+      "previous_sha256": "",
+      "current_sha256": "f13d56ce9dc0ace2e850d05bd074fd5731739aa2f3951ff31e07b6f7945f05af",
+      "official_url": "funding.html",
+      "metrics": {
+        "added": 0,
+        "removed": 0,
+        "changed": 0
+      },
+      "comparison_status": "baseline_only"
     }
   ],
   "jurisdictions": [

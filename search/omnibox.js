@@ -68,7 +68,7 @@
     try {
       const matches = (await load()).map(entry => ({ entry, score: score(query, entry) })).filter(row => row.score >= 0).sort((left, right) => right.score - left.score || left.entry.title.localeCompare(right.entry.title)).slice(0, 36);
       if (!matches.length) {
-        results.innerHTML = '<p class="shrine-search-empty"><b>Not in the held corpus.</b> This search checked all 149 held MiCA articles, held DAC8 amending text, Level 2 source records, entities, jurisdictions, markets, and indexed pages. Absence from a held index is not a finding about an entity or provision.</p>';
+        results.innerHTML = '<p class="shrine-search-empty"><b>Not in the held corpus.</b> This search checked all 149 held MiCA articles, held DAC8 amending text, Level 2 source records, entities, jurisdictions, markets, indexed pages, and held funding source records. Absence from a held index is not a finding about an entity, provision, or funding program.</p>';
         return;
       }
       const groups = {};

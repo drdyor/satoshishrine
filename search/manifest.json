@@ -8,12 +8,19 @@
       "gzip_bytes": 339407,
       "sha256": "825cd5523753c3536de5ff32f303c08fa94400e199c3053e5323c36c98b67141"
     },
+    "funding": {
+      "file": "search/funding.json",
+      "entries": 74,
+      "bytes": 131136,
+      "gzip_bytes": 37124,
+      "sha256": "5ac6db855ad7161fb87eaf9d55338cfad59978a5625d5cf110eadca20c5a554e"
+    },
     "pages": {
       "file": "search/pages.json",
-      "entries": 4401,
-      "bytes": 14051025,
-      "gzip_bytes": 370919,
-      "sha256": "2ca009ff2f1aab2a366ea2ac2eab335b436a4999e12fe23013f75f95b3475460"
+      "entries": 4481,
+      "bytes": 14299507,
+      "gzip_bytes": 378400,
+      "sha256": "3e8a4718c6df88711011d1983cf18c82bb6d90f9471663ab81819f4a1fcd49ef"
     },
     "provisions-dac8-amendment": {
       "file": "search/provisions-dac8-amendment.json",
