@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "purpose": "OpenTimestamps anchor head for the verified private evidence-volume release; this manifest contains no raw evidence.",
+  "archive_release": {
+    "repository": "drdyor/amazon",
+    "tag": "satoshishrine-evidence-20260821-window6-final",
+    "release_url": "https://github.com/drdyor/amazon/releases/tag/satoshishrine-evidence-20260821-window6-final",
+    "asset_name": "satoshishrine-evidence-20260821T232724Z.tar.gz",
+    "asset_sha256": "91333302abad9a0c59a86fed9568dc7b34562ef222030e973862ef23e2f39d0f",
+    "archive_round_trip": {
+      "status": "PASS",
+      "sample_files_verified": 20,
+      "verified_at": "2026-08-21T23:27:00Z"
+    }
+  },
+  "public_receipt_route": "/week/2026-W34#evidence-anchor",
+  "boundary": "The receipt timestamps this archive-head manifest. It does not reveal, publish, authenticate, or independently verify the contents of the private evidence archive."
+}

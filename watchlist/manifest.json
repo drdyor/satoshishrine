@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T11:49:56Z",
+  "generated_at": "2026-08-22T15:57:56Z",
   "catalog": {
     "path": "watchlist/catalog.json",
-    "sha256": "6a074887e3470b9b27a250dc973fbc941ec14bb45e56449f68e0380048c80230",
+    "sha256": "47e67f78747836092ac1aff4ab2aec813edcb221457626f3990660286808d959",
     "items": 4690
   },
   "latest_weekly_archive": {
@@ -12,8 +12,8 @@
     "week": "2026-W34",
     "checked_records": [
       {
-        "source_file": "content\\digest\\2026-08-21.txt",
-        "sha256": "632f0a23228b292f1be96fa3d9b35f11e8e222f7f5001a028d0fe24ec75e1e9f",
+        "source_file": "content/digest/2026-08-21.txt",
+        "sha256": "8189a55f02d5b2cfcb3f483d27a24d0ffa774aa735a30732694d7f50e01cb3d3",
         "date": "2026-08-21"
       }
     ],

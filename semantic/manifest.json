@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-22T11:46:37Z",
+  "generated_at": "2026-08-22T15:57:54Z",
   "model": {
     "repository": "Xenova/all-MiniLM-L6-v2",
     "license": "Apache-2.0",
@@ -20,9 +20,9 @@
     "message": "The held corpus contains nothing close to this.",
     "self_test": {
       "meaningful_query": "custody and administration of crypto-assets for clients",
-      "meaningful_top_score": 0.8323371040483881,
+      "meaningful_top_score": 0.8358207964123802,
       "gibberish_query": "QZXJ-absent-corpus-999",
-      "gibberish_top_score": 0.2554752180393426,
+      "gibberish_top_score": 0.2581482315946599,
       "gibberish_hits_floor": true
     }
   },
@@ -30,8 +30,8 @@
     {
       "path": "semantic/shards/held-sources.json",
       "chunks": 971,
-      "gzip_bytes": 657660,
-      "sha256": "afbeeaa345af9662b52200cef7b0291f4f2530a348ececdfe5fa0db3c5c30ced"
+      "gzip_bytes": 657424,
+      "sha256": "69731dc89ec982f7a28354e2fcf41af5d1b675e0451617a9fcc29cd6b9de4e3d"
     }
   ],
   "method_boundary": "Semantic retrieval orders held, provenance-complete sources. It does not generate prose, determine applicability, or make a legal conclusion."
