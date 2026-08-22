@@ -18,9 +18,9 @@
     "pages": {
       "file": "search/pages.json",
       "entries": 4481,
-      "bytes": 14299507,
-      "gzip_bytes": 378400,
-      "sha256": "3e8a4718c6df88711011d1983cf18c82bb6d90f9471663ab81819f4a1fcd49ef"
+      "bytes": 14312770,
+      "gzip_bytes": 378377,
+      "sha256": "59cddcea63eb949d441490a2a361cdabb27924ea567c5616d36d79e4e61e76af"
     },
     "provisions-dac8-amendment": {
       "file": "search/provisions-dac8-amendment.json",

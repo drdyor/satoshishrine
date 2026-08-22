@@ -71,9 +71,25 @@
         results.innerHTML = '<p class="shrine-search-empty"><b>Not in the held corpus.</b> This search checked all 149 held MiCA articles, held DAC8 amending text, Level 2 source records, entities, jurisdictions, markets, indexed pages, and held funding source records. Absence from a held index is not a finding about an entity, provision, or funding program.</p>';
         return;
       }
+      // Match-centered excerpt with the query highlighted, so a hit shows WHERE it hit.
+      const excerptFor = (entry, rawQuery) => {
+        const text = String(entry.search_text || '');
+        if (text.length < 40) return '';
+        const tokens = rawQuery.toLowerCase().split(/\s+/).filter(token => token.length > 2);
+        const lower = text.toLowerCase();
+        let at = -1;
+        for (const token of tokens) { const hit = lower.indexOf(token); if (hit >= 0 && (at < 0 || hit < at)) at = hit; }
+        if (at < 0) return '';
+        const start = Math.max(0, at - 90);
+        const end = Math.min(text.length, at + 170);
+        let slice = (start > 0 ? '…' : '') + text.slice(start, end).trim() + (end < text.length ? '…' : '');
+        slice = esc(slice);
+        for (const token of tokens) slice = slice.replace(new RegExp(`(${token.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')})`, 'ig'), '<mark>$1</mark>');
+        return `<span class="shrine-search-excerpt">${slice}</span>`;
+      };
       const groups = {};
       matches.forEach(row => (groups[row.entry.group] ||= []).push(row));
-      results.innerHTML = Object.entries(groups).sort(([, left], [, right]) => right[0].score - left[0].score).map(([group, rows]) => `<section class="shrine-search-group"><h2>${esc(group)}</h2>${rows.slice(0, 8).map(row => { const entry = row.entry; return `<a class="shrine-search-result" href="${esc(entry.route)}"><b>${esc(entry.title)}</b><small>${esc(entry.subtitle)}</small><code>${esc(entry.evidence.artifact)} · sha256 ${esc(entry.evidence.sha256)}</code></a>`; }).join('')}</section>`).join('');
+      results.innerHTML = Object.entries(groups).sort(([, left], [, right]) => right[0].score - left[0].score).map(([group, rows]) => `<section class="shrine-search-group"><h2>${esc(group)}</h2>${rows.slice(0, 8).map(row => { const entry = row.entry; return `<a class="shrine-search-result" href="${esc(entry.route)}"><b>${esc(entry.title)}</b><small>${esc(entry.subtitle)}</small>${excerptFor(entry, query)}<code>${esc(entry.evidence.artifact)} · sha256 ${esc(entry.evidence.sha256)}</code></a>`; }).join('')}</section>`).join('');
     } catch (error) {
       results.innerHTML = '<p class="shrine-search-empty">Local held-source indexes could not be loaded. No result is inferred.</p>';
     }
