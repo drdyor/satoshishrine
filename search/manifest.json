@@ -18,72 +18,72 @@
     "pages": {
       "file": "search/pages.json",
       "entries": 4567,
-      "bytes": 14572051,
-      "gzip_bytes": 383587,
-      "sha256": "8bc127bd7d98a4540bc5545f0066fe09758bf52bbc4d0cc4d6bd83e062adf447"
+      "bytes": 14585572,
+      "gzip_bytes": 383568,
+      "sha256": "a393f0cb24dd54ade80dd514ee09576c6537ae94d1c5476afbb3334f9eba96b0"
     },
     "provisions-dac8-amendment": {
       "file": "search/provisions-dac8-amendment.json",
       "entries": 11,
       "bytes": 118982,
       "gzip_bytes": 26263,
-      "sha256": "8cbb2e30b7b8bfd9032de9380042e2a4641ea4ce90269c84dc40fc7cadf80567"
+      "sha256": "2341b7535f50cf185df6b234632cb45ec9c3f317ed448d38974cb27d85ceec45"
     },
     "provisions-level2-and-held-surfaces": {
       "file": "search/provisions-level2-and-held-surfaces.json",
-      "entries": 13,
-      "bytes": 46126,
-      "gzip_bytes": 10257,
-      "sha256": "a15fd6d4d0800480a8b06842c08699b015c90191ae84da41fc345477776fac3b"
+      "entries": 244,
+      "bytes": 826048,
+      "gzip_bytes": 159591,
+      "sha256": "e0a1f9af3b3ce11277af76e5bcc03a1f3e2bf4e38f00766dbfbf6f67c153d055"
     },
     "provisions-mica-001-030": {
       "file": "search/provisions-mica-001-030.json",
       "entries": 30,
       "bytes": 119892,
-      "gzip_bytes": 22832,
-      "sha256": "0ebf8c2dca2fcfc18f553c0f78c8ac9e64adead1b1e99d3d4ded5bae0263a9bb"
+      "gzip_bytes": 22829,
+      "sha256": "425c83d4719305ed7301e1a98b787fab9949491facd6a386b9755fc9391f9512"
     },
     "provisions-mica-031-060": {
       "file": "search/provisions-mica-031-060.json",
       "entries": 30,
       "bytes": 127583,
-      "gzip_bytes": 24713,
-      "sha256": "3c00086b679b6062251f6af0bcae60e0b278f804ecea31dd5f6a8d230518b76d"
+      "gzip_bytes": 24711,
+      "sha256": "f64affac8261bc378070401dd9ca754414594ebdd84bc52bca3d6daa70d84975"
     },
     "provisions-mica-061-090": {
       "file": "search/provisions-mica-061-090.json",
       "entries": 30,
       "bytes": 112867,
-      "gzip_bytes": 22674,
-      "sha256": "efe0981e71dc3f218bcfc22adc993cabe527b16ea9c5f8d1315ffdf34955eb44"
+      "gzip_bytes": 22672,
+      "sha256": "519c73d499235b54750afe6cc38fe7a7800588242e478758825eec5d29b3d656"
     },
     "provisions-mica-091-120": {
       "file": "search/provisions-mica-091-120.json",
       "entries": 30,
       "bytes": 105571,
       "gzip_bytes": 19677,
-      "sha256": "1ce81673b7aae0bad64a2ea7fff85ee93295b7b71cd200f10518ef04e509be30"
+      "sha256": "59f1785f06e934d59790f65357cde3161645b5a70dd8bf55229f7ae3e3281f5c"
     },
     "provisions-mica-121-149": {
       "file": "search/provisions-mica-121-149.json",
       "entries": 29,
       "bytes": 96649,
-      "gzip_bytes": 18257,
-      "sha256": "5c720029cf1becb63ca3d34b2d2ef67c6ae876230857982c31b6590fbfdf62ef"
+      "gzip_bytes": 18258,
+      "sha256": "c2ae2046941a0994d6d3e6c24c2b707163105d22b422bb24baf28bef7851a273"
     },
     "provisions-mica-annexes": {
       "file": "search/provisions-mica-annexes.json",
       "entries": 6,
       "bytes": 69608,
-      "gzip_bytes": 12514,
-      "sha256": "24d3abb7aa8c43b9a86b1215b0b79239b67c8898fd2c23113e00b0b0a37f7053"
+      "gzip_bytes": 12515,
+      "sha256": "0b3c9e34838b81e167dfc2db66ae2a52cb79940427cfa9dc803f44351118c720"
     },
     "provisions-mica-recitals": {
       "file": "search/provisions-mica-recitals.json",
       "entries": 119,
       "bytes": 185112,
-      "gzip_bytes": 32398,
-      "sha256": "7b3c95505284dc024a66bc8a65339bb54d8d28a5233bca4a8834a9740e135471"
+      "gzip_bytes": 32395,
+      "sha256": "8bc79c614c920571e8b09fcd11d0519856e7835fa7d49823dbe16fbee8d03bed"
     }
   },
   "provision_shards": [

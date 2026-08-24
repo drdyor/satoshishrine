@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-22T17:18:28Z",
+  "generated_at": "2026-08-24T21:20:44Z",
   "model": {
     "repository": "Xenova/all-MiniLM-L6-v2",
     "license": "Apache-2.0",
@@ -20,18 +20,68 @@
     "message": "The held corpus contains nothing close to this.",
     "self_test": {
       "meaningful_query": "custody and administration of crypto-assets for clients",
-      "meaningful_top_score": 0.8358207964123802,
+      "meaningful_top_score": 0.8485573893246505,
       "gibberish_query": "QZXJ-absent-corpus-999",
-      "gibberish_top_score": 0.2581482315946599,
+      "gibberish_top_score": 0.28607000231467294,
       "gibberish_hits_floor": true
     }
   },
   "shards": [
     {
+      "path": "semantic/shards/aiact.json",
+      "instrument": "aiact",
+      "chunks": 468,
+      "gzip_bytes": 329885,
+      "sha256": "8cf54c399aafe388fb94fff6aec7daa01a4c0666d514124f89019b7ead4276c7"
+    },
+    {
+      "path": "semantic/shards/dac8.json",
+      "instrument": "dac8",
+      "chunks": 148,
+      "gzip_bytes": 104914,
+      "sha256": "c625b93da83abdaff535e664da3f775e3a3a172670ef156fd7df9674d05a8dd4"
+    },
+    {
+      "path": "semantic/shards/dora.json",
+      "instrument": "dora",
+      "chunks": 277,
+      "gzip_bytes": 195136,
+      "sha256": "9171d228a43802c2b69df2008672c563f0ceae6f260c30f7ed884c87bc9f749d"
+    },
+    {
+      "path": "semantic/shards/level2.json",
+      "instrument": "level2",
+      "chunks": 41,
+      "gzip_bytes": 32599,
+      "sha256": "fbb4ed98117575fc116a1417edc9df66f6f3e8cedfaa4cc7339a6760a19f71ff"
+    },
+    {
+      "path": "semantic/shards/mica.json",
+      "instrument": "mica",
+      "chunks": 870,
+      "gzip_bytes": 596199,
+      "sha256": "8fa53c1898a13849d004a6facab4fd2ad4241688ebf5aa11fa31b927b97bf81c"
+    },
+    {
+      "path": "semantic/shards/other.json",
+      "instrument": "other",
+      "chunks": 33,
+      "gzip_bytes": 21671,
+      "sha256": "b04b5856121ae24b98a86c3d03a688e839568579859b7abe5e80d8044278907c"
+    },
+    {
+      "path": "semantic/shards/tfr.json",
+      "instrument": "tfr",
+      "chunks": 106,
+      "gzip_bytes": 71790,
+      "sha256": "98d431f46a497229866b4354eb0d563dc373679a04845c59f7046ed1a7e8213e"
+    },
+    {
       "path": "semantic/shards/held-sources.json",
-      "chunks": 971,
-      "gzip_bytes": 657424,
-      "sha256": "69731dc89ec982f7a28354e2fcf41af5d1b675e0451617a9fcc29cd6b9de4e3d"
+      "instrument": "combined",
+      "chunks": 1943,
+      "gzip_bytes": 1339695,
+      "sha256": "6d3b38f932ed28c7e8506015bfaf92e7d075530a8dd4fde1dc3bc040f5574aed"
     }
   ],
   "method_boundary": "Semantic retrieval orders held, provenance-complete sources. It does not generate prose, determine applicability, or make a legal conclusion."

@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T17:18:31Z",
+  "generated_at": "2026-08-24T21:24:18Z",
   "catalog": {
     "path": "watchlist/catalog.json",
-    "sha256": "da821946d26c89abf1482de72f59e33f0aa00c3b9056bf98b12b1798631bd700",
-    "items": 4690
+    "sha256": "b7c3df282e5337a82cb158bdd3edf52f80542938b6040d77fd28fd90e7c5a597",
+    "items": 4921
   },
   "latest_weekly_archive": {
     "state": "held_archive_record",
@@ -12,8 +12,8 @@
     "week": "2026-W34",
     "checked_records": [
       {
-        "source_file": "content/digest/2026-08-21.txt",
-        "sha256": "8189a55f02d5b2cfcb3f483d27a24d0ffa774aa735a30732694d7f50e01cb3d3",
+        "source_file": "content\\digest\\2026-08-21.txt",
+        "sha256": "632f0a23228b292f1be96fa3d9b35f11e8e222f7f5001a028d0fe24ec75e1e9f",
         "date": "2026-08-21"
       }
     ],
