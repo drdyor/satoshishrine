@@ -1,4 +1,9 @@
-/* SatoshiShrine semantic retrieval: source-bounded, browser-only, and no-network by design. */
+/* SatoshiShrine semantic retrieval: source-bounded, browser-only, and no-network by design.
+ * The model loading, the int8 recovery, the cosine and the floor live in semantic-core.js and
+ * are IMPORTED, not repeated here. /checkup/ imports the same module. When this file held its
+ * own copy, the second consumer copied it wrong and reported a false absence in production. */
+import * as core from '/semantic/semantic-core.js';
+
 (() => {
   const root = document.querySelector('#semantic-retrieval');
   if (!root) return;
@@ -7,7 +12,7 @@
   const status = root.querySelector('#semantic-status');
   const results = root.querySelector('#semantic-results');
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  let corpus, extractor, api;
+  let corpus, extractor;
   // Shards already fetched, by instrument. The corpus only ever GROWS: a later query that
   // needs an instrument we have not fetched adds it, and one that needs fewer still searches
   // everything loaded. Narrowing a cached corpus would let a second question be answered
@@ -16,14 +21,7 @@
   const fetchedShards = new Map();
   const localOnly = async () => {
     // No early return on a cached corpus: the wanted instruments are resolved first.
-    api ??= await import('/semantic/vendor/transformers.min.js');
-    if (!api?.pipeline || !api?.env) throw new Error('The local semantic runtime did not load. No remote fallback is used.');
-    api.env.allowRemoteModels = false;
-    api.env.allowLocalModels = true;
-    api.env.useBrowserCache = false;
-    api.env.localModelPath = '/semantic/models/';
-    api.env.backends.onnx.wasm.wasmPaths = '/semantic/vendor/';
-    api.env.backends.onnx.wasm.numThreads = 1;
+    const extractorPromise = core.loadExtractor();
     // Which instruments a query names. Fetching only those is the point of the split; the
     // FALLBACK is what keeps it honest -- a query naming none loads every instrument, because
     // narrowing the corpus and reporting the result as absence is the one failure this site
@@ -56,7 +54,7 @@
         if (!response.ok) throw new Error('The local held-source vector shard is unavailable.');
         return response.json();
       }))),
-      extractor || api.pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', { quantized: true }),
+      extractor || extractorPromise,
     ]);
     missing.forEach((path, index) => fetchedShards.set(path, fetchedParts[index]));
     const active = [...fetchedShards.values()];
@@ -70,10 +68,7 @@
     extractor = extractorReady;
     return { corpus, extractor };
   };
-  const rank = (query, source) => {
-    const recovered = source.vectors.map(vector => vector.q8.map(value => value * vector.scale));
-    return recovered.map((vector, index) => ({ index, score: vector.reduce((sum, value, position) => sum + value * query[position], 0) / Math.max(Math.hypot(...vector), 1e-12) })).sort((a, b) => b.score - a.score);
-  };
+  const rank = (query, source) => core.rank(query, core.recover(source.vectors));
   const render = rows => {
     results.innerHTML = rows.map(({index, score}) => {
       const chunk = corpus.chunks[index], p = chunk.provenance;
@@ -88,7 +83,7 @@
       const loaded = await localOnly();
       const output = await loaded.extractor(text, { pooling: 'mean', normalize: true });
       const ranked = rank(Array.from(output.data), loaded.corpus);
-      const threshold = 0.43;
+      const threshold = core.FLOOR;
       if (!ranked.length || ranked[0].score < threshold) {
         status.textContent = 'The held corpus contains nothing close to this. Searched: held legislative and source-surface records in this browser’s local semantic index. Review those held records above; this does not establish an absence beyond that held index or a conclusion about the described situation.';
         results.innerHTML = '';

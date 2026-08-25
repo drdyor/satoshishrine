@@ -47,63 +47,20 @@ missing from it. It shows you held text to read.</p>
 <div id="out"></div>
 
 <script type="module">
+import * as core from '/semantic/semantic-core.js';
 const SHARDS = ["/semantic/shards/aiact.json", "/semantic/shards/dac8.json", "/semantic/shards/dora.json", "/semantic/shards/level2.json", "/semantic/shards/mica.json", "/semantic/shards/other.json", "/semantic/shards/tfr.json"];
-const FLOOR = 0.43;              // the same floor the site's semantic search uses
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const status = document.getElementById('status');
 const out = document.getElementById('out');
 
-let engine = null;
+let corpus = null;
 async function localEngine() {
-  if (engine) return engine;
-  // The same vendored model and the same shards the search page uses. A second embedder with a
-  // different tokenizer would produce vectors that do not live in the same space as the corpus,
-  // and the ranking would be quietly meaningless rather than visibly broken.
-  // Paths copied from semantic/semantic-runtime.js, which is the loader that demonstrably
-  // works in production. The first version of this guessed '/semantic/transformers.min.js'
-  // and '/semantic/' for the wasm; the real paths are under /semantic/vendor/, so the page
-  // returned 200 and every drop failed with "the local semantic runtime did not load".
-  // A 200 on the page is not a working page, and this file's own docstring claimed it was
-  // built from the shapes that exist while this block was written from a guess.
-  const api = await import('/semantic/vendor/transformers.min.js').catch(() => null);
-  if (!api?.pipeline || !api?.env) throw new Error('the local semantic runtime did not load');
-  api.env.allowRemoteModels = false;
-  api.env.allowLocalModels = true;
-  api.env.useBrowserCache = false;
-  api.env.localModelPath = '/semantic/models/';
-  api.env.backends.onnx.wasm.wasmPaths = '/semantic/vendor/';
-  api.env.backends.onnx.wasm.numThreads = 1;
-  const extractor = await api.pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2',
-                                       { quantized: true });
-  const parts = await Promise.all(SHARDS.map(p => fetch(p).then(r => {
-    if (!r.ok) throw new Error(`a held-source shard is unavailable (${p})`);
-    return r.json();
-  })));
-  // The shards store int8-quantised vectors as {id, q8:[...], scale}, NOT float arrays.
-  // Recovered exactly as semantic/semantic-runtime.js does it, because that is the code the
-  // site's own search runs and the two must live in the same vector space. Treating `vectors`
-  // as parallel float arrays -- which this file's docstring once claimed it had verified --
-  // produced NaN for every comparison, so every passage came back "nothing in the held corpus
-  // is close to this". A false absence, silently, on the one failure this site exists to avoid.
-  const corpus = {
-    chunks: parts.flatMap(p => p.chunks),
-    vectors: parts.flatMap(p => p.vectors).map(v => v.q8.map(value => value * v.scale)),
-  };
-  if (corpus.chunks.length !== corpus.vectors.length) {
-    throw new Error('the held-source shards do not line up: ' + corpus.chunks.length +
-                    ' passages against ' + corpus.vectors.length + ' vectors');
-  }
-  engine = { extractor, corpus };
-  return engine;
-}
-
-// The query vector arrives normalised from the extractor, so dividing by the held vector's
-// magnitude alone is the cosine. Same expression as semantic-runtime.js rank().
-function cosine(query, held) {
-  let dot = 0, magnitude = 0;
-  for (let i = 0; i < held.length; i++) { dot += held[i]*query[i]; magnitude += held[i]*held[i]; }
-  return dot / Math.max(Math.sqrt(magnitude), 1e-12);
+  // ONE implementation, imported. This block previously held its own copy of the loader, the
+  // dequantisation and the cosine, and was wrong in all three -- see semantic-core.js. The
+  // import is the structural fix: a copy can drift, an import cannot.
+  if (!corpus) corpus = await core.loadCorpus(SHARDS);
+  return corpus;
 }
 
 // Split on blank lines and headings first, so a passage is a passage the author wrote rather
@@ -149,20 +106,17 @@ async function run(file) {
       return;
     }
     status.textContent = `Loading the local model and held-source vectors for ${pieces.length} passage(s)…`;
-    const { extractor, corpus } = await localEngine();
+    const held = await localEngine();
 
     let matched = 0;
     for (let i = 0; i < pieces.length; i++) {
       status.textContent = `Comparing passage ${i + 1} of ${pieces.length}, locally…`;
-      const output = await extractor(pieces[i].text, { pooling: 'mean', normalize: true });
-      const mine = Array.from(output.data);
-      let best = null, bestScore = 0;
-      for (let j = 0; j < corpus.vectors.length; j++) {
-        const score = cosine(mine, corpus.vectors[j]);
-        if (score > bestScore) { bestScore = score; best = corpus.chunks[j]; }
-      }
+      const mine = await core.embed(pieces[i].text);
+      const ranked = core.rank(mine, held.vectors);
+      const bestScore = ranked.length ? ranked[0].score : 0;
+      const best = ranked.length ? held.chunks[ranked[0].index] : null;
       const card = document.createElement('div');
-      if (best && bestScore >= FLOOR) {
+      if (best && bestScore >= core.FLOOR) {
         matched++;
         const p = best.provenance || {};
         card.className = 'pair';
