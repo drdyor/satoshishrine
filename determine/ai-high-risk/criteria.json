@@ -1,0 +1,697 @@
+{
+  "schema_version": "1.0",
+  "question": "Is this AI system high-risk under the EU AI Act?",
+  "gateway": {
+    "provision": "AI Act Article 6(2)",
+    "url": "",
+    "text": "Article 6(2) provides that AI systems referred to in Annex III are considered high-risk. The areas below are Annex III, in its own words."
+  },
+  "source": {
+    "provision": "AI Act Annex III",
+    "artifact": "docs_evidence/eu-legislation/eurlex-full-text/20260823T093000Z/32024R1689.pdf",
+    "sha256": "bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e",
+    "retrieved_at": "20260823T093000Z",
+    "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R1689"
+  },
+  "documentation_duty": {
+    "provision": "AI Act Article 6(4)",
+    "text": "A provider who considers that an AI system referred to in Annex III is not high-risk shall document its assessment before that system is placed on the market or put into service. Such provider shall be subject to the registration obligation set out in Article 49(2). Upon request of national competent authorities, the provider shall provide the documentation of the assessment."
+  },
+  "obligations": [
+    {
+      "number": "8",
+      "heading": "Compliance with the requirements",
+      "url": "/celex/32024R1689/ART_8/20260823-bba63044/"
+    },
+    {
+      "number": "9",
+      "heading": "Risk management system",
+      "url": "/celex/32024R1689/ART_9/20260823-bba63044/"
+    },
+    {
+      "number": "10",
+      "heading": "Data and data governance",
+      "url": "/celex/32024R1689/ART_10/20260823-bba63044/"
+    },
+    {
+      "number": "11",
+      "heading": "Technical documentation",
+      "url": "/celex/32024R1689/ART_11/20260823-bba63044/"
+    },
+    {
+      "number": "12",
+      "heading": "Record-keeping",
+      "url": "/celex/32024R1689/ART_12/20260823-bba63044/"
+    },
+    {
+      "number": "13",
+      "heading": "Transparency and provision of information to deployers",
+      "url": "/celex/32024R1689/ART_13/20260823-bba63044/"
+    },
+    {
+      "number": "14",
+      "heading": "Human oversight",
+      "url": "/celex/32024R1689/ART_14/20260823-bba63044/"
+    },
+    {
+      "number": "15",
+      "heading": "Accuracy, robustness and cybersecurity",
+      "url": "/celex/32024R1689/ART_15/20260823-bba63044/"
+    },
+    {
+      "number": "16",
+      "heading": "Obligations of providers of high-risk AI systems Providers of…",
+      "url": "/celex/32024R1689/ART_16/20260823-bba63044/"
+    },
+    {
+      "number": "17",
+      "heading": "Quality management system",
+      "url": "/celex/32024R1689/ART_17/20260823-bba63044/"
+    }
+  ],
+  "areas": [
+    {
+      "number": "1",
+      "name": "Biometrics, in so far as their use is permitted under relevant Union or national law",
+      "asks": "Do you identify people, or read their faces, voices or emotions?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "remote biometric identification systems. This shall not include AI systems intended to be used for biometric verification the sole purpose of which is to confirm that a specific natural person is the person he or she claims to be",
+          "examples": [],
+          "terms": [
+            "remote biometric identification system",
+            "biometric verification",
+            "AI system"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "c",
+          "text": "AI systems intended to be used for emotion recognition.",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "2",
+      "name": "Critical infrastructure",
+      "asks": "Do you run safety systems for utilities, traffic or other critical infrastructure?",
+      "criteria": [
+        {
+          "letter": "",
+          "text": "AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity",
+          "examples": [],
+          "terms": [
+            "safety component",
+            "AI system"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "3",
+      "name": "Education and vocational training",
+      "asks": "Do you decide admissions, mark work, or monitor students?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels",
+          "examples": [
+            "to determine access or admission",
+            "assign natural persons to educational and vocational training institutions at all levels"
+          ],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions at all levels",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "c",
+          "text": "AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "d",
+          "text": "AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels.",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "4",
+      "name": "Employment, workers' management and access to self-employment",
+      "asks": "Do you screen applicants, allocate work, or manage or monitor staff?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates",
+          "examples": [
+            "to place targeted job advertisements",
+            "filter job applications",
+            "to evaluate candidates"
+          ],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships.",
+          "examples": [
+            "to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships",
+            "allocate tasks based on individual behaviour or personal traits or characteristics",
+            "monitor and evaluate the performance and behaviour of persons in such relationships"
+          ],
+          "terms": [
+            "AI system"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "5",
+      "name": "Access to and enjoyment of essential private services and essential public services and benefits",
+      "asks": "Do you score creditworthiness, price insurance, triage emergency calls, or decide access to public benefits?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "c",
+          "text": "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance",
+          "examples": [],
+          "terms": [
+            "AI system",
+            "risk"
+          ]
+        },
+        {
+          "letter": "d",
+          "text": "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems.",
+          "examples": [
+            "AI systems intended to evaluate and classify emergency calls by natural persons",
+            "establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems"
+          ],
+          "terms": [
+            "AI system"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "6",
+      "name": "Law enforcement, in so far as their use is permitted under relevant Union or national law",
+      "asks": "Do you build tools used by police or law enforcement?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences",
+          "examples": [],
+          "terms": [
+            "law enforcement",
+            "AI system",
+            "risk"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools",
+          "examples": [],
+          "terms": [
+            "law enforcement",
+            "AI system"
+          ]
+        },
+        {
+          "letter": "c",
+          "text": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences",
+          "examples": [],
+          "terms": [
+            "law enforcement",
+            "AI system"
+          ]
+        },
+        {
+          "letter": "d",
+          "text": "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680, or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups",
+          "examples": [
+            "by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680",
+            "assess personality traits and characteristics or past criminal behaviour of natural persons or groups"
+          ],
+          "terms": [
+            "law enforcement",
+            "AI system",
+            "profiling",
+            "risk"
+          ]
+        },
+        {
+          "letter": "e",
+          "text": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences.",
+          "examples": [],
+          "terms": [
+            "law enforcement",
+            "AI system",
+            "profiling"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "7",
+      "name": "Migration, asylum and border control management, in so far as their use is permitted under relevant Union or national law",
+      "asks": "Do you build tools used in migration, asylum or border control?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies as polygraphs or similar tools",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State",
+          "examples": [],
+          "terms": [
+            "AI system",
+            "risk"
+          ]
+        },
+        {
+          "letter": "c",
+          "text": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status, including related assessments of the reliability of evidence",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "d",
+          "text": "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons, with the exception of the verification of travel documents.",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        }
+      ]
+    },
+    {
+      "number": "8",
+      "name": "Administration of justice and democratic processes",
+      "asks": "Do you build tools used in courts, or that influence elections?",
+      "criteria": [
+        {
+          "letter": "a",
+          "text": "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution",
+          "examples": [
+            "by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts",
+            "be used in a similar way in alternative dispute resolution"
+          ],
+          "terms": [
+            "AI system"
+          ]
+        },
+        {
+          "letter": "b",
+          "text": "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda. This does not include AI systems to the output of which natural persons are not directly exposed, such as tools used to organise, optimise or structure political campaigns from an administrative or logistical point of view. ELI: http://data.europa.eu/eli/reg/2024/1689/oj 129/144 EN OJ L, 12.7.2024",
+          "examples": [],
+          "terms": [
+            "AI system"
+          ]
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "AI system": {
+      "number": "1",
+      "term": "AI system",
+      "definition": "a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments"
+    },
+    "risk": {
+      "number": "2",
+      "term": "risk",
+      "definition": "the combination of the probability of an occurrence of harm and the severity of that harm"
+    },
+    "provider": {
+      "number": "3",
+      "term": "provider",
+      "definition": "a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model or that has an AI system or a general-purpose AI model developed and places it on the market or puts the AI system into service under its own name or trademark, whether for payment or free of charge"
+    },
+    "deployer": {
+      "number": "4",
+      "term": "deployer",
+      "definition": "a natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity"
+    },
+    "authorised representative": {
+      "number": "5",
+      "term": "authorised representative",
+      "definition": "a natural or legal person located or established in the Union who has received and accepted a written mandate from a provider of an AI system or a general-purpose AI model to, respectively, perform and carry out on its behalf the obligations and procedures established by this Regulation"
+    },
+    "importer": {
+      "number": "6",
+      "term": "importer",
+      "definition": "a natural or legal person located or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established in a third country"
+    },
+    "distributor": {
+      "number": "7",
+      "term": "distributor",
+      "definition": "a natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the Union market"
+    },
+    "operator": {
+      "number": "8",
+      "term": "operator",
+      "definition": "a provider, product manufacturer, deployer, authorised representative, importer or distributor"
+    },
+    "placing on the market": {
+      "number": "9",
+      "term": "placing on the market",
+      "definition": "the first making available of an AI system or a general-purpose AI model on the Union market"
+    },
+    "making available on the market": {
+      "number": "10",
+      "term": "making available on the market",
+      "definition": "the supply of an AI system or a general-purpose AI model for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge"
+    },
+    "putting into service": {
+      "number": "11",
+      "term": "putting into service",
+      "definition": "the supply of an AI system for first use directly to the deployer or for own use in the Union for its intended purpose"
+    },
+    "intended purpose": {
+      "number": "12",
+      "term": "intended purpose",
+      "definition": "the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation"
+    },
+    "reasonably foreseeable misuse": {
+      "number": "13",
+      "term": "reasonably foreseeable misuse",
+      "definition": "the use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems, including other AI systems"
+    },
+    "safety component": {
+      "number": "14",
+      "term": "safety component",
+      "definition": "a component of a product or of an AI system which fulfils a safety function for that product or AI system, or the failure or malfunctioning of which endangers the health and safety of persons or property"
+    },
+    "instructions for use": {
+      "number": "15",
+      "term": "instructions for use",
+      "definition": "the information provided by the provider to inform the deployer of, in particular, an AI system's intended purpose and proper use"
+    },
+    "recall of an AI system": {
+      "number": "16",
+      "term": "recall of an AI system",
+      "definition": "any measure aiming to achieve the return to the provider or taking out of service or disabling the use of an AI system made available to deployers"
+    },
+    "withdrawal of an AI system": {
+      "number": "17",
+      "term": "withdrawal of an AI system",
+      "definition": "any measure aiming to prevent an AI system in the supply chain being made available on the market"
+    },
+    "performance of an AI system": {
+      "number": "18",
+      "term": "performance of an AI system",
+      "definition": "the ability of an AI system to achieve its intended purpose"
+    },
+    "notifying authority": {
+      "number": "19",
+      "term": "notifying authority",
+      "definition": "the national authority responsible for setting up and carrying out the necessary procedures for the assessment, designation and notification of conformity assessment bodies and for their monitoring"
+    },
+    "conformity assessment": {
+      "number": "20",
+      "term": "conformity assessment",
+      "definition": "the process of demonstrating whether the requirements set out in Chapter III, Section 2 relating to a high-risk AI system have been fulfilled"
+    },
+    "conformity assessment body": {
+      "number": "21",
+      "term": "conformity assessment body",
+      "definition": "a body that performs third-party conformity assessment activities, including testing, certification and inspection"
+    },
+    "notified body": {
+      "number": "22",
+      "term": "notified body",
+      "definition": "a conformity assessment body notified in accordance with this Regulation and other relevant Union harmonisation legislation"
+    },
+    "substantial modification": {
+      "number": "23",
+      "term": "substantial modification",
+      "definition": "a change to an AI system after its placing on the market or putting into service which is not foreseen or planned in the initial conformity assessment carried out by the provider and as a result of which the compliance of the AI system with the requirements set out in Chapter III, Section 2 is affected or results in a modification to the intended purpose for which the AI system has been assessed"
+    },
+    "CE marking": {
+      "number": "24",
+      "term": "CE marking",
+      "definition": "a marking by which a provider indicates that an AI system is in conformity with the requirements set out in Chapter III, Section 2 and other applicable Union harmonisation legislation providing for its affixing"
+    },
+    "post-market monitoring system": {
+      "number": "25",
+      "term": "post-market monitoring system",
+      "definition": "all activities carried out by providers of AI systems to collect and review experience gained from the use of AI systems they place on the market or put into service for the purpose of identifying any need to immediately apply any necessary corrective or preventive actions"
+    },
+    "market surveillance authority": {
+      "number": "26",
+      "term": "market surveillance authority",
+      "definition": "the national authority carrying out the activities and taking the measures pursuant to Regulation (EU) 2019/1020"
+    },
+    "harmonised standard": {
+      "number": "27",
+      "term": "harmonised standard",
+      "definition": "a harmonised standard as defined in Article 2(1), point (c), of Regulation (EU) No 1025/2012"
+    },
+    "common specification": {
+      "number": "28",
+      "term": "common specification",
+      "definition": "a set of technical specifications as defined in Article 2, point (4) of Regulation (EU) No 1025/2012, providing means to comply with certain requirements established under this Regulation"
+    },
+    "training data": {
+      "number": "29",
+      "term": "training data",
+      "definition": "data used for training an AI system through fitting its learnable parameters"
+    },
+    "validation data": {
+      "number": "30",
+      "term": "validation data",
+      "definition": "data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process in order, inter alia, to prevent underfitting or overfitting"
+    },
+    "validation data set": {
+      "number": "31",
+      "term": "validation data set",
+      "definition": "a separate data set or part of the training data set, either as a fixed or variable split"
+    },
+    "testing data": {
+      "number": "32",
+      "term": "testing data",
+      "definition": "data used for providing an independent evaluation of the AI system in order to confirm the expected performance of that system before its placing on the market or putting into service"
+    },
+    "input data": {
+      "number": "33",
+      "term": "input data",
+      "definition": "data provided to or directly acquired by an AI system on the basis of which the system produces an output"
+    },
+    "biometric data": {
+      "number": "34",
+      "term": "biometric data",
+      "definition": "personal data resulting from specific technical processing relating to the physical, physiological or behavioural characteristics of a natural person, such as facial images or dactyloscopic data"
+    },
+    "biometric identification": {
+      "number": "35",
+      "term": "biometric identification",
+      "definition": "the automated recognition of physical, physiological, behavioural, or psychological human features for the purpose of establishing the identity of a natural person by comparing biometric data of that individual to biometric data of individuals stored in a database"
+    },
+    "biometric verification": {
+      "number": "36",
+      "term": "biometric verification",
+      "definition": "the automated, one-to-one verification, including authentication, of the identity of natural persons by comparing their biometric data to previously provided biometric data"
+    },
+    "special categories of personal data": {
+      "number": "37",
+      "term": "special categories of personal data",
+      "definition": "the categories of personal data referred to in Article 9(1) of Regulation (EU) 2016/679, Article 10 of Directive (EU) 2016/680 and Article 10(1) of Regulation (EU) 2018/1725"
+    },
+    "sensitive operational data": {
+      "number": "38",
+      "term": "sensitive operational data",
+      "definition": "operational data related to activities of prevention, detection, investigation or prosecution of criminal offences, the disclosure of which could jeopardise the integrity of criminal proceedings"
+    },
+    "emotion recognition system": {
+      "number": "39",
+      "term": "emotion recognition system",
+      "definition": "an AI system for the purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data"
+    },
+    "biometric categorisation system": {
+      "number": "40",
+      "term": "biometric categorisation system",
+      "definition": "an AI system for the purpose of assigning natural persons to specific categories on the basis of their biometric data, unless it is ancillary to another commercial service and strictly necessary for objective technical reasons"
+    },
+    "remote biometric identification system": {
+      "number": "41",
+      "term": "remote biometric identification system",
+      "definition": "an AI system for the purpose of identifying natural persons, without their active involvement, typically at a distance through the comparison of a person's biometric data with the biometric data contained in a reference database"
+    },
+    "real-time remote biometric identification system": {
+      "number": "42",
+      "term": "real-time remote biometric identification system",
+      "definition": "a remote biometric identification system, whereby the capturing of biometric data, the comparison and the identification all occur without a significant delay, comprising not only instant identification, but also limited short delays in order to avoid circumvention"
+    },
+    "post-remote biometric identification system": {
+      "number": "43",
+      "term": "post-remote biometric identification system",
+      "definition": "a remote biometric identification system other than a real-time remote biometric identification system"
+    },
+    "publicly accessible space": {
+      "number": "44",
+      "term": "publicly accessible space",
+      "definition": "any publicly or privately owned physical place accessible to an undetermined number of natural persons, regardless of whether certain conditions for access may apply, and regardless of the potential capacity restrictions"
+    },
+    "law enforcement": {
+      "number": "46",
+      "term": "law enforcement",
+      "definition": "activities carried out by law enforcement authorities or on their behalf for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including safeguarding against and preventing threats to public security"
+    },
+    "AI Office": {
+      "number": "47",
+      "term": "AI Office",
+      "definition": "the Commission's function of contributing to the implementation, monitoring and supervision of AI systems and general-purpose AI models, and AI governance, provided for in Commission Decision of 24 January 2024"
+    },
+    "national competent authority": {
+      "number": "48",
+      "term": "national competent authority",
+      "definition": "a notifying authority or a market surveillance authority"
+    },
+    "serious incident": {
+      "number": "49",
+      "term": "serious incident",
+      "definition": "an incident or malfunctioning of an AI system that directly or indirectly leads to any of the following: (a) the death of a person, or serious harm to a person's health"
+    },
+    "personal data": {
+      "number": "50",
+      "term": "personal data",
+      "definition": "personal data as defined in Article 4, point (1), of Regulation (EU) 2016/679"
+    },
+    "non-personal data": {
+      "number": "51",
+      "term": "non-personal data",
+      "definition": "data other than personal data as defined in Article 4, point (1), of Regulation (EU) 2016/679"
+    },
+    "profiling": {
+      "number": "52",
+      "term": "profiling",
+      "definition": "profiling as defined in Article 4, point (4), of Regulation (EU) 2016/679"
+    },
+    "real-world testing plan": {
+      "number": "53",
+      "term": "real-world testing plan",
+      "definition": "a document that describes the objectives, methodology, geographical, population and temporal scope, monitoring, organisation and conduct of testing in real-world conditions"
+    },
+    "sandbox plan": {
+      "number": "54",
+      "term": "sandbox plan",
+      "definition": "a document agreed between the participating provider and the competent authority describing the objectives, conditions, timeframe, methodology and requirements for the activities carried out within the sandbox"
+    },
+    "AI regulatory sandbox": {
+      "number": "55",
+      "term": "AI regulatory sandbox",
+      "definition": "a controlled framework set up by a competent authority which offers providers or prospective providers of AI systems the possibility to develop, train, validate and test, where appropriate in real-world conditions, an innovative AI system, pursuant to a sandbox plan for a limited time under regulatory supervision"
+    },
+    "AI literacy": {
+      "number": "56",
+      "term": "AI literacy",
+      "definition": "skills, knowledge and understanding that allow providers, deployers and affected persons, taking into account their respective rights and obligations in the context of this Regulation, to make an informed deployment of AI systems, as well as to gain awareness about the opportunities and risks of AI and possible harm it can cause"
+    },
+    "testing in real-world conditions": {
+      "number": "57",
+      "term": "testing in real-world conditions",
+      "definition": "the temporary testing of an AI system for its intended purpose in real-world conditions outside a laboratory or otherwise simulated environment, with a view to gathering reliable and robust data and to assessing and verifying the conformity of the AI system with the requirements of this Regulation and it does not qualify as placing the AI system on the market or putting it into service within the"
+    },
+    "informed consent": {
+      "number": "59",
+      "term": "informed consent",
+      "definition": "a subject's freely given, specific, unambiguous and voluntary expression of his or her willingness to participate in a particular testing in real-world conditions, after having been informed of all aspects of the testing that are relevant to the subject's decision to participate"
+    },
+    "deep fake": {
+      "number": "60",
+      "term": "deep fake",
+      "definition": "AI-generated or manipulated image, audio or video content that resembles existing persons, objects, places, entities or events and would falsely appear to a person to be authentic or truthful"
+    },
+    "widespread infringement": {
+      "number": "61",
+      "term": "widespread infringement",
+      "definition": "any act or omission contrary to Union law protecting the interest of individuals, which: (a) has harmed or is likely to harm the collective interests of individuals residing in at least two Member States other than the Member State in which: (i) the act or omission originated or took place"
+    },
+    "critical infrastructure": {
+      "number": "62",
+      "term": "critical infrastructure",
+      "definition": "critical infrastructure as defined in Article 2, point (4), of Directive (EU) 2022/2557"
+    },
+    "general-purpose AI model": {
+      "number": "63",
+      "term": "general-purpose AI model",
+      "definition": "an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for r"
+    },
+    "high-impact capabilities": {
+      "number": "64",
+      "term": "high-impact capabilities",
+      "definition": "capabilities that match or exceed the capabilities recorded in the most advanced general-purpose AI models"
+    },
+    "systemic risk": {
+      "number": "65",
+      "term": "systemic risk",
+      "definition": "a risk that is specific to the high-impact capabilities of general-purpose AI models, having a significant impact on the Union market due to their reach, or due to actual or reasonably foreseeable negative effects on public health, safety, public security, fundamental rights, or the society as a whole, that can be propagated at scale across the value chain"
+    },
+    "general-purpose AI system": {
+      "number": "66",
+      "term": "general-purpose AI system",
+      "definition": "an AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes, both for direct use as well as for integration in other AI systems"
+    },
+    "floating-point operation": {
+      "number": "67",
+      "term": "floating-point operation",
+      "definition": "any mathematical operation or assignment involving floating-point numbers, which are a subset of the real numbers typically represented on computers by an integer of fixed precision scaled by an integer exponent of a fixed base"
+    },
+    "downstream provider": {
+      "number": "68",
+      "term": "downstream provider",
+      "definition": "a provider of an AI system, including a general-purpose AI system, which integrates an AI model, regardless of whether the AI model is provided by themselves and vertically integrated or provided by another entity based on contractual relations. 50/144 ELI: http://data.europa.eu/eli/reg/2024/1689/oj OJ L, 12.7.2024 EN"
+    }
+  },
+  "boundary": "Every criterion here is the verbatim text of Annex III. Selecting one records what you said about your own system. It is not a determination by this site, and it is not legal advice."
+}
