@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "boundary": "Each entry is a corpus root that existed. A frozen page states the root of its own build; find that root here and verify against the archived proof set beside it. A later root does not invalidate an earlier citation.",
+  "verify": "/celex/proofs/<root>.json carries the membership proof set for that root.",
+  "roots": [
+    {
+      "root": "581628a5b36518981241d2b51f048aa46384f30a74bf648ef542c652028cdeff",
+      "tree_size": 516,
+      "head_commit": "4657808a6be127c5462b28ed6e48750d16e65b2c",
+      "first_built": "20260823-d7502c01"
+    }
+  ]
+}
