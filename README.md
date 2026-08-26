@@ -2,7 +2,7 @@
 
 **This repository is generated.** It is the built static site that Vercel serves at
 <https://satoshishrine.vercel.app>. Nothing here is edited by hand; every file is overwritten
-by the next publish. The build that produces it lives in a separate repository.
+by the next publish. The build that produces it is a separate, private repository.
 
 ## What the site is
 
@@ -25,15 +25,17 @@ Leaf definition: `sha256(celex ␟ provision ␟ artifact_sha256 ␟ captured �
 separator. Pairs hash left+right; an odd node is duplicated. Text extracted with
 `pdftotext version 4.00`.
 
-## Licensing, in two parts
+## The legal texts
 
-The **legal texts** are European Union material, reproduced under Commission Decision
-2011/833/EU on the reuse of Commission documents. Only the Official Journal publication is
-authentic. They are not ours to license.
+They are European Union material, reproduced under Commission Decision 2011/833/EU on the reuse
+of Commission documents. Only the Official Journal publication is authentic.
 
-The **code** that builds this site is MIT licensed and lives in the build repository. The
-vendored in-browser model runtime under `semantic/vendor/` ships unmodified under its own
+The vendored in-browser model runtime under `semantic/vendor/` ships unmodified under its own
 licence; see `semantic/LICENSES.md`.
+
+No licence is stated here for the code that builds this site. That is not an oversight and it is
+not an implied grant: the terms have not been decided, and this file will say so plainly rather
+than imply anything either way.
 
 ## What this does not do
 
