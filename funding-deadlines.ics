@@ -3,4 +3,124 @@ VERSION:2.0
 PRODID:-//SatoshiShrine//Funding Radar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ethereum-official-page@satoshishrine.com
+DTSTAMP:20250324T000000Z
+DTSTART;VALUE=DATE:20250324
+SUMMARY:Ethereum Foundation — stated deadline
+URL:https://esp.ethereum.foundation/academic-grants
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:flow-official-page@satoshishrine.com
+DTSTAMP:20250816T000000Z
+DTSTART;VALUE=DATE:20250816
+SUMMARY:Flow Foundation — stated deadline
+URL:https://developers.flow.com/ecosystem/developer-support-hub/grants
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:axelar-official-page@satoshishrine.com
+DTSTAMP:20221111T000000Z
+DTSTART;VALUE=DATE:20221111
+SUMMARY:Axelar — stated deadline
+URL:https://www.axelar.network/blog/axelar-longhash-accelerator-grant-program
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:coinbase-developer-platform-official-page@satoshishrine.com
+DTSTAMP:20241025T000000Z
+DTSTART;VALUE=DATE:20241025
+SUMMARY:Coinbase Developer Platform — stated deadline
+URL:https://www.coinbase.com/fr-fr/developer-platform/discover/launches/builder-grants-round2
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:nlnet-official-page@satoshishrine.com
+DTSTAMP:20261103T000000Z
+DTSTART;VALUE=DATE:20261103
+SUMMARY:NLnet Foundation (NGI Zero) — stated deadline
+URL:https://nlnet.nl/codesupply/guideforapplicants/
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:ethereum-academic-official-page@satoshishrine.com
+DTSTAMP:20250324T000000Z
+DTSTART;VALUE=DATE:20250324
+SUMMARY:Ethereum Foundation Academic Grants — stated deadline
+URL:https://esp.ethereum.foundation/academic-grants
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-hacken-io-official-page@satoshishrine.com
+DTSTAMP:20260209T000000Z
+DTSTART;VALUE=DATE:20260209
+SUMMARY:Superchain Security Audit Grants — stated deadline
+URL:https://hacken.io/services/superchain-audit-grants/
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-zcashcommunity-com-official-page@satoshishrine.com
+DTSTAMP:20230417T000000Z
+DTSTART;VALUE=DATE:20230417
+SUMMARY:Launching the Zcash Minor Grants Program by ZFND — stated deadline
+URL:https://forum.zcashcommunity.com/t/launching-the-zcash-minor-grants-program-by-zfnd/44075
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-audd-digital-official-page@satoshishrine.com
+DTSTAMP:20260407T000000Z
+DTSTART;VALUE=DATE:20260407
+SUMMARY:AUDDapt Grant Program — stated deadline
+URL:https://www.audd.digital/auddapt-grant-program/
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-foresight-org-official-page@satoshishrine.com
+DTSTAMP:20261031T000000Z
+DTSTART;VALUE=DATE:20261031
+SUMMARY:AI for Science & Safety Nodes — stated deadline
+URL:https://foresight.org/grants/ai-science-safety-nodes-rfp/
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-sbir-gov-official-page@satoshishrine.com
+DTSTAMP:20261108T000000Z
+DTSTART;VALUE=DATE:20261108
+SUMMARY:Funding Opportunities — stated deadline
+URL:https://www.sbir.gov/topics
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-service-gov-uk-official-page@satoshishrine.com
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261118
+SUMMARY:Innovation competitions — stated deadline
+URL:https://apply-for-innovation-funding.service.gov.uk/competition/search
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-philafound-org-official-page@satoshishrine.com
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261008
+SUMMARY:Philadelphia District Attorney's Office Forfeiture Fund 2026 — stated deadline
+URL:https://www.philafound.org/nonprofits/available-grants/special-initiative-grants/dao/
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-standict-eu-official-page@satoshishrine.com
+DTSTAMP:20240109T000000Z
+DTSTART;VALUE=DATE:20240109
+SUMMARY:StandICT.eu 2026 — stated deadline
+URL:https://standict.eu/standicteu-2026-3rd-open-call
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
+BEGIN:VEVENT
+UID:lead-subsdy-com-official-page@satoshishrine.com
+DTSTAMP:20260414T000000Z
+DTSTART;VALUE=DATE:20260414
+SUMMARY:Towards the water infrastructures of the future — stated deadline
+URL:https://www.subsdy.com/grants/towards-the-water-infrastructures-of-the-future
+DESCRIPTION:Deadline text is verbatim from a held funder page; see the Funding Radar source record.
+END:VEVENT
 END:VCALENDAR

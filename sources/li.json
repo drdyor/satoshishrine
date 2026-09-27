@@ -100,7 +100,7 @@
     {
       "category": "EUR-Lex DAC8 national-measure source",
       "state": "source_held",
-      "basis": "Held source-record state: out_of_scope."
+      "basis": "Held source-record state: outside this source's scope."
     },
     {
       "category": "Direct national regulator source surface",

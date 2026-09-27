@@ -45,7 +45,13 @@ the exact wording they answered, and say so.
 
 ## Known gaps
 
-Held source PDFs are not yet published here, so `artifact_sha256` is currently checkable only
-against EUR-Lex, which rotates files. There is no container or lockfile yet, so the Merkle root
-cannot be reproduced from scratch by a third party. The root is not signed. These are recorded
-as outstanding work rather than left to be discovered.
+Held source artifacts are not yet published here, so `artifact_sha256` is currently checkable
+only against EUR-Lex, which rotates files. There is no container or lockfile yet, so the Merkle
+root cannot be reproduced from scratch by a third party. The root is not signed. These are
+recorded as outstanding work rather than left to be discovered.
+
+The provisions are extracted from **18 distinct official artifacts**. That number is
+computed at build time, not asserted: an earlier draft said "88 source PDFs", which was a count of
+FILES on disk. Nineteen documents were captured more than once — the ESMA and EBA papers six times
+each — so 88 files are 22 distinct documents, of which 18 carry published
+provisions. A file count read as a document count overstates the breadth of the corpus.
