@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-27T09:25:44Z",
+  "generated_at": "2026-09-27T10:51:19Z",
   "boundary": "The observatory indexes held source observations and source-file comparisons. It does not determine legal status, regulatory activity, permission, compliance, or an entity outcome.",
   "stats": {
     "jurisdictions_with_monitored_sources": {
@@ -12,17 +12,17 @@
       "contract_path": "crypto_jurisdictions.sources"
     },
     "changed_since_last_scan": {
-      "value": 63,
+      "value": 64,
       "contract_path": "diffs.weekly_diff.summary"
     },
     "verified_unchanged": {
-      "value": 269,
+      "value": 268,
       "contract_path": "diffs.weekly_diff.summary"
     }
   },
   "system": {
-    "last_scan": "2026-09-27T09:08:29Z",
-    "run_id": "20260927T083532Z",
+    "last_scan": "2026-09-27T10:22:14Z",
+    "run_id": "20260927T094646Z",
     "status": "passed",
     "checks": 10,
     "retrieval_issues": 0,
@@ -83,7 +83,7 @@
       "source": "CASPS.csv",
       "route": "changes/casps-csv.html",
       "state": "unchanged",
-      "detected_at": "2026-09-27T08:36:16Z",
+      "detected_at": "2026-09-27T09:49:13Z",
       "from_snapshot": {
         "id": "20260819T174251Z",
         "retrieved_at": "20260819T174251Z",
@@ -113,7 +113,7 @@
       "source": "NCASP.csv",
       "route": "changes/ncasp-csv.html",
       "state": "unchanged",
-      "detected_at": "2026-09-27T08:36:16Z",
+      "detected_at": "2026-09-27T09:49:13Z",
       "from_snapshot": {
         "id": "20260819T174251Z",
         "retrieved_at": "20260819T174251Z",
@@ -142,22 +142,22 @@
     {
       "source": "Funding Radar source contract",
       "route": "funding-changes.html",
-      "state": "unchanged",
-      "detected_at": "2026-09-27T00:37:10Z",
+      "state": "changed",
+      "detected_at": "2026-09-27T09:46:45Z",
       "from_snapshot": {
-        "retrieved_at": "2026-09-27T00:21:18Z",
-        "hold": "state/funding_programs.json"
-      },
-      "to_snapshot": {
         "retrieved_at": "2026-09-27T00:37:10Z",
         "hold": "state/funding_programs.json"
       },
+      "to_snapshot": {
+        "retrieved_at": "2026-09-27T09:46:45Z",
+        "hold": "state/funding_programs.json"
+      },
       "previous_sha256": "a0f8bdc81d568ef3a4033d7ac1ff227a59ffc4563860a9f7d6d3078b78a965dc",
-      "current_sha256": "a0f8bdc81d568ef3a4033d7ac1ff227a59ffc4563860a9f7d6d3078b78a965dc",
+      "current_sha256": "705b5b50c48685d87882e7e4c31b71eef9ef28a44827f4b89cd1bc1d41e310b4",
       "official_url": "funding.html",
       "metrics": {
         "added": 0,
-        "removed": 0,
+        "removed": 32,
         "changed": 0
       },
       "comparison_status": "compared"
@@ -166,7 +166,7 @@
       "source": "32022R2554.html · eu-legislation/eurlex-full-text",
       "route": "changes/document-eu-legislation-eurlex-full-text-32022r2554-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -209,7 +209,7 @@
       "source": "32022R2554.txt · eu-legislation/eurlex-full-text",
       "route": "changes/document-eu-legislation-eurlex-full-text-32022r2554-txt.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260822T222832Z",
         "hold": "docs_evidence\\eu-legislation\\eurlex-full-text\\20260822T222832Z\\32022R2554.txt"
@@ -4996,7 +4996,7 @@
       "source": "32023R1113.html · eu-legislation/eurlex-full-text",
       "route": "changes/document-eu-legislation-eurlex-full-text-32023r1113-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -5039,7 +5039,7 @@
       "source": "32023R1113.txt · eu-legislation/eurlex-full-text",
       "route": "changes/document-eu-legislation-eurlex-full-text-32023r1113-txt.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260822T222832Z",
         "hold": "docs_evidence\\eu-legislation\\eurlex-full-text\\20260822T222832Z\\32023R1113.txt"
@@ -6943,7 +6943,7 @@
       "source": "32024R1689.txt · eu-legislation/eurlex-full-text",
       "route": "changes/document-eu-legislation-eurlex-full-text-32024r1689-txt.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260822T222832Z",
         "hold": "docs_evidence\\eu-legislation\\eurlex-full-text\\20260822T222832Z\\32024R1689.txt"
@@ -15410,7 +15410,7 @@
       "source": "AI try.html · eu-legislation/eurlex-full-text",
       "route": "changes/document-eu-legislation-eurlex-full-text-ai-try-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -15453,7 +15453,7 @@
       "source": "OJ 2024 2902.txt · eu-legislation/mica-level2",
       "route": "changes/document-eu-legislation-mica-level2-oj-2024-2902-txt.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -15496,7 +15496,7 @@
       "source": "OJ 2025 298.txt · eu-legislation/mica-level2",
       "route": "changes/document-eu-legislation-mica-level2-oj-2025-298-txt.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -15539,7 +15539,7 @@
       "source": "funding data.csv · funding-radar/data-layer",
       "route": "changes/document-funding-radar-data-layer-funding-data-csv.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -15582,7 +15582,7 @@
       "source": "aerodrome.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-aerodrome-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\aerodrome.html"
@@ -15806,7 +15806,7 @@
       "source": "alchemix.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-alchemix-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\alchemix.html"
@@ -15860,7 +15860,7 @@
       "source": "aptos.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-aptos-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\aptos.html"
@@ -15914,7 +15914,7 @@
       "source": "aster.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-aster-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\aster.html"
@@ -15968,7 +15968,7 @@
       "source": "binance.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-binance-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\binance.html"
@@ -16022,7 +16022,7 @@
       "source": "bitfinex.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-bitfinex-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\bitfinex.html"
@@ -16080,7 +16080,7 @@
       "source": "bitget.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-bitget-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\bitget.html"
@@ -16134,7 +16134,7 @@
       "source": "blackrock-buidl.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-blackrock-buidl-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\blackrock-buidl.html"
@@ -16188,7 +16188,7 @@
       "source": "celo.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-celo-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\celo.html"
@@ -16244,7 +16244,7 @@
       "source": "colosseum.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-colosseum-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\colosseum.html"
@@ -16298,7 +16298,7 @@
       "source": "dfinity.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-dfinity-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\dfinity.html"
@@ -16492,7 +16492,7 @@
       "source": "etherfi.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-etherfi-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\etherfi.html"
@@ -16550,7 +16550,7 @@
       "source": "ethglobal.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-ethglobal-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\ethglobal.html"
@@ -16606,7 +16606,7 @@
       "source": "filecoin.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-filecoin-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\filecoin.html"
@@ -16660,7 +16660,7 @@
       "source": "fundesci.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-fundesci-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\fundesci.html"
@@ -16712,7 +16712,7 @@
       "source": "gate.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-gate-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\gate.html"
@@ -16766,7 +16766,7 @@
       "source": "global-dollar.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-global-dollar-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\global-dollar.html"
@@ -16820,7 +16820,7 @@
       "source": "hairdao.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-hairdao-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\hairdao.html"
@@ -16876,7 +16876,7 @@
       "source": "human-rights-foundation.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-human-rights-foundation-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\human-rights-foundation.html"
@@ -17102,7 +17102,7 @@
       "source": "hyperliquid.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-hyperliquid-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\hyperliquid.html"
@@ -17156,7 +17156,7 @@
       "source": "jupiter.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-jupiter-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\jupiter.html"
@@ -17218,7 +17218,7 @@
       "source": "karma.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-karma-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\karma.html"
@@ -17272,7 +17272,7 @@
       "source": "lead-0xbeacon-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-0xbeacon-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17315,7 +17315,7 @@
       "source": "lead-1inch-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-1inch-network-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-1inch-network.html"
@@ -17369,7 +17369,7 @@
       "source": "lead-acala-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-acala-network-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-acala-network.html"
@@ -17424,7 +17424,7 @@
       "source": "lead-alchemypay-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-alchemypay-org-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-alchemypay-org.html"
@@ -17478,7 +17478,7 @@
       "source": "lead-alliance-xyz.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-alliance-xyz-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-alliance-xyz.html"
@@ -17532,7 +17532,7 @@
       "source": "lead-aptosnetwork-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-aptosnetwork-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17575,7 +17575,7 @@
       "source": "lead-arc-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-arc-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17618,7 +17618,7 @@
       "source": "lead-atgraphite-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-atgraphite-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17661,7 +17661,7 @@
       "source": "lead-atka-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-atka-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17704,7 +17704,7 @@
       "source": "lead-avalanche-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-avalanche-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17747,7 +17747,7 @@
       "source": "lead-aztec-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-aztec-network-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17790,7 +17790,7 @@
       "source": "lead-bahamut-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-bahamut-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17833,7 +17833,7 @@
       "source": "lead-blockchain-news.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-blockchain-news-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17876,7 +17876,7 @@
       "source": "lead-blockchainacademics-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-blockchainacademics-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17919,7 +17919,7 @@
       "source": "lead-blockmm-ai.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-blockmm-ai-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -17962,7 +17962,7 @@
       "source": "lead-bu-edu.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-bu-edu-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18005,7 +18005,7 @@
       "source": "lead-camino-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-camino-network-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18048,7 +18048,7 @@
       "source": "lead-caper-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-caper-network-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18091,7 +18091,7 @@
       "source": "lead-chainstack-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-chainstack-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18134,7 +18134,7 @@
       "source": "lead-clr-fund.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-clr-fund-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18177,7 +18177,7 @@
       "source": "lead-cointelegraph-accelerate-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cointelegraph-accelerate-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18220,7 +18220,7 @@
       "source": "lead-comp-xyz.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-comp-xyz-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-comp-xyz.html"
@@ -18278,7 +18278,7 @@
       "source": "lead-coredaofoundation-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-coredaofoundation-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18321,7 +18321,7 @@
       "source": "lead-cornarolabs-xyz.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cornarolabs-xyz-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-cornarolabs-xyz.html"
@@ -18373,7 +18373,7 @@
       "source": "lead-cow-fi.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cow-fi-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-cow-fi.html"
@@ -18453,7 +18453,7 @@
       "source": "lead-crab-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-crab-network-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-crab-network.html"
@@ -18507,7 +18507,7 @@
       "source": "lead-crypticweb3-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-crypticweb3-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18550,7 +18550,7 @@
       "source": "lead-cryptobriefing-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cryptobriefing-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18593,7 +18593,7 @@
       "source": "lead-cryptodeep-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cryptodeep-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18636,7 +18636,7 @@
       "source": "lead-cryptollia-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cryptollia-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18679,7 +18679,7 @@
       "source": "lead-cuscuton-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cuscuton-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18722,7 +18722,7 @@
       "source": "lead-cyber-fund.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-cyber-fund-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-cyber-fund.html"
@@ -18774,7 +18774,7 @@
       "source": "lead-decentraland-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-decentraland-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18817,7 +18817,7 @@
       "source": "lead-deepdao-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-deepdao-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18860,7 +18860,7 @@
       "source": "lead-denariilabs-xyz.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-denariilabs-xyz-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18903,7 +18903,7 @@
       "source": "lead-dergipark-org-tr.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-dergipark-org-tr-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18946,7 +18946,7 @@
       "source": "lead-digifoundry-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-digifoundry-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -18989,7 +18989,7 @@
       "source": "lead-draperuniversity-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-draperuniversity-com-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-draperuniversity-com.html"
@@ -19041,7 +19041,7 @@
       "source": "lead-eda-gov.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-eda-gov-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-eda-gov.html"
@@ -19104,7 +19104,7 @@
       "source": "lead-eufundingportal-eu.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-eufundingportal-eu-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19147,7 +19147,7 @@
       "source": "lead-europa-eu.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-europa-eu-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19190,7 +19190,7 @@
       "source": "lead-f6s-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-f6s-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19233,7 +19233,7 @@
       "source": "lead-forrestgrants-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-forrestgrants-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19276,7 +19276,7 @@
       "source": "lead-fundingprogrammesportal-gov-cy.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-fundingprogrammesportal-gov-cy-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19319,7 +19319,7 @@
       "source": "lead-globalsouthopportunities-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-globalsouthopportunities-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19362,7 +19362,7 @@
       "source": "lead-grantedai-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-grantedai-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19405,7 +19405,7 @@
       "source": "lead-grants-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-grants-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19448,7 +19448,7 @@
       "source": "lead-grants-gov.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-grants-gov-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19491,7 +19491,7 @@
       "source": "lead-hackathonradar-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-hackathonradar-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19534,7 +19534,7 @@
       "source": "lead-hacken-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-hacken-io-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-hacken-io.html"
@@ -19588,7 +19588,7 @@
       "source": "lead-hackindia-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-hackindia-org-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-hackindia-org.html"
@@ -19642,7 +19642,7 @@
       "source": "lead-hemi-xyz.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-hemi-xyz-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19685,7 +19685,7 @@
       "source": "lead-incubatorlist-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-incubatorlist-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19728,7 +19728,7 @@
       "source": "lead-indiascienceandtechnology-gov-in.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-indiascienceandtechnology-gov-in-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-indiascienceandtechnology-gov-in.html"
@@ -19782,7 +19782,7 @@
       "source": "lead-ingonyama-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-ingonyama-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19825,7 +19825,7 @@
       "source": "lead-kaia-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-kaia-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19868,7 +19868,7 @@
       "source": "lead-kalshi-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-kalshi-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -19911,7 +19911,7 @@
       "source": "lead-launchaccelerator-co.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-launchaccelerator-co-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-launchaccelerator-co.html"
@@ -19963,7 +19963,7 @@
       "source": "lead-lightlink-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-lightlink-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20006,7 +20006,7 @@
       "source": "lead-manta-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-manta-network-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-manta-network.html"
@@ -20062,7 +20062,7 @@
       "source": "lead-massa-foundation.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-massa-foundation-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20105,7 +20105,7 @@
       "source": "lead-moonbeam-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-moonbeam-network-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20148,7 +20148,7 @@
       "source": "lead-nexus2049-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-nexus2049-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20191,7 +20191,7 @@
       "source": "lead-nsf-gov.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-nsf-gov-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20234,7 +20234,7 @@
       "source": "lead-opensci-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-opensci-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20277,7 +20277,7 @@
       "source": "lead-opportunitiesforyouth-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-opportunitiesforyouth-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20320,7 +20320,7 @@
       "source": "lead-philafound-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-philafound-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20363,7 +20363,7 @@
       "source": "lead-polymarket-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-polymarket-com-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-polymarket-com.html"
@@ -20417,7 +20417,7 @@
       "source": "lead-research-swiss.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-research-swiss-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20460,7 +20460,7 @@
       "source": "lead-retropgf-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-retropgf-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20503,7 +20503,7 @@
       "source": "lead-risein-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-risein-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20546,7 +20546,7 @@
       "source": "lead-rocknblock-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-rocknblock-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20589,7 +20589,7 @@
       "source": "lead-solanalabs-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-solanalabs-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20632,7 +20632,7 @@
       "source": "lead-spark-money.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-spark-money-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20675,7 +20675,7 @@
       "source": "lead-standict-eu.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-standict-eu-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20718,7 +20718,7 @@
       "source": "lead-subsdy-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-subsdy-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20761,7 +20761,7 @@
       "source": "lead-svpchain-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-svpchain-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20804,7 +20804,7 @@
       "source": "lead-tally-xyz.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-tally-xyz-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20847,7 +20847,7 @@
       "source": "lead-techflowpost-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-techflowpost-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20890,7 +20890,7 @@
       "source": "lead-thecoincourse-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-thecoincourse-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -20933,7 +20933,7 @@
       "source": "lead-thedao-fund.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-thedao-fund-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-thedao-fund.html"
@@ -21001,7 +21001,7 @@
       "source": "lead-thesignal-directory.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-thesignal-directory-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21044,7 +21044,7 @@
       "source": "lead-thetopvoices-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-thetopvoices-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21087,7 +21087,7 @@
       "source": "lead-umd-edu.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-umd-edu-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21130,7 +21130,7 @@
       "source": "lead-voi-network.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-voi-network-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21173,7 +21173,7 @@
       "source": "lead-web3voyager-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-web3voyager-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21216,7 +21216,7 @@
       "source": "lead-whitechain-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-whitechain-io-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-whitechain-io.html"
@@ -21270,7 +21270,7 @@
       "source": "lead-worldmobile-club.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-worldmobile-club-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-worldmobile-club.html"
@@ -21326,7 +21326,7 @@
       "source": "lead-zama-org.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-zama-org-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21369,7 +21369,7 @@
       "source": "lead-zcashcommunity-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-zcashcommunity-com-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lead-zcashcommunity-com.html"
@@ -21423,7 +21423,7 @@
       "source": "lead-zealynx-io.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-zealynx-io-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21466,7 +21466,7 @@
       "source": "lead-zhcinstitute-com.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lead-zhcinstitute-com-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -21509,7 +21509,7 @@
       "source": "lido.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-lido-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\lido.html"
@@ -21563,7 +21563,7 @@
       "source": "mina.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-mina-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\mina.html"
@@ -21621,7 +21621,7 @@
       "source": "monero.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-monero-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\monero.html"
@@ -21681,7 +21681,7 @@
       "source": "morpho.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-morpho-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\morpho.html"
@@ -21737,7 +21737,7 @@
       "source": "movement.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-movement-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\movement.html"
@@ -21791,7 +21791,7 @@
       "source": "nexo.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-nexo-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\nexo.html"
@@ -21845,7 +21845,7 @@
       "source": "nlnet.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-nlnet-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\nlnet.html"
@@ -22004,7 +22004,7 @@
       "source": "octant.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-octant-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\octant.html"
@@ -22058,7 +22058,7 @@
       "source": "okx.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-okx-html.html",
       "state": "substantial",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\okx.html"
@@ -22112,7 +22112,7 @@
       "source": "optimism.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-optimism-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\optimism.html"
@@ -22176,7 +22176,7 @@
       "source": "protocol-guild.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-protocol-guild-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\protocol-guild.html"
@@ -22883,7 +22883,7 @@
       "source": "pump-fun.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-pump-fun-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\pump-fun.html"
@@ -22937,7 +22937,7 @@
       "source": "questbook.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-questbook-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\questbook.html"
@@ -22991,7 +22991,7 @@
       "source": "researchhub.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-researchhub-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\researchhub.html"
@@ -23050,7 +23050,7 @@
       "source": "safe.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-safe-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\safe.html"
@@ -23104,7 +23104,7 @@
       "source": "world.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-world-html.html",
       "state": "replaced",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260926T045949Z",
         "hold": "docs_evidence\\funding-radar\\official-pages\\20260926T045949Z\\world.html"
@@ -23158,7 +23158,7 @@
       "source": "authorisation register.html · uae/dfsa",
       "route": "changes/document-uae-dfsa-authorisation-register-html.html",
       "state": "minor",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "20260818T025821Z",
         "hold": "docs_evidence\\uae\\dfsa\\20260818T025821Z\\authorisation_register.html"
@@ -23212,7 +23212,7 @@
       "source": "EBA ART emt.html · eu-market-access/source-migration-watch",
       "route": "changes/document-eu-market-access-source-migration-watch-eba-art-emt-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -23257,7 +23257,7 @@
       "source": "ESMA interim MICA register.html · eu-market-access/source-migration-watch",
       "route": "changes/document-eu-market-access-source-migration-watch-esma-interim-mica-register-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -23302,7 +23302,7 @@
       "source": "alphagrowth.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-alphagrowth-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -23347,7 +23347,7 @@
       "source": "bitway.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-bitway-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -23392,7 +23392,7 @@
       "source": "united-stables.html · funding-radar/official-pages",
       "route": "changes/document-funding-radar-official-pages-united-stables-html.html",
       "state": "first_hold",
-      "detected_at": "2026-09-27T09:10:39Z",
+      "detected_at": "2026-09-27T10:11:10Z",
       "from_snapshot": {
         "retrieved_at": "",
         "hold": ""
@@ -23440,7 +23440,7 @@
       "name": "Austria",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23452,7 +23452,7 @@
       "name": "Belgium",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23464,7 +23464,7 @@
       "name": "Bulgaria",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": false,
@@ -23476,7 +23476,7 @@
       "name": "Croatia",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23488,7 +23488,7 @@
       "name": "Cyprus",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23500,7 +23500,7 @@
       "name": "Czechia",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23512,7 +23512,7 @@
       "name": "Denmark",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23524,7 +23524,7 @@
       "name": "Estonia",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23536,7 +23536,7 @@
       "name": "Finland",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23548,7 +23548,7 @@
       "name": "France",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23560,7 +23560,7 @@
       "name": "Germany",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23572,7 +23572,7 @@
       "name": "Greece",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23584,7 +23584,7 @@
       "name": "Hungary",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23596,7 +23596,7 @@
       "name": "Iceland",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": false,
@@ -23608,7 +23608,7 @@
       "name": "Ireland",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23620,7 +23620,7 @@
       "name": "Italy",
       "state": "verified_this_scan",
       "held_source_count": 7,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": true,
       "has_dac8_measure": true,
@@ -23632,7 +23632,7 @@
       "name": "Latvia",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23644,7 +23644,7 @@
       "name": "Liechtenstein",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": false,
@@ -23656,7 +23656,7 @@
       "name": "Lithuania",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23668,7 +23668,7 @@
       "name": "Luxembourg",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23680,7 +23680,7 @@
       "name": "Malta",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23692,7 +23692,7 @@
       "name": "Netherlands",
       "state": "verified_this_scan",
       "held_source_count": 7,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": true,
       "has_dac8_measure": true,
@@ -23704,7 +23704,7 @@
       "name": "Norway",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": false,
@@ -23716,7 +23716,7 @@
       "name": "Poland",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23728,7 +23728,7 @@
       "name": "Portugal",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23740,7 +23740,7 @@
       "name": "Romania",
       "state": "verified_this_scan",
       "held_source_count": 5,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23752,7 +23752,7 @@
       "name": "Slovakia",
       "state": "verified_this_scan",
       "held_source_count": 7,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": true,
       "has_dac8_measure": true,
@@ -23764,7 +23764,7 @@
       "name": "Slovenia",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23776,7 +23776,7 @@
       "name": "Spain",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
@@ -23788,7 +23788,7 @@
       "name": "Sweden",
       "state": "verified_this_scan",
       "held_source_count": 6,
-      "last_checked": "2026-09-27T09:08:29Z",
+      "last_checked": "2026-09-27T10:22:14Z",
       "last_change": "20260820T131649Z",
       "has_named_record": false,
       "has_dac8_measure": true,
