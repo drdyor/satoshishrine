@@ -10,17 +10,17 @@
     },
     "funding": {
       "file": "search/funding.json",
-      "entries": 171,
-      "bytes": 411794,
-      "gzip_bytes": 118078,
-      "sha256": "625ed55f34b8aa43636b2a7f5c5c1bc7649571e17ba9600247d5d60f5d35d528"
+      "entries": 308,
+      "bytes": 750175,
+      "gzip_bytes": 216197,
+      "sha256": "30c897b4a6780a872e2de7d3cf77c62f566ca3b6926bf391ad295296a2467675"
     },
     "pages": {
       "file": "search/pages.json",
-      "entries": 4723,
-      "bytes": 15083745,
-      "gzip_bytes": 396357,
-      "sha256": "a8ae436569ce4d234001fb07009f4743ec0debc8e59952282c9b085619464cd9"
+      "entries": 5224,
+      "bytes": 16677061,
+      "gzip_bytes": 429069,
+      "sha256": "d2f4244a9b0500c5d7743688d48b1280aa67f7f067bc4e84ac53764e20f4762e"
     },
     "provisions-dac8-amendment": {
       "file": "search/provisions-dac8-amendment.json",
